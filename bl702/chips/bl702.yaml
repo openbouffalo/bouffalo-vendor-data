@@ -1,8 +1,9 @@
 name: bl702
 
+# TODO: Interrupts
+
 memories:
   - name: xip
-    peripheral: xip
     type: xip
     address: 0x23000000
     size: 0x01000000 # TODO: Datasheet says that it's only 8KB
@@ -14,7 +15,6 @@ memories:
       - address: 0x53000000
         size: 0x01000000
   - name: psram
-    peripheral: psram
     type: psram
     address: 0x24000000
     size: 0x01000000 # TODO: Datasheet says that it's only 8KB
@@ -26,7 +26,6 @@ memories:
       - address: 0x54000000
         size: 0x01000000
   - name: wram
-    peripheral: wram
     type: sram
     address: 0x42020000
     size: 0x10000 # TODO: bl702.h says it's only 56 KB
@@ -38,7 +37,6 @@ memories:
       - address: 0x52020000
         size: 0x10000
   - name: tcm
-    peripheral: tcm
     type: tcm
     address: 0x22010000
     size: 0x10000 # TODO: Datasheet and some code says that it's split to 16KB instructions and 48KB data
@@ -49,6 +47,11 @@ memories:
         size: 0x01000000
       - address: 0x52010000
         size: 0x01000000
+  - name: hbn_ram
+    type: sram # TODO: Clarify that it is retention ram
+    address: 0x40010000
+    size: 0x1000
+
 
 
 # TODO: Add sizes, but those are known only from datasheet which does not contain every peripheral.
