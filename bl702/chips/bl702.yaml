@@ -54,150 +54,186 @@ memories:
 
 
 
-# TODO: Add sizes, but those are known only from datasheet which does not contain every peripheral.
 peripherals:
   - name: glb
     peripheral: glb
     address: 0x40000000
+    size: 0x1000
     description: "Global control register"
   - name: rf
     peripheral: rf
     address: 0x40001000
+    size: 0x1000
     description: ""
   - name: bz_phy
     address: 0x40001000
+    size: 0x1000
     description: ""
   - name: bz_phy_agc
     address: 0x40001000
+    size: 0x1000
     description: ""
   - name: gpip
     peripheral: gpip
     address: 0x40002000
+    size: 0x1000
     description: "General purpose DAC/ADC/ACOMP interface control"
   - name: sec_dbg
     peripheral: sec_dbg
     address: 0x40003000
+    size: 0x1000
     description: Security Debug module
   - name: sec_eng
     peripheral: sec_eng
     address: 0x40004000
+    size: 0x1000
     description: Security Engine module
   - name: tzc_sec
     peripheral: tzc_sec
     address: 0x40005000
+    size: 0x1000
     description: Trustzone control security
   - name: tzc_nsec
     peripheral: tzc_nsec
     address: 0x40006000
+    size: 0x1000
     description: Trustzone control none-security
-  - name: ef_data
+  - name: ef_data # TODO: ef_data_0 and ef_data_1
     peripheral: ef_data
     address: 0x40007000
+    size: 0x1000
     description: ""
   - name: ef_ctrl
     peripheral: ef_ctrl
     address: 0x40007000
+    size: 0x1000
     description: "eFuse memory control"
   - name: cci
     peripheral: cci
     address: 0x40008000
+    size: 0x1000
     description: ""
   - name: l1c
     peripheral: l1c
     address: 0x40009000
+    size: 0x1000
     description: L1 cache config
   - name: uart0
     peripheral: uart
     address: 0x4000A000
+    size: 0x100
     description: "UART control (support ISO 17987)"
   - name: uart1
     peripheral: uart
     address: 0x4000A100
+    size: 0x100
     description: "UART control (support ISO 17987)"
   - name: spi
     peripheral: spi
     address: 0x4000A200
+    size: 0x100
     description: "SPI master/slave control"
   - name: i2c
     peripheral: i2c
     address: 0x4000A300
+    size: 0x100
     description: "I2C control"
   - name: pwm
     peripheral: pwm
     address: 0x4000A400
+    size: 0x100
     description: "Pulse Width Modulation * 5 control"
   - name: timer
     peripheral: timer
     address: 0x4000A500
+    size: 0x100
     description: "Timer control"
   - name: ir
     peripheral: ir
     address: 0x4000A600
+    size: 0x100
     description: "IR Remote Control"
   - name: cks
     peripheral: cks
     address: 0x4000A700
+    size: 0x100
     description: ""
   - name: qdec0
     peripheral: qdec
     address: 0x4000A800
+    size: 0x40
     description: "Quadrature decoder control"
   - name: qdec1
     peripheral: qdec
     address: 0x4000A840
+    size: 0x40
     description: "Quadrature decoder control"
   - name: qdec2
     peripheral: qdec
     address: 0x4000A880
+    size: 0x40
     description: "Quadrature decoder control"
   - name: kys
     peripheral: kys
     address: 0x4000A900
+    size: 0x100
     description: "Key-Scan control"
   - name: i2s
     peripheral: i2s
     address: 0x4000AA00
+    size: 0x100
     description: "I2S control"
   - name: cam
     peripheral: cam
     address: 0x4000AD00
+    size: 0x100
     description: "CAM control (BL706)"
   - name: mjpeg
     peripheral: mjpeg
     address: 0x4000AE00
+    size: 0x1000
     description: ""
   - name: sf_ctrl
     peripheral: sf_ctrl
     address: 0x4000B000
+    size: 0x100
     description: "Flash/pSRAM QSPI control"
   - name: sf_ctrl_buf
     peripheral: sf_ctrl_buf
     address: 0x4000B700
+    size: 0x100 # TODO: ???
     description: ""
   - name: dma
     peripheral: dma
     address: 0x4000C000
+    size: 0x1000
     description: "DMA control"
   - name: emac
     peripheral: emac
     address: 0x4000D000
+    size: 0x800
     description: "Ethernet MAC control (BL704/BL706)"
   - name: usb
     peripheral: usb
     address: 0x4000D800
+    size: 0x400
     description: "USB control"
   - name: pds
     peripheral: pds
     address: 0x4000E000
+    size: 0x1000
     description: Power down sleep module
   - name: hbn
     peripheral: hbn
     address: 0x4000F000
+    size: 0x1000
     description: Hibernate module
   - name: aon
     peripheral: aon
     address: 0x4000F000
+    size: 0x1000
     description: Always on module
   - name: mac154
     address: 0x4C000000
+    size: 0x1000 # TODO: ???
     description: MAC154 module
