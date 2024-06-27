@@ -125,6 +125,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_out_inv
         description: |-
           Output inverse signal
@@ -133,21 +134,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_mod_en
         description: Enable signal of output modulation
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_swm_en
         description: Enable signal of IRTX Software Mode (SWM)
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_data_en
         description: Enable signal of data phase (Don't care if SWM is enabled)
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: cr_irtx_logic0_hl_inv
         description: |-
           Logic 0 H/L inverse signal (Don't care if SWM is enabled)
@@ -156,6 +161,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_logic1_hl_inv
         description: |-
           Logic 1 H/L inverse signal (Don't care if SWM is enabled)
@@ -164,16 +170,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irtx_head_en
         description: Enable signal of head pulse (Don't care if SWM is enabled)
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: cr_irtx_head_hl_inv
         description: |-
           Tail pulse H/L inverse signal (Don't care if SWM is enabled)
@@ -182,11 +191,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_tail_en
         description: Enable signal of tail pulse (Don't care if SWM is enabled)
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: cr_irtx_tail_hl_inv
         description: |-
           Tail pulse H/L inverse signal (Don't care if SWM is enabled)
@@ -195,16 +206,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_data_num
         description: "Bit count of Data phase (unit: bit / PW for normal / SWM)"
         bit_size: 6
         bit_offset: 12
         default_value: 0x1f
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: irtx_int_sts
     description: ""
     fields:
@@ -213,41 +227,49 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_1_7
         description: ""
         bit_size: 7
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irtx_end_mask
         description: Interrupt mask of irtx_end_int
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_9_15
         description: ""
         bit_size: 7
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irtx_end_clr
         description: Interrupt clear of irtx_end_int
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: w1c
       - name: reserved_17_23
         description: ""
         bit_size: 7
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irtx_end_en
         description: Interrupt enable of irtx_end_int
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: irtx_data_word0
     description: ""
     fields:
@@ -256,6 +278,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_data_word1
     description: ""
     fields:
@@ -264,6 +287,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_pulse_width
     description: ""
     fields:
@@ -272,21 +296,25 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x464
+        permissions: r/w
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irtx_mod_ph0_w
         description: Modulation phase 0 width
         bit_size: 8
         bit_offset: 16
         default_value: 0x11
+        permissions: r/w
       - name: cr_irtx_mod_ph1_w
         description: Modulation phase 1 width
         bit_size: 8
         bit_offset: 24
         default_value: 0x22
+        permissions: r/w
   - name: irtx_pw
     description: ""
     fields:
@@ -295,41 +323,49 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_logic0_ph1_w
         description: Pulse width of logic0 phase 1 (Don't care if SWM is enabled)
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_logic1_ph0_w
         description: Pulse width of logic1 phase 0 (Don't care if SWM is enabled)
         bit_size: 4
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_logic1_ph1_w
         description: Pulse width of logic1 phase 1 (Don't care if SWM is enabled)
         bit_size: 4
         bit_offset: 12
         default_value: 0x2
+        permissions: r/w
       - name: cr_irtx_head_ph0_w
         description: Pulse width of head pulse phase 0 (Don't care if SWM is enabled)
         bit_size: 4
         bit_offset: 16
         default_value: 0xf
+        permissions: r/w
       - name: cr_irtx_head_ph1_w
         description: Pulse width of head pulse phase 1 (Don't care if SWM is enabled)
         bit_size: 4
         bit_offset: 20
         default_value: 0x7
+        permissions: r/w
       - name: cr_irtx_tail_ph0_w
         description: Pulse width of tail pulse phase 0 (Don't care if SWM is enabled)
         bit_size: 4
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: cr_irtx_tail_ph1_w
         description: Pulse width of tail pulse phase 1 (Don't care if SWM is enabled)
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
   - name: irtx_swm_pw_0
     description: ""
     fields:
@@ -343,6 +379,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_swm_pw_1
     description: ""
     fields:
@@ -356,6 +393,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_swm_pw_2
     description: ""
     fields:
@@ -369,6 +407,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_swm_pw_3
     description: ""
     fields:
@@ -382,6 +421,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_swm_pw_4
     description: ""
     fields:
@@ -395,6 +435,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_swm_pw_5
     description: ""
     fields:
@@ -408,6 +449,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_swm_pw_6
     description: ""
     fields:
@@ -421,6 +463,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irtx_swm_pw_7
     description: ""
     fields:
@@ -434,6 +477,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: irrx_config
     description: ""
     fields:
@@ -446,11 +490,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: cr_irrx_in_inv
         description: Input inverse signal
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: cr_irrx_mode
         description: |-
           IRRX mode
@@ -461,26 +507,31 @@ fieldsets:
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: cr_irrx_deg_en
         description: Enable signal of IRRX input de-glitch function
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irrx_deg_cnt
         description: De-glitch function cycle count
         bit_size: 4
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_31
         description: ""
         bit_size: 20
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
   - name: irrx_int_sts
     description: ""
     fields:
@@ -489,41 +540,49 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_1_7
         description: ""
         bit_size: 7
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irrx_end_mask
         description: Interrupt mask of irrx_end_int
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_9_15
         description: ""
         bit_size: 7
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irrx_end_clr
         description: Interrupt clear of irrx_end_int
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: w1c
       - name: reserved_17_23
         description: ""
         bit_size: 7
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: cr_irrx_end_en
         description: Interrupt enable of irrx_end_int
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: irrx_pw_config
     description: ""
     fields:
@@ -533,11 +592,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xd47
+        permissions: r/w
       - name: cr_irrx_end_th
         description: Pulse width threshold to trigger END condition
         bit_size: 16
         bit_offset: 16
         default_value: 0x2327
+        permissions: r/w
   - name: irrx_data_count
     description: ""
     fields:
@@ -546,11 +607,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: irrx_data_word0
     description: ""
     fields:
@@ -559,6 +622,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: irrx_data_word1
     description: ""
     fields:
@@ -567,6 +631,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: irrx_swm_fifo_config_0
     description: ""
     fields:
@@ -575,31 +640,37 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1c
       - name: reserved_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: reserved_11_31
         description: ""
         bit_size: 21
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
   - name: irrx_swm_fifo_rdata
     description: ""
     fields:
@@ -608,8 +679,10 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd

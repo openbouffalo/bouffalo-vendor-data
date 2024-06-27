@@ -46,86 +46,103 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: rx_sel_128fs
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: tx_sel_128fs
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: dc_mul
         description: ""
         bit_size: 8
         bit_offset: 4
         default_value: 0x64
+        permissions: r/w
       - name: scale_sel
         description: ""
         bit_size: 3
         bit_offset: 12
         default_value: 0x5
+        permissions: r/w
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: dither_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reserved_18_19
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: force_lr
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: force_sel
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: dsd_swap
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: out_dat_dly
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: out_sel_dly
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: out_sel_inv
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: rsvd_31_29
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: pdm_dma_config
     description: ""
     fields:
@@ -134,51 +151,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: rx_format
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x3
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: pdm_dma_tx_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: tx_format
         description: ""
         bit_size: 3
         bit_offset: 12
         default_value: 0x3
+        permissions: r/w
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: tx_data_shift
         description: ""
         bit_size: 5
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_21_31
         description: ""
         bit_size: 11
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
   - name: pdm_dma_wdata2
     description: ""
     fields:
@@ -187,6 +214,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: w
   - name: pdm_dma_wdata
     description: ""
     fields:
@@ -195,6 +223,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: w
   - name: pdm_dma_rdata
     description: ""
     fields:
@@ -203,6 +232,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: pdm_tx_fifo_status
     description: ""
     fields:
@@ -211,71 +241,85 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: tx_fifo_full
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: tx_cs
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: TxFifoRdPtr
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x4
+        permissions: r
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: TxFifoWrPtr
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: tx2_fifo_empty
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: tx2_fifo_full
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: tx2_cs
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: Tx2FifoRdPtr
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x4
+        permissions: r
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: Tx2FifoWrPtr
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: reserved_26_31
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
   - name: pdm_rx_fifo_status
     description: ""
     fields:
@@ -284,33 +328,40 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r
       - name: rx_fifo_full
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: rx_cs
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: RxFifoRdPtr
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x3
+        permissions: r
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: RxFifoWrPtr
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: reserved_11_31
         description: ""
         bit_size: 21
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd

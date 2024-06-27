@@ -191,36 +191,43 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: cs_1
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: RESERVED_4
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: cs_2
         description: ""
         bit_size: 2
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: RESERVED_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: cs_wdt
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_31
         description: ""
         bit_size: 22
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
   - name: TMR2_0
     description: ""
     fields:
@@ -229,6 +236,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: TMR2_1
     description: ""
     fields:
@@ -237,6 +245,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: TMR2_2
     description: ""
     fields:
@@ -245,6 +254,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: TMR3_0
     description: ""
     fields:
@@ -253,6 +263,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: TMR3_1
     description: ""
     fields:
@@ -261,6 +272,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: TMR3_2
     description: ""
     fields:
@@ -269,6 +281,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: TCR2
     description: ""
     fields:
@@ -277,6 +290,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: TCR3
     description: ""
     fields:
@@ -285,6 +299,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: TMSR2
     description: ""
     fields:
@@ -293,21 +308,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: tmsr_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: tmsr_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: TMSR3
     description: ""
     fields:
@@ -316,21 +335,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: tmsr_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: tmsr_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: TIER2
     description: ""
     fields:
@@ -339,21 +362,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: tier_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: tier_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: TIER3
     description: ""
     fields:
@@ -362,21 +389,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: tier_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: tier_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: TPLVR2
     description: ""
     fields:
@@ -385,6 +416,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: TPLVR3
     description: ""
     fields:
@@ -393,6 +425,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: TPLCR2
     description: ""
     fields:
@@ -401,11 +434,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: TPLCR3
     description: ""
     fields:
@@ -414,11 +449,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: WMER
     description: ""
     fields:
@@ -427,16 +464,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: wrie
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: WMR
     description: ""
     fields:
@@ -445,11 +485,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: WVR
     description: ""
     fields:
@@ -458,11 +500,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: WSR
     description: ""
     fields:
@@ -471,11 +515,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_31
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
   - name: TICR2
     description: ""
     fields:
@@ -484,21 +530,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: tclr_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w
       - name: tclr_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: TICR3
     description: ""
     fields:
@@ -507,21 +557,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: tclr_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w
       - name: tclr_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: WICR
     description: ""
     fields:
@@ -530,11 +584,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_1_31
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
   - name: TCER
     description: ""
     fields:
@@ -543,21 +599,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: timer2_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: timer3_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: TCMR
     description: ""
     fields:
@@ -566,21 +626,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: timer2_mode
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: timer3_mode
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: TILR2
     description: ""
     fields:
@@ -589,21 +653,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: tilr_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: tilr_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: TILR3
     description: ""
     fields:
@@ -612,21 +680,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: tilr_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: tilr_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: WCR
     description: ""
     fields:
@@ -635,11 +707,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_1_31
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
   - name: WFAR
     description: ""
     fields:
@@ -648,11 +722,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: WSAR
     description: ""
     fields:
@@ -661,11 +737,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: TCVWR2
     description: ""
     fields:
@@ -674,6 +752,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: TCVWR3
     description: ""
     fields:
@@ -682,6 +761,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: TCVSYN2
     description: ""
     fields:
@@ -690,6 +770,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: TCVSYN3
     description: ""
     fields:
@@ -698,6 +779,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: TCDR
     description: ""
     fields:
@@ -706,18 +788,22 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: tcdr2
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: tcdr3
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: wcdr
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w

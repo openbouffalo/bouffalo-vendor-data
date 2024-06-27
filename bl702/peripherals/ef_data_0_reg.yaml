@@ -171,101 +171,121 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ef_sboot_sign_mode
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: rsvd0
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: rsvd1
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: ef_cpu0_enc_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: ef_boot_sel
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: ef_sf_key_0_sel
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: rsvd2
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: rsvd3
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: rsvd4
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: ef_0_key_enc_en
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: rsvd5
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: rsvd6
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: rsvd7
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: rsvd8
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: rsvd9
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: rsvd10
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: rsvd11
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: ef_dbg_jtag_0_dis
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: ef_dbg_mode
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
   - name: ef_dbg_pwd_low
     description: ""
     fields:
@@ -274,6 +294,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_dbg_pwd_high
     description: ""
     fields:
@@ -282,6 +303,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_ana_trim_0
     description: ""
     fields:
@@ -290,6 +312,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_sw_usage_0
     description: ""
     fields:
@@ -298,6 +321,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_wifi_mac_low
     description: ""
     fields:
@@ -306,6 +330,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_wifi_mac_high
     description: ""
     fields:
@@ -314,6 +339,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_0_w0
     description: ""
     fields:
@@ -322,6 +348,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_0_w1
     description: ""
     fields:
@@ -330,6 +357,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_0_w2
     description: ""
     fields:
@@ -338,6 +366,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_0_w3
     description: ""
     fields:
@@ -346,6 +375,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_1_w0
     description: ""
     fields:
@@ -354,6 +384,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_1_w1
     description: ""
     fields:
@@ -362,6 +393,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_1_w2
     description: ""
     fields:
@@ -370,6 +402,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_1_w3
     description: ""
     fields:
@@ -378,6 +411,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_2_w0
     description: ""
     fields:
@@ -386,6 +420,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_2_w1
     description: ""
     fields:
@@ -394,6 +429,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_2_w2
     description: ""
     fields:
@@ -402,6 +438,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_2_w3
     description: ""
     fields:
@@ -410,6 +447,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_3_w0
     description: ""
     fields:
@@ -418,6 +456,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_3_w1
     description: ""
     fields:
@@ -426,6 +465,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_3_w2
     description: ""
     fields:
@@ -434,6 +474,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_3_w3
     description: ""
     fields:
@@ -442,6 +483,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_4_w0
     description: ""
     fields:
@@ -450,6 +492,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_4_w1
     description: ""
     fields:
@@ -458,6 +501,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_4_w2
     description: ""
     fields:
@@ -466,6 +510,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_4_w3
     description: ""
     fields:
@@ -474,6 +519,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_5_w0
     description: ""
     fields:
@@ -482,6 +528,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_5_w1
     description: ""
     fields:
@@ -490,6 +537,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_5_w2
     description: ""
     fields:
@@ -498,6 +546,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_key_slot_5_w3
     description: ""
     fields:
@@ -506,6 +555,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: ef_data_0_lock
     description: ""
     fields:
@@ -514,98 +564,118 @@ fieldsets:
         bit_size: 13
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_key_slot_4_l
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_key_slot_5_l
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_boot_mode
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_dbg_pwd
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_sw_usage_0
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_wifi_mac
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_key_slot_0
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_key_slot_1
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_key_slot_2
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_key_slot_3
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_key_slot_4_h
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: wr_lock_key_slot_5_h
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: rd_lock_dbg_pwd
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: rd_lock_key_slot_0
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: rd_lock_key_slot_1
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: rd_lock_key_slot_2
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: rd_lock_key_slot_3
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: rd_lock_key_slot_4
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: rd_lock_key_slot_5
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w

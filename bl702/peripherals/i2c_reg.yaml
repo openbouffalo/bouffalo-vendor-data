@@ -70,6 +70,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: cr_i2c_pkt_dir
         description: |-
           Transfer direction of the packet
@@ -77,11 +78,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_deg_en
         description: Enable signal of I2C input de-glitch function (for all input pins)
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: cr_i2c_scl_sync_en
         description: >-
           Enable signal of I2C SCL synchronization, should be enabled to support
@@ -91,11 +94,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_sub_addr_en
         description: Enable signal of I2C sub-address field
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: cr_i2c_sub_addr_bc
         description: |-
           Sub-address field byte count
@@ -103,36 +108,43 @@ fieldsets:
         bit_size: 2
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: cr_i2c_slv_addr
         description: Slave address for I2C transaction (target address)
         bit_size: 7
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: cr_i2c_pkt_len
         description: "Packet length (unit: byte)"
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_24_27
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
       - name: cr_i2c_deg_cnt
         description: De-glitch function cycle count
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
   - name: i2c_int_sts
     description: ""
     fields:
@@ -141,144 +153,172 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: i2c_txf_int
         description: I2C TX FIFO ready (tx_fifo_cnt > tx_fifo_th) interrupt,
           auto-cleared when data is pushed
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: i2c_rxf_int
         description: I2C RX FIFO ready (rx_fifo_cnt > rx_fifo_th) interrupt,
           auto-cleared when data is popped
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: i2c_nak_int
         description: I2C NACK-received interrupt
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: i2c_arb_int
         description: I2C arbitration lost interrupt
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: i2c_fer_int
         description: I2C TX/RX FIFO error interrupt, auto-cleared when FIFO
           overflow/underflow error flag is cleared
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: cr_i2c_end_mask
         description: Interrupt mask of i2c_end_int
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_txf_mask
         description: Interrupt mask of i2c_txf_int
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_rxf_mask
         description: Interrupt mask of i2c_rxf_int
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_nak_mask
         description: Interrupt mask of i2c_nak_int
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_arb_mask
         description: Interrupt mask of i2c_arb_int
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_fer_mask
         description: Interrupt mask of i2c_fer_int
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: cr_i2c_end_clr
         description: Interrupt clear of i2c_end_int
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: w1c
       - name: rsvd_17
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: rsvd_18
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: cr_i2c_nak_clr
         description: Interrupt clear of i2c_nak_int
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: w1c
       - name: cr_i2c_arb_clr
         description: Interrupt clear of i2c_arb_int
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: w1c
       - name: rsvd_21
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: cr_i2c_end_en
         description: Interrupt enable of i2c_end_int
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_txf_en
         description: Interrupt enable of i2c_txf_int
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_rxf_en
         description: Interrupt enable of i2c_rxf_int
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_nak_en
         description: Interrupt enable of i2c_nak_int
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_arb_en
         description: Interrupt enable of i2c_arb_int
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: cr_i2c_fer_en
         description: Interrupt enable of i2c_fer_int
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: i2c_sub_addr
     description: ""
     fields:
@@ -287,21 +327,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: cr_i2c_sub_addr_b1
         description: I2C sub-address field - byte[1]
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: cr_i2c_sub_addr_b2
         description: I2C sub-address field - byte[2]
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_i2c_sub_addr_b3
         description: I2C sub-address field - byte[3]
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
   - name: i2c_bus_busy
     description: ""
     fields:
@@ -310,17 +354,20 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: cr_i2c_bus_busy_clr
         description: Clear signal of bus_busy status, not for normal usage (in case I2C
           bus hangs)
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1c
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: i2c_prd_start
     description: ""
     fields:
@@ -329,21 +376,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_s_ph_1
         description: Length of START condition phase 1
         bit_size: 8
         bit_offset: 8
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_s_ph_2
         description: Length of START condition phase 2
         bit_size: 8
         bit_offset: 16
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_s_ph_3
         description: Length of START condition phase 3
         bit_size: 8
         bit_offset: 24
         default_value: 0xf
+        permissions: r/w
   - name: i2c_prd_stop
     description: ""
     fields:
@@ -352,21 +403,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_p_ph_1
         description: Length of STOP condition phase 1
         bit_size: 8
         bit_offset: 8
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_p_ph_2
         description: Length of STOP condition phase 2
         bit_size: 8
         bit_offset: 16
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_p_ph_3
         description: Length of STOP condition phase 3
         bit_size: 8
         bit_offset: 24
         default_value: 0xf
+        permissions: r/w
   - name: i2c_prd_data
     description: ""
     fields:
@@ -375,6 +430,7 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_d_ph_1
         description: >-
           Length of DATA phase 1
@@ -384,16 +440,19 @@ fieldsets:
         bit_size: 8
         bit_offset: 8
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_d_ph_2
         description: Length of DATA phase 2
         bit_size: 8
         bit_offset: 16
         default_value: 0xf
+        permissions: r/w
       - name: cr_i2c_prd_d_ph_3
         description: Length of DATA phase 3
         bit_size: 8
         bit_offset: 24
         default_value: 0xf
+        permissions: r/w
   - name: i2c_fifo_config_0
     description: ""
     fields:
@@ -402,46 +461,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: i2c_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: i2c_fifo_config_1
     description: ""
     fields:
@@ -450,43 +518,51 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x2
+        permissions: r
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: tx_fifo_th
         description: TX FIFO threshold, dma_tx_req will not be asserted if tx_fifo_cnt
           is less than this value
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_23
         description: ""
         bit_size: 7
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: rx_fifo_th
         description: RX FIFO threshold, dma_rx_req will not be asserted if tx_fifo_cnt
           is less than this value
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: i2c_fifo_wdata
     description: ""
     fields:
@@ -495,6 +571,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: w
   - name: i2c_fifo_rdata
     description: ""
     fields:
@@ -503,3 +580,4 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r

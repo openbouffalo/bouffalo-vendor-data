@@ -91,91 +91,109 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r
       - name: ef_if_0_autoload_done
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r
       - name: ef_if_0_busy
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: ef_if_0_rw
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_0_trig
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_0_manual_en
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_0_cyc_modify
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: ef_clk_sahb_data_sel
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_prot_code_ctrl
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_por_dig
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: ef_clk_sahb_data_gate
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_auto_rd_en
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x1
+        permissions: r/w
       - name: ef_if_cyc_modify_lock
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_0_int
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: ef_if_0_int_clr
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x1
+        permissions: r/w
       - name: ef_if_0_int_set
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ef_if_prot_code_cyc
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
   - name: ef_if_cyc_0
     description: ""
     fields:
@@ -184,26 +202,31 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_cyc_rd_dat
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: ef_if_cyc_rd_adr
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_cyc_cs
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_cyc_pd_cs_s
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x16
+        permissions: r/w
   - name: ef_if_cyc_1
     description: ""
     fields:
@@ -212,26 +235,31 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x9
+        permissions: r/w
       - name: ef_if_cyc_pp
         description: ""
         bit_size: 8
         bit_offset: 6
         default_value: 0x98
+        permissions: r/w
       - name: ef_if_cyc_wr_adr
         description: ""
         bit_size: 6
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: ef_if_cyc_ps_cs
         description: ""
         bit_size: 6
         bit_offset: 20
         default_value: 0x2
+        permissions: r/w
       - name: ef_if_cyc_pd_cs_h
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
   - name: ef_if_0_manual
     description: ""
     fields:
@@ -240,46 +268,55 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_pd
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: ef_if_ps
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_strobe
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: ef_if_pgenb
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: ef_if_load
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: ef_if_csb
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: ef_if_0_q
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: ef_if_prot_code_manual
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
   - name: ef_if_0_status
     description: ""
     fields:
@@ -288,6 +325,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xe400
+        permissions: r
   - name: ef_if_cfg_0
     description: ""
     fields:
@@ -296,101 +334,121 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: ef_if_sboot_sign_mode
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: ef_if_sboot_en
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ef_if_cpu1_enc_en
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ef_if_cpu0_enc_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: ef_if_boot_sel
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: ef_if_sf_key_0_sel
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: ef_if_sdu_dis
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: ef_if_ble_dis
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ef_if_wifi_dis
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: ef_if_0_key_enc_en
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: ef_if_cam_dis
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: ef_if_m154_dis
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: ef_if_cpu1_dis
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: ef_if_cpu_rst_dbg_dis
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r
       - name: ef_if_se_dbg_dis
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: ef_if_efuse_dbg_dis
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r
       - name: ef_if_dbg_jtag_1_dis
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: ef_if_dbg_jtag_0_dis
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: ef_if_dbg_mode
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r
   - name: ef_sw_cfg_0
     description: ""
     fields:
@@ -399,101 +457,121 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_sboot_sign_mode
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_sboot_en
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_cpu1_enc_en
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_cpu0_enc_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: reserved_8_11
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
       - name: ef_sw_sf_key_0_sel
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_sdu_dis
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_ble_dis
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_wifi_dis
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_0_key_enc_en
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_cam_dis
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_m154_dis
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_cpu1_dis
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_cpu_rst_dbg_dis
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_se_dbg_dis
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_efuse_dbg_dis
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_dbg_jtag_1_dis
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_dbg_jtag_0_dis
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: ef_sw_dbg_mode
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
   - name: ef_reserved
     description: ""
     fields:
@@ -502,6 +580,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
   - name: ef_if_ana_trim_0
     description: ""
     fields:
@@ -510,6 +589,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: ef_if_sw_usage_0
     description: ""
     fields:
@@ -518,6 +598,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: ef_crc_ctrl_0
     description: ""
     fields:
@@ -526,71 +607,85 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: ef_crc_trig
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ef_crc_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: ef_crc_mode
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: ef_crc_error
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ef_crc_dout_inv_en
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: ef_crc_dout_endian
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: ef_crc_din_endian
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: ef_crc_int
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: ef_crc_int_clr
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: ef_crc_int_set
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: ef_crc_lock
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: ef_crc_slp_n
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0xff
+        permissions: r/w
   - name: ef_crc_ctrl_1
     description: ""
     fields:
@@ -599,6 +694,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: ef_crc_ctrl_2
     description: ""
     fields:
@@ -607,6 +703,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: ef_crc_ctrl_3
     description: ""
     fields:
@@ -615,6 +712,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: ef_crc_ctrl_4
     description: ""
     fields:
@@ -623,6 +721,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xc2a8fa9d
+        permissions: r/w
   - name: ef_crc_ctrl_5
     description: ""
     fields:
@@ -631,3 +730,4 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r

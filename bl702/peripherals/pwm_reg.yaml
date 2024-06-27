@@ -166,21 +166,25 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: pwm_int_clear
         description: PWM channel interrupt clear
         bit_size: 6
         bit_offset: 8
         default_value: 0x0
+        permissions: w
       - name: reserved_14_31
         description: ""
         bit_size: 18
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
   - name: pwm0_clkdiv
     description: ""
     fields:
@@ -189,11 +193,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm0_thre1
     description: ""
     fields:
@@ -202,11 +208,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm0_thre2
     description: ""
     fields:
@@ -215,11 +223,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm0_period
     description: ""
     fields:
@@ -228,11 +238,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm0_config
     description: ""
     fields:
@@ -241,41 +253,49 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_out_inv
         description: PWM invert output mode
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_mode
         description: PWM stop mode, 1'b1 - graceful ; 1'b0 - abrupt
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pwm_sw_force_val
         description: PWM SW Mode force value
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sw_mode
         description: PWM SW Mode setting
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_en
         description: PWM stop enable
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sts_top
         description: PWM stop status
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: pwm0_interrupt
     description: ""
     fields:
@@ -284,16 +304,19 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_int_enable
         description: PWM interrupt enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
   - name: pwm1_clkdiv
     description: ""
     fields:
@@ -302,11 +325,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm1_thre1
     description: ""
     fields:
@@ -315,11 +340,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm1_thre2
     description: ""
     fields:
@@ -328,11 +355,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm1_period
     description: ""
     fields:
@@ -341,11 +370,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm1_config
     description: ""
     fields:
@@ -354,41 +385,49 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_out_inv
         description: PWM invert output mode
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_mode
         description: PWM stop mode, 1'b1 - graceful ; 1'b0 - abrupt
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pwm_sw_force_val
         description: PWM SW Mode force value
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sw_mode
         description: PWM SW Mode setting
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_en
         description: PWM stop enable
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sts_top
         description: PWM stop status
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: pwm1_interrupt
     description: ""
     fields:
@@ -397,16 +436,19 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_int_enable
         description: PWM interrupt enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
   - name: pwm2_clkdiv
     description: ""
     fields:
@@ -415,11 +457,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm2_thre1
     description: ""
     fields:
@@ -428,11 +472,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm2_thre2
     description: ""
     fields:
@@ -441,11 +487,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm2_period
     description: ""
     fields:
@@ -454,11 +502,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm2_config
     description: ""
     fields:
@@ -467,41 +517,49 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_out_inv
         description: PWM invert output mode
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_mode
         description: PWM stop mode, 1'b1 - graceful ; 1'b0 - abrupt
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pwm_sw_force_val
         description: PWM SW Mode force value
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sw_mode
         description: PWM SW Mode setting
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_en
         description: PWM stop enable
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sts_top
         description: PWM stop status
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: pwm2_interrupt
     description: ""
     fields:
@@ -510,16 +568,19 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_int_enable
         description: PWM interrupt enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
   - name: pwm3_clkdiv
     description: ""
     fields:
@@ -528,11 +589,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm3_thre1
     description: ""
     fields:
@@ -541,11 +604,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm3_thre2
     description: ""
     fields:
@@ -554,11 +619,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm3_period
     description: ""
     fields:
@@ -567,11 +634,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm3_config
     description: ""
     fields:
@@ -580,41 +649,49 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_out_inv
         description: PWM invert output mode
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_mode
         description: PWM stop mode, 1'b1 - graceful ; 1'b0 - abrupt
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pwm_sw_force_val
         description: PWM SW Mode force value
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sw_mode
         description: PWM SW Mode setting
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_en
         description: PWM stop enable
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sts_top
         description: PWM stop status
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: pwm3_interrupt
     description: ""
     fields:
@@ -623,16 +700,19 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_int_enable
         description: PWM interrupt enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
   - name: pwm4_clkdiv
     description: ""
     fields:
@@ -641,11 +721,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm4_thre1
     description: ""
     fields:
@@ -654,11 +736,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm4_thre2
     description: ""
     fields:
@@ -667,11 +751,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm4_period
     description: ""
     fields:
@@ -680,11 +766,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: pwm4_config
     description: ""
     fields:
@@ -693,41 +781,49 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_out_inv
         description: PWM invert output mode
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_mode
         description: PWM stop mode, 1'b1 - graceful ; 1'b0 - abrupt
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pwm_sw_force_val
         description: PWM SW Mode force value
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sw_mode
         description: PWM SW Mode setting
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: pwm_stop_en
         description: PWM stop enable
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: pwm_sts_top
         description: PWM stop status
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: pwm4_interrupt
     description: ""
     fields:
@@ -736,13 +832,16 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pwm_int_enable
         description: PWM interrupt enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd

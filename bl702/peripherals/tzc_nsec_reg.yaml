@@ -36,101 +36,121 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r
       - name: tzc_rom0_r1_id0_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r
       - name: tzc_rom1_r0_id0_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r
       - name: tzc_rom1_r1_id0_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r
       - name: reserved_4_7
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: tzc_rom0_r0_id1_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r
       - name: tzc_rom0_r1_id1_en
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r
       - name: tzc_rom1_r0_id1_en
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r
       - name: tzc_rom1_r1_id1_en
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: tzc_rom0_r0_en
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: tzc_rom0_r1_en
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: tzc_rom1_r0_en
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: tzc_rom1_r1_en
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_23
         description: ""
         bit_size: 4
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: tzc_rom0_r0_lock
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: tzc_rom0_r1_lock
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r
       - name: tzc_rom1_r0_lock
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: tzc_rom1_r1_lock
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: tzc_sboot_done
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r
   - name: tzc_rom0_r0
     description: ""
     fields:
@@ -139,11 +159,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r
       - name: tzc_rom0_r0_start
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r
   - name: tzc_rom0_r1
     description: ""
     fields:
@@ -152,11 +174,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r
       - name: tzc_rom0_r1_start
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r
   - name: tzc_rom1_r0
     description: ""
     fields:
@@ -165,11 +189,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r
       - name: tzc_rom1_r0_start
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r
   - name: tzc_rom1_r1
     description: ""
     fields:
@@ -178,8 +204,10 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r
       - name: tzc_rom1_r1_start
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r

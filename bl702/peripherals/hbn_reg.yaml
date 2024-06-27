@@ -111,86 +111,103 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: hbn_mode
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: w
       - name: trap_mode
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: pwrdn_hbn_core
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: pwrdn_hbn_rtc
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: sw_rst
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: hbn_dis_pwr_off_ldo11
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: hbn_dis_pwr_off_ldo11_rt
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: hbn_ldo11_rt_vout_sel
         description: ""
         bit_size: 4
         bit_offset: 15
         default_value: 0xa
+        permissions: r/w
       - name: hbn_ldo11_aon_vout_sel
         description: ""
         bit_size: 4
         bit_offset: 19
         default_value: 0xa
+        permissions: r/w
       - name: pu_dcdc18_aon
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: rtc_dly_option
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: pwr_on_option
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: sram_slp_option
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: sram_slp
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: hbn_state
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r
   - name: HBN_TIME_L
     description: ""
     fields:
@@ -199,6 +216,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: HBN_TIME_H
     description: ""
     fields:
@@ -207,11 +225,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: RTC_TIME_L
     description: ""
     fields:
@@ -220,6 +240,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: RTC_TIME_H
     description: ""
     fields:
@@ -228,16 +249,19 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_30
         description: ""
         bit_size: 23
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
       - name: rtc_time_latch
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: w
   - name: HBN_IRQ_MODE
     description: ""
     fields:
@@ -246,66 +270,79 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x5
+        permissions: r/w
       - name: hbn_pin_wakeup_mask
         description: ""
         bit_size: 5
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reg_aon_pad_ie_smt
         description: ""
         bit_size: 5
         bit_offset: 8
         default_value: 0x1f
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_en_hw_pu_pd
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reserved_17
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: irq_bor_en
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: irq_acomp0_en
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: irq_acomp1_en
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: pin_wakeup_sel
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x3
+        permissions: r/w
       - name: pin_wakeup_en
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: HBN_IRQ_STAT
     description: ""
     fields:
@@ -314,6 +351,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: HBN_IRQ_CLR
     description: ""
     fields:
@@ -322,6 +360,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: w
   - name: HBN_PIR_CFG
     description: ""
     fields:
@@ -330,46 +369,55 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pir_lpf_sel
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: pir_dis
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: pir_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_cgen
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_nosync
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_31
         description: ""
         bit_size: 22
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
   - name: HBN_PIR_VTH
     description: ""
     fields:
@@ -378,11 +426,13 @@ fieldsets:
         bit_size: 14
         bit_offset: 0
         default_value: 0x3ff
+        permissions: r/w
       - name: reserved_14_31
         description: ""
         bit_size: 18
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
   - name: HBN_PIR_INTERVAL
     description: ""
     fields:
@@ -391,11 +441,13 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0xa3d
+        permissions: r/w
       - name: reserved_12_31
         description: ""
         bit_size: 20
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
   - name: HBN_MISC
     description: ""
     fields:
@@ -404,46 +456,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: bor_vth
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: pu_bor
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: r_bor_out
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: reserved_4_15
         description: ""
         bit_size: 12
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: hbn_flash_pullup_aon
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: hbn_flash_pulldown_aon
         description: ""
         bit_size: 6
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: HBN_GLB
     description: ""
     fields:
@@ -452,61 +513,73 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: hbn_uart_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: hbn_f32k_sel
         description: ""
         bit_size: 2
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: hbn_pu_rc32k
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: ldo11_rt_iload_sel
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: hbn_reset_event
         description: ""
         bit_size: 5
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: hbn_clear_reset_event
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: sw_ldo11soc_vout_sel_aon
         description: ""
         bit_size: 4
         bit_offset: 16
         default_value: 0xa
+        permissions: r/w
       - name: reserved_20_23
         description: ""
         bit_size: 4
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: sw_ldo11_rt_vout_sel
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0xa
+        permissions: r/w
       - name: sw_ldo11_aon_vout_sel
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0xa
+        permissions: r/w
   - name: HBN_SRAM
     description: ""
     fields:
@@ -515,31 +588,37 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x3
+        permissions: r/w
       - name: retram_emaw
         description: ""
         bit_size: 2
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: reserved_5
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: retram_ret
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: retram_slp
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: HBN_RSV0
     description: ""
     fields:
@@ -548,6 +627,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: HBN_RSV1
     description: ""
     fields:
@@ -556,6 +636,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: HBN_RSV2
     description: ""
     fields:
@@ -564,6 +645,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: HBN_RSV3
     description: ""
     fields:
@@ -572,6 +654,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: rc32k_ctrl0
     description: ""
     fields:
@@ -580,61 +663,73 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r
       - name: rc32k_rdy
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r
       - name: rc32k_cal_inprogress
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: rc32k_cal_div
         description: ""
         bit_size: 2
         bit_offset: 3
         default_value: 0x3
+        permissions: r/w
       - name: rc32k_cal_precharge
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: rc32k_dig_code_fr_cal
         description: ""
         bit_size: 10
         bit_offset: 6
         default_value: 0x200
+        permissions: r
       - name: rc32k_vref_dly
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: rc32k_allow_cal
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: rc32k_ext_code_en
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x1
+        permissions: r/w
       - name: rc32k_cal_en
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_21
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
       - name: rc32k_code_fr_ext
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x12c
+        permissions: r/w
   - name: xtal32k
     description: ""
     fields:
@@ -643,63 +738,76 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: xtal32k_lowv_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: xtal32k_ext_sel
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: xtal32k_amp_ctrl
         description: ""
         bit_size: 2
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: xtal32k_reg
         description: ""
         bit_size: 2
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: xtal32k_outbuf_stre
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: xtal32k_otf_short
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: xtal32k_inv_stre
         description: ""
         bit_size: 2
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: xtal32k_capbank
         description: ""
         bit_size: 6
         bit_offset: 11
         default_value: 0x20
+        permissions: r/w
       - name: xtal32k_ac_cap_short
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: pu_xtal32k_buf
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x1
+        permissions: r/w
       - name: pu_xtal32k
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x1
+        permissions: r/w
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd

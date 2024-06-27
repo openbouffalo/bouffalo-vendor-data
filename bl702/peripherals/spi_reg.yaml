@@ -70,6 +70,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_s_en
         description: >-
           Enable signal of SPI Slave function, Master and Slave should not be
@@ -79,6 +80,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_frame_size
         description: |-
           SPI frame size (also the valid width for each FIFO entry)
@@ -89,6 +91,7 @@ fieldsets:
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_sclk_pol
         description: |-
           SCLK polarity
@@ -97,11 +100,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_sclk_ph
         description: SCLK clock phase inverse signal
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_bit_inv
         description: |-
           Bit-inverse signal for each data byte
@@ -110,6 +115,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_byte_inv
         description: |-
           Byte-inverse signal for each FIFO entry data
@@ -118,11 +124,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_rxd_ignr_en
         description: Enable signal of RX data ignore function
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_m_cont_en
         description: >-
           Enable signal of master continuous transfer mode
@@ -134,26 +142,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: cr_spi_deg_en
         description: Enable signal of all input de-glitch function
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: cr_spi_deg_cnt
         description: De-glitch function cycle count
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: spi_int_sts
     description: ""
     fields:
@@ -165,146 +178,174 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: spi_txf_int
         description: SPI TX FIFO ready (tx_fifo_cnt > tx_fifo_th) interrupt,
           auto-cleared when data is pushed
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: spi_rxf_int
         description: SPI RX FIFO ready (rx_fifo_cnt > rx_fifo_th) interrupt,
           auto-cleared when data is popped
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: spi_sto_int
         description: SPI slave mode transfer time-out interrupt, triggered when SPI bus
           is idle for a given value
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: spi_txu_int
         description: SPI slave mode TX underrun error flag, triggered when TXD is not
           ready during transfer in slave mode
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: spi_fer_int
         description: SPI TX/RX FIFO error interrupt, auto-cleared when FIFO
           overflow/underflow error flag is cleared
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: cr_spi_end_mask
         description: Interrupt mask of spi_end_int
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_txf_mask
         description: Interrupt mask of spi_txe_int
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_rxf_mask
         description: Interrupt mask of spi_rxv_int
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_sto_mask
         description: Interrupt mask of spi_sto_int
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_txu_mask
         description: Interrupt mask of spi_txu_int
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_fer_mask
         description: Interrupt mask of spi_fer_int
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: cr_spi_end_clr
         description: Interrupt clear of spi_end_int
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: w1c
       - name: rsvd_17
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: rsvd_18
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: cr_spi_sto_clr
         description: Interrupt clear of spi_sto_int
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: w1c
       - name: cr_spi_txu_clr
         description: Interrupt clear of spi_txu_int
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: w1c
       - name: rsvd_21
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: cr_spi_end_en
         description: Interrupt enable of spi_end_int
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_txf_en
         description: Interrupt enable of spi_txe_int
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_rxf_en
         description: Interrupt enable of spi_rxv_int
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_sto_en
         description: Interrupt enable of spi_sto_int
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_txu_en
         description: Interrupt enable of spi_txu_int
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: cr_spi_fer_en
         description: Interrupt enable of spi_fer_int
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: spi_bus_busy
     description: ""
     fields:
@@ -313,11 +354,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_1_31
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
   - name: spi_prd_0
     description: ""
     fields:
@@ -326,21 +369,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: cr_spi_prd_p
         description: Length of STOP condition (please refer to "Timing" tab)
         bit_size: 8
         bit_offset: 8
         default_value: 0xf
+        permissions: r/w
       - name: cr_spi_prd_d_ph_0
         description: Length of DATA phase 0 (please refer to "Timing" tab)
         bit_size: 8
         bit_offset: 16
         default_value: 0xf
+        permissions: r/w
       - name: cr_spi_prd_d_ph_1
         description: Length of DATA phase 1 (please refer to "Timing" tab)
         bit_size: 8
         bit_offset: 24
         default_value: 0xf
+        permissions: r/w
   - name: spi_prd_1
     description: ""
     fields:
@@ -349,11 +396,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: spi_rxd_ignr
     description: ""
     fields:
@@ -362,21 +411,25 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_15
         description: ""
         bit_size: 11
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: cr_spi_rxd_ignr_s
         description: Starting point of RX data ignore function
         bit_size: 5
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_21_31
         description: ""
         bit_size: 11
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
   - name: spi_sto_value
     description: ""
     fields:
@@ -385,11 +438,13 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0xfff
+        permissions: r/w
       - name: reserved_12_31
         description: ""
         bit_size: 20
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
   - name: spi_fifo_config_0
     description: ""
     fields:
@@ -398,46 +453,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: spi_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: spi_fifo_config_1
     description: ""
     fields:
@@ -446,43 +510,51 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x4
+        permissions: r
       - name: reserved_3_7
         description: ""
         bit_size: 5
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 3
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: reserved_11_15
         description: ""
         bit_size: 5
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: tx_fifo_th
         description: TX FIFO threshold, dma_tx_req will not be asserted if tx_fifo_cnt
           is less than this value
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_23
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: rx_fifo_th
         description: RX FIFO threshold, dma_rx_req will not be asserted if tx_fifo_cnt
           is less than this value
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_26_31
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
   - name: spi_fifo_wdata
     description: ""
     fields:
@@ -491,6 +563,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: w
   - name: spi_fifo_rdata
     description: ""
     fields:
@@ -499,3 +572,4 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r

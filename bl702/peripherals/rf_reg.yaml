@@ -716,21 +716,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x7
+        permissions: r
       - name: fw_rev
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: hw_rev
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x7
+        permissions: r
       - name: reserved_24_31
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
   - name: dsp_readback
     description: ""
     fields:
@@ -739,56 +743,67 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: ch_ind_hw
         description: ""
         bit_size: 7
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: rbb_ind_hw
         description: ""
         bit_size: 5
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: rbb_bw_ind_hw
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: ch_ind
         description: ""
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: ch_ind_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: rbb_ind
         description: ""
         bit_size: 5
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: rbb_ind_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
       - name: rbb_bw_ind
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: rbb_bw_ind_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x1
+        permissions: r/w
   - name: rf_ctrl_source
     description: ""
     fields:
@@ -797,91 +812,109 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_1_2
         description: ""
         bit_size: 2
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl_tx_hw
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: gain_ctrl_rx_hw
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: rosdac_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: rosdac_ctrl_rccal
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: kcal_ratio_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_bw_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: lo_fcw_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: reserved_21_23
         description: ""
         bit_size: 3
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
       - name: inc_fcal_en_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_25_27
         description: ""
         bit_size: 3
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
       - name: vco_idac_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: rf_cal_state_ctrl
     description: ""
     fields:
@@ -890,46 +923,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: acal_state_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: kcal_state_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: roscal_state_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: rccal_state_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: inc_fcal_state_en
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: inc_acal_state_en
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: inc_roscal_state_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: rf_cal_switch_ctrl
     description: ""
     fields:
@@ -938,56 +980,67 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: kcal_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: rccal_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: inc_acal_en
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: inc_fcal_en
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: inc_fcal_en_hw
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: rf_cal_status
     description: ""
     fields:
@@ -996,36 +1049,43 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: acal_status
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: kcal_status
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: roscal_status
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: rccal_status
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_29
         description: ""
         bit_size: 20
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: dl_rfcal_table_status
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
   - name: pu_delay_confg
     description: ""
     fields:
@@ -1034,51 +1094,61 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: pud_delay
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_6_11
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: lo_reset_delay
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: lo_reset_width
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reserved_18_19
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_reset_width
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: reserved_22_31
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
   - name: pucr_reg
     description: ""
     fields:
@@ -1087,146 +1157,175 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pu_txbuf
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxbuf
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pu_dtc
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: pu_adpll_sfreg
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: pu_adpll_adc
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: adpll_clk_en
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: lotpm_hfp_bypass
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_lfp_bypass
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_clk_en
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: pu_fbdv_buf
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: pu_fbdv
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: pu_vco
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: pu_vco_ldo
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: pu_lodist_body_bias
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: rxadc_clk_en
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxadc
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: pu_rosdac
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_pkdet
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: pu_rmx
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: pu_lna
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: pu_pa
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: rx_bypass_en
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: pa_seri_cap_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: rst_adpll
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: rst_lotpm_hfp
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: rst_fbdv
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: pucr_sb
     description: ""
     fields:
@@ -1235,131 +1334,157 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pu_txbuf_sb
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxbuf_sb
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pu_dtc_sb
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: pu_adpll_sfreg_sb
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: pu_adpll_adc_sb
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: adpll_clk_en_sb
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: lotpm_hfp_bypass_sb
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_lfp_bypass_sb
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_clk_en_sb
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: pu_fbdv_buf_sb
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: pu_fbdv_sb
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: pu_vco_sb
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: pu_vco_ldo_sb
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: pu_lodist_body_bias_sb
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: rxadc_clk_en_sb
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxadc_sb
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: pu_rosdac_sb
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_pkdet_sb
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_sb
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: pu_rmx_sb
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: pu_lna_sb
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: pu_pa_sb
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: rx_bypass_en_sb
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: pa_seri_cap_en_sb
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: pucr_lotx
     description: ""
     fields:
@@ -1368,131 +1493,157 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: pu_txbuf_lotx
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: pu_rxbuf_lotx
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pu_dtc_lotx
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pu_adpll_sfreg_lotx
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: pu_adpll_adc_lotx
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: adpll_clk_en_lotx
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_bypass_lotx
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_lfp_bypass_lotx
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_clk_en_lotx
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: pu_fbdv_buf_lotx
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: pu_fbdv_lotx
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: pu_vco_lotx
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: pu_vco_ldo_lotx
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: pu_lodist_body_bias_lotx
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: rxadc_clk_en_lotx
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxadc_lotx
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: pu_rosdac_lotx
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_pkdet_lotx
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_lotx
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: pu_rmx_lotx
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: pu_lna_lotx
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: pu_pa_lotx
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: rx_bypass_en_lotx
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: pa_seri_cap_en_lotx
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: pucr_lorx
     description: ""
     fields:
@@ -1501,131 +1652,157 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pu_txbuf_lorx
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxbuf_lorx
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: pu_dtc_lorx
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pu_adpll_sfreg_lorx
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: pu_adpll_adc_lorx
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: adpll_clk_en_lorx
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_bypass_lorx
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_lfp_bypass_lorx
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_clk_en_lorx
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: pu_fbdv_buf_lorx
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: pu_fbdv_lorx
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: pu_vco_lorx
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: pu_vco_ldo_lorx
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: pu_lodist_body_bias_lorx
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: rxadc_clk_en_lorx
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxadc_lorx
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: pu_rosdac_lorx
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_pkdet_lorx
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_lorx
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: pu_rmx_lorx
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: pu_lna_lorx
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: pu_pa_lorx
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: rx_bypass_en_lorx
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: pa_seri_cap_en_lorx
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: pucr_tx
     description: ""
     fields:
@@ -1634,131 +1811,157 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: pu_txbuf_tx
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: pu_rxbuf_tx
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: pu_dtc_tx
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pu_adpll_sfreg_tx
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: pu_adpll_adc_tx
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: adpll_clk_en_tx
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_bypass_tx
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: lotpm_lfp_bypass_tx
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: lotpm_hfp_clk_en_tx
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: pu_fbdv_buf_tx
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: pu_fbdv_tx
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: pu_vco_tx
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: pu_vco_ldo_tx
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: pu_lodist_body_bias_tx
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: rxadc_clk_en_tx
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxadc_tx
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: pu_rosdac_tx
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_pkdet_tx
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: pu_rbb_tx
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: pu_rmx_tx
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: pu_lna_tx
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: pu_pa_tx
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x1
+        permissions: r/w
       - name: rx_bypass_en_tx
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: pa_seri_cap_en_tx
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: pucr_rx
     description: ""
     fields:
@@ -1767,131 +1970,157 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pu_txbuf_rx
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: pu_rxbuf_rx
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: pu_dtc_rx
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: pu_adpll_sfreg_rx
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: pu_adpll_adc_rx
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: adpll_clk_en_rx
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_bypass_rx
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_lfp_bypass_rx
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: lotpm_hfp_clk_en_rx
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: pu_fbdv_buf_rx
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: pu_fbdv_rx
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: pu_vco_rx
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: pu_vco_ldo_rx
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: pu_lodist_body_bias_rx
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: rxadc_clk_en_rx
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: pu_rxadc_rx
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: pu_rosdac_rx
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: pu_rbb_pkdet_rx
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x1
+        permissions: r/w
       - name: pu_rbb_rx
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x1
+        permissions: r/w
       - name: pu_rmx_rx
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: pu_lna_rx
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x1
+        permissions: r/w
       - name: pu_pa_rx
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: rx_bypass_en_rx
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: pa_seri_cap_en_rx
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: pucr_hw
     description: ""
     fields:
@@ -1900,146 +2129,175 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: pu_txbuf_hw
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: pu_rxbuf_hw
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: pu_dtc_hw
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: pu_adpll_sfreg_hw
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: pu_adpll_adc_hw
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: adpll_clk_en_hw
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: lotpm_hfp_bypass_hw
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: lotpm_lfp_bypass_hw
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: lotpm_hfp_clk_en_hw
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: pu_fbdv_buf_hw
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: pu_fbdv_hw
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: pu_vco_hw
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: pu_vco_ldo_hw
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: pu_lodist_body_bias_hw
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: rxadc_clk_en_hw
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: pu_rxadc_hw
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: pu_rosdac_hw
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: pu_rbb_pkdet_hw
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: pu_rbb_hw
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: pu_rmx_hw
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: pu_lna_hw
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r
       - name: pu_pa_hw
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: rx_bypass_en_hw
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r
       - name: pa_seri_cap_en_hw
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r
       - name: rst_adpll_hw
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r
       - name: rst_lotpm_hfp_hw
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: rst_fbdv_hw
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: non_reg_readback
     description: ""
     fields:
@@ -2048,71 +2306,85 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: ppu_testbuf_hw
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ppu_txbuf_hw
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ppu_rxbuf_hw
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: ppu_adpll_sfreg_hw
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: ppu_fbdv_hw
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: pud_vco_hw
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: ppu_vco_hw
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: ppu_vco_ldo_hw
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: ppu_lodist_body_bias_hw
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: reserved_14
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: ppu_rbb_hw
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ppu_lna_hw
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
   - name: trx_gain_bw
     description: ""
     fields:
@@ -2121,46 +2393,55 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x7
+        permissions: r/w
       - name: gc_rbb1
         description: ""
         bit_size: 2
         bit_offset: 3
         default_value: 0x3
+        permissions: r/w
       - name: gc_rbb2
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x7
+        permissions: r/w
       - name: rbb_bw
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: pa_ref_dac
         description: ""
         bit_size: 5
         bit_offset: 12
         default_value: 0x1c
+        permissions: r/w
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: pa_inbuf_unit
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x7
+        permissions: r/w
       - name: reserved_23_31
         description: ""
         bit_size: 9
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
   - name: trx_gain_bw_hw
     description: ""
     fields:
@@ -2169,46 +2450,55 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: gc_rbb1_hw
         description: ""
         bit_size: 2
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: gc_rbb2_hw
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: rbb_bw_hw
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: pa_ref_dac_hw
         description: ""
         bit_size: 5
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: pa_inbuf_unit_hw
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x7
+        permissions: r
       - name: reserved_23_31
         description: ""
         bit_size: 9
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
   - name: dctest_actest
     description: ""
     fields:
@@ -2217,91 +2507,109 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: dc_tp_out_en
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: atest_out_en
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_8_16
         description: ""
         bit_size: 9
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
       - name: ten_dtc
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: ten_rbb
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: ten_rbb_actest
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: ten_adpll_adc
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: ten_vco
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: ten_rxadc
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: ten_rrf1
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: ten_rrf0
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: ten_pa_1
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: ten_pa_0
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: ten_lodist
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: ten_dll
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_29_30
         description: ""
         bit_size: 2
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
       - name: ten_mbg
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: dtest
     description: ""
     fields:
@@ -2310,51 +2618,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_1_22
         description: ""
         bit_size: 22
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: dtest_en_rxadc_q
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: dtest_en_rxadc_i
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: dtest_en_adpll_adc
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: dtest_en_mod4
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: dtest_en_fref
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: dtest_en_dtc_out
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: dtest_en_dtc_in
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_test
     description: ""
     fields:
@@ -2363,41 +2681,49 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: adpll_test_data_sel
         description: ""
         bit_size: 3
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_test_start_sel
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_test_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: adpll_test_start
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r
       - name: reserved_26_31
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
   - name: rf_ext_pa
     description: ""
     fields:
@@ -2406,31 +2732,37 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: rf_ext_pa_lotx
         description: ""
         bit_size: 5
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: rf_ext_pa_tx
         description: ""
         bit_size: 5
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: rf_ext_pa_lorx
         description: ""
         bit_size: 5
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: rf_ext_pa_rx
         description: ""
         bit_size: 5
         bit_offset: 20
         default_value: 0x2
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: cip_ldo15
     description: ""
     fields:
@@ -2439,11 +2771,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x2
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: pa
     description: ""
     fields:
@@ -2452,66 +2786,79 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x6
+        permissions: r/w
       - name: pa_seri_cs_rx
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: pa_seri_cs_hw
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x6
+        permissions: r
       - name: pa_para_cs
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_19
         description: ""
         bit_size: 4
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
       - name: pa_vdd11_sel
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: pa_ldo_bm
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x6
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: pa_lp_en
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: pa_hp_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: pa_force_short_open
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: lna_mx
     description: ""
     fields:
@@ -2520,51 +2867,61 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x3
+        permissions: r/w
       - name: lna_rfb_match
         description: ""
         bit_size: 3
         bit_offset: 3
         default_value: 0x4
+        permissions: r/w
       - name: lna_vdd13_sel
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x2
+        permissions: r/w
       - name: lna_load_csw
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x7
+        permissions: r/w
       - name: lna_lg_gsel
         description: ""
         bit_size: 3
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: lna_cap_match
         description: ""
         bit_size: 3
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: lna_cap_lg
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: lna_bm_lg
         description: ""
         bit_size: 4
         bit_offset: 20
         default_value: 0x5
+        permissions: r/w
       - name: lna_bm_hg
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0x5
+        permissions: r/w
       - name: lna_bm_hw
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x5
+        permissions: r
   - name: rbb_rosdac
     description: ""
     fields:
@@ -2573,41 +2930,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: rosdac_i_hw
         description: ""
         bit_size: 6
         bit_offset: 8
         default_value: 0x20
+        permissions: r
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: rosdac_q
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x20
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: rosdac_i
         description: ""
         bit_size: 6
         bit_offset: 24
         default_value: 0x20
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_cap_1
     description: ""
     fields:
@@ -2616,41 +2981,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap2_fc_i
         description: ""
         bit_size: 6
         bit_offset: 8
         default_value: 0x20
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap1_fc_q
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x20
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap1_fc_i
         description: ""
         bit_size: 6
         bit_offset: 24
         default_value: 0x20
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_cap_2
     description: ""
     fields:
@@ -2659,41 +3032,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap2_fc_i_hw
         description: ""
         bit_size: 6
         bit_offset: 8
         default_value: 0x20
+        permissions: r
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap1_fc_q_hw
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x20
+        permissions: r
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap1_fc_i_hw
         description: ""
         bit_size: 6
         bit_offset: 24
         default_value: 0x20
+        permissions: r
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_cap_3
     description: ""
     fields:
@@ -2702,41 +3083,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap2_fc_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 8
         default_value: 0x20
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap1_fc_q_bw0
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x20
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap1_fc_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 24
         default_value: 0x20
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_cap4
     description: ""
     fields:
@@ -2745,41 +3134,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap2_fc_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 8
         default_value: 0x20
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap1_fc_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x20
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_cap1_fc_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 24
         default_value: 0x20
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_rx
     description: ""
     fields:
@@ -2788,81 +3185,97 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x5
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_rx1_bw1
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x5
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_rx2_bw0
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x2
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_rx1_bw0
         description: ""
         bit_size: 3
         bit_offset: 12
         default_value: 0x2
+        permissions: r/w
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_rx2_hw
         description: ""
         bit_size: 3
         bit_offset: 16
         default_value: 0x2
+        permissions: r
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_rx1_hw
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x2
+        permissions: r
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_rx2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x5
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_rx1
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x5
+        permissions: r/w
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: rbb
     description: ""
     fields:
@@ -2871,106 +3284,127 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: pkdet_out_raw
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_pkdet_out_rstn_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: rbb_pkdet_out_rstn_hw
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r
       - name: rbb_pkdet_out_rstn
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_pkdet_en_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: rbb_pkdet_en_hw
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: rbb_pkdet_en
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_pkdet_vth
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x5
+        permissions: r/w
       - name: rosdac_range
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reserved_18
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_lpf_en
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: rbb_deq
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_vcm
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_26_27
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
       - name: rbb_bm_op
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rxadc
     description: ""
     fields:
@@ -2979,71 +3413,85 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: rxadc_vref_sel
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: rxadc_clk_sync_inv
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: rxadc_clk_inv
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: rxadc_clk_div_sel
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: rxadc_glitch_remove
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_21_23
         description: ""
         bit_size: 3
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
       - name: rxadc_dly_ctrl
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_26_31
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
   - name: rxadc_readback
     description: ""
     fields:
@@ -3052,21 +3500,25 @@ fieldsets:
         bit_size: 9
         bit_offset: 0
         default_value: 0x100
+        permissions: r
       - name: reserved_9_15
         description: ""
         bit_size: 7
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: rxadc_dout_i
         description: ""
         bit_size: 9
         bit_offset: 16
         default_value: 0x100
+        permissions: r
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: rf_adc_osdata
     description: ""
     fields:
@@ -3075,21 +3527,25 @@ fieldsets:
         bit_size: 9
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_9_15
         description: ""
         bit_size: 7
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: rxadc_os_i
         description: ""
         bit_size: 9
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: testbuf
     description: ""
     fields:
@@ -3098,66 +3554,79 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: testbuf_rfb
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: testbuf_op_cc
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0xa
+        permissions: r/w
       - name: testbuf_boost
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: testbuf_bm
         description: ""
         bit_size: 3
         bit_offset: 16
         default_value: 0x2
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: testbuf_vcm
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: pu_testbuf
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: vco
     description: ""
     fields:
@@ -3166,76 +3635,91 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: vco_short_idac_filter
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: vco_modcap_sel
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: vco_acal_vref
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x3
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: vco_vbias
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: vco_idac_boost
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: vco_ldo_vsel
         description: ""
         bit_size: 2
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: vco_ldo_bypass
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: vco_idac
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x18
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: vco_idac_hw
         description: ""
         bit_size: 6
         bit_offset: 24
         default_value: 0x20
+        permissions: r
       - name: reserved_30
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
       - name: vco_acal_ud
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: lodist
     description: ""
     fields:
@@ -3244,56 +3728,67 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: lodist_rxbuf_supply_mode
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: lodist_rxbuf_supply_boost
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: lodist_rwell_bias
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: lodist_nwell_bias
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: lodist_75dc_sel
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
   - name: fbdv
     description: ""
     fields:
@@ -3302,86 +3797,103 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: fbdv_adpll_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: fbdv_dco_dither_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: fbdv_fb_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: fbdv_sample_clk_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reserved_18_19
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: fbdv_stg_sel
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_21_23
         description: ""
         bit_size: 3
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
       - name: rst_mmdiv
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_27
         description: ""
         bit_size: 3
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
       - name: lotpm_fmash_clk_polarity
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: dco_dither_clk_polarity
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: kcal1
     description: ""
     fields:
@@ -3390,26 +3902,31 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x2bc0
+        permissions: r/w
       - name: kcal_cnt_start
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: kcal_ratio
         description: ""
         bit_size: 10
         bit_offset: 20
         default_value: 0x355
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: kcal2
     description: ""
     fields:
@@ -3418,26 +3935,31 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: kcal_cnt_rdy
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: kcal_ratio_hw
         description: ""
         bit_size: 10
         bit_offset: 20
         default_value: 0x355
+        permissions: r
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_slope_gen
     description: ""
     fields:
@@ -3446,26 +3968,31 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_slope_gen_dc_corr
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: adpll_slope_gen_pulse_width_enhance
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_adc
     description: ""
     fields:
@@ -3474,86 +4001,103 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: adpll_adc_vth_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: adpll_adc_data_sign_sel
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_adc_vref_fine
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_adc_vref_coarse
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x3
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_adc_oscal_en
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_adc_clk_sync_inv
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_23
         description: ""
         bit_size: 7
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_adc_clk_div_sel
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_27
         description: ""
         bit_size: 3
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_adc_clk_inv
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: adpll_adc_clk_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_dtc
     description: ""
     fields:
@@ -3562,31 +4106,37 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_dtc_r_sel
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_dtc_inv_vth_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_10_31
         description: ""
         bit_size: 22
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
   - name: lo_fc_config1
     description: ""
     fields:
@@ -3595,11 +4145,13 @@ fieldsets:
         bit_size: 25
         bit_offset: 0
         default_value: 0x962000
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: lo_fcw_config2
     description: ""
     fields:
@@ -3608,11 +4160,13 @@ fieldsets:
         bit_size: 25
         bit_offset: 0
         default_value: 0x9b0000
+        permissions: r
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: lo_fcw3
     description: ""
     fields:
@@ -3621,21 +4175,25 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: tx_freq_mod_hp
         description: ""
         bit_size: 10
         bit_offset: 16
         default_value: 0x200
+        permissions: r
       - name: reserved_26_31
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
   - name: lotpm
     description: ""
     fields:
@@ -3644,46 +4202,55 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: lotpm_hfp_delay_fmash
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x2
+        permissions: r/w
       - name: lotpm_hfp_delay_fref
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x2
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: lotpm_hfp_polarity
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: lotpm_hfp_mash1_sel
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
   - name: adpll1
     description: ""
     fields:
@@ -3692,136 +4259,163 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: adpll_lo_lock_sel
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: adpll_timeout_cnt1_sel
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: adpll_timeout_cnt_sel
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: adpll_momhold_lmsenb_ext
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: adpll_rst_coarse_det_ext
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: adpll_rst_spd_det_ext
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: adpll_loop_lock_ext
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: adpll_fcal_done_ext
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: adpll_fcal_start_ext
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: adpll_lo_lock_directly
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: adpll_lo_fsm_ext
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: adpll_fsm_en
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lock_fail_en
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: adpll_abnormal_dealed
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_17
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_vctrl_det_start_ext
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: adpll_vctrl_det_en_ext
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: adpll_mom_update_en_ext
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: adpll_freqerr_det_start_ext
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: adpll_mom_search_en_ext
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: adpll_lo_open
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: adpll_sfreg_sel
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: adpll_lo_unlock_intrpt_clear_sel
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: adpll_force_inc_fcal_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: reserved_27_31
         description: ""
         bit_size: 5
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_lf_reg
     description: ""
     fields:
@@ -3830,76 +4424,91 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: adpll_lf_lsb_ext
         description: ""
         bit_size: 7
         bit_offset: 2
         default_value: 0x40
+        permissions: r/w
       - name: adpll_lf_avg_en
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: adpll_lf_f_p3
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: reserved_12
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_beta_fast
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: adpll_lf_beta_exp
         description: ""
         bit_size: 3
         bit_offset: 14
         default_value: 0x3
+        permissions: r/w
       - name: adpll_lf_beta_base
         description: ""
         bit_size: 2
         bit_offset: 17
         default_value: 0x3
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_alpha_fast
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x3
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_alpha_exp
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x2
+        permissions: r/w
       - name: adpll_lf_alpha_base
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: adpll_lf_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_lf_tx
     description: ""
     fields:
@@ -3908,61 +4517,73 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_f_p3_tx
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: reserved_12
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_beta_fast_tx
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: adpll_lf_beta_exp_tx
         description: ""
         bit_size: 3
         bit_offset: 14
         default_value: 0x3
+        permissions: r/w
       - name: adpll_lf_beta_base_tx
         description: ""
         bit_size: 2
         bit_offset: 17
         default_value: 0x3
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_alpha_fast_tx
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x3
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_alpha_exp_tx
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x2
+        permissions: r/w
       - name: adpll_lf_alpha_base_tx
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_lf_rx
     description: ""
     fields:
@@ -3971,61 +4592,73 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_f_p3_rx
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: reserved_12
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_beta_fast_rx
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: adpll_lf_beta_exp_rx
         description: ""
         bit_size: 3
         bit_offset: 14
         default_value: 0x3
+        permissions: r/w
       - name: adpll_lf_beta_base_rx
         description: ""
         bit_size: 2
         bit_offset: 17
         default_value: 0x3
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_alpha_fast_rx
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x3
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_alpha_exp_rx
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x2
+        permissions: r/w
       - name: adpll_lf_alpha_base_rx
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_lf_hw
     description: ""
     fields:
@@ -4034,61 +4667,73 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_f_p3_hw
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x1
+        permissions: r
       - name: reserved_12
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_beta_fast_hw
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r
       - name: adpll_lf_beta_exp_hw
         description: ""
         bit_size: 3
         bit_offset: 14
         default_value: 0x3
+        permissions: r
       - name: adpll_lf_beta_base_hw
         description: ""
         bit_size: 2
         bit_offset: 17
         default_value: 0x3
+        permissions: r
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_alpha_fast_hw
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x3
+        permissions: r
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lf_alpha_exp_hw
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x2
+        permissions: r
       - name: adpll_lf_alpha_base_hw
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_vctrl
     description: ""
     fields:
@@ -4097,96 +4742,115 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sdm_bypass
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: sdm_dither
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sdm_order
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: reserved_13
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_capcode_bypass
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: adpll_dco_mash_bypass
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: adpll_force_mom_hold
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_mom_update_period
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_vctrl_det_cons_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: adpll_vctrl_moni_win_sel
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: adpll_vctrl_lock_win_sel
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: adpll_vctrl_range_sel_ext_en
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_lms
     description: ""
     fields:
@@ -4195,86 +4859,103 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_pha_cancel_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lms_q_delay
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: adpll_pha_prbs_sel
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: adpll_lms_step_enlarge
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: adpll_pha_dither_en
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: adpll_pha_dem_en
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: adpll_sdm_dither_prbs_en
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: adpll_lms_step
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x2
+        permissions: r/w
       - name: adpll_sdm_dither_en_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x1
+        permissions: r/w
       - name: adpll_sdm_dither_en
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x1
+        permissions: r/w
       - name: adpll_lms_ext_value
         description: ""
         bit_size: 9
         bit_offset: 20
         default_value: 0x140
+        permissions: r/w
       - name: adpll_lms_ext_value_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_fref_div2_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: adpll_spd
     description: ""
     fields:
@@ -4283,101 +4964,121 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_spd_out_range_delay
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_spd_in_range_cons
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x2
+        permissions: r/w
       - name: adpll_coarse_path_turnoff
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x2
+        permissions: r/w
       - name: adpll_spd_threshold
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x3
+        permissions: r/w
       - name: adpll_coarse_in_range_cons
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x3
+        permissions: r/w
       - name: adpll_spd_gain
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x2
+        permissions: r/w
       - name: adpll_coarse_gain
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: adpll_force_lf_fast_mode_ctrl_hw
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: adpll_force_lf_fast_mode
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: adpll_force_lf_fast_mode_hw
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: adpll_coarse_phaerr_en
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: adpll_coarse_path_offtime_sel
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: adpll_spd_outrange_dly_sel_ext
         description: ""
         bit_size: 2
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: adpll_spd_lms_sstp_win_sel
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: adpll_force_coarse_path_on
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: adpll_coarsepha_dly_sel
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: adpll_spd_in_range_delay_1
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x1
+        permissions: r/w
   - name: fcal
     description: ""
     fields:
@@ -4386,41 +5087,49 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: fcal_coarse_pha_threshold
         description: ""
         bit_size: 2
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: fcal_mom_toggle_cnt
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: fcal_clk_period
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x2
+        permissions: r/w
       - name: fcal_mode
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_8_15
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
       - name: fcal_mom_ini_ext
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x80
+        permissions: r/w
       - name: reserved_24_31
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_polarity
     description: ""
     fields:
@@ -4429,46 +5138,55 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lp_mom_polarity
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lms_polarity
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_fcal_polarity
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_lp_polarity
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: reserved_21_31
         description: ""
         bit_size: 11
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_output
     description: ""
     fields:
@@ -4477,96 +5195,115 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: adpll_lo_lock
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: reserved_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_fsm_state
         description: ""
         bit_size: 4
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: adpll_spd_unlock_sign
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: adpll_vctrl_out_range_fsm
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: adpll_mom_update_fail_fsm
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: adpll_mom_update_ou_fsm
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: adpll_spd_unlock_fsm
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: adpll_spd_lock_fsm
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: adpll_fcal_done_fsm
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: adpll_capcode_out_range
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: adpll_mom_update_total_ou
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: adpll_capcode_ud
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: adpll_vctrl_det_done
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: adpll_freqerr_sign
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: adpll_freqerr_ou
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: adpll_freqerr_det_done
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r
       - name: reserved_22_31
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
   - name: adpll_reserved
     description: ""
     fields:
@@ -4575,11 +5312,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
       - name: adpll_resv0
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: rf_reserved
     description: ""
     fields:
@@ -4588,11 +5327,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
       - name: rf_resv0
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: rf_reserved_2
     description: ""
     fields:
@@ -4601,6 +5342,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x55555555
+        permissions: r/w
   - name: rbb_gain_ctrl0
     description: ""
     fields:
@@ -4609,41 +5351,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl0_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl0_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl0_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl0_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl0_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl1
     description: ""
     fields:
@@ -4652,41 +5402,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl1_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl1_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl1_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl1_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl1_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl2
     description: ""
     fields:
@@ -4695,41 +5453,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl2_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl2_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl2_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl2_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x2
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl2_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl3
     description: ""
     fields:
@@ -4738,41 +5504,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl3_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl3_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl3_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl3_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x3
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl3_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl4
     description: ""
     fields:
@@ -4781,41 +5555,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl4_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl4_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl4_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl4_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl4_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl5
     description: ""
     fields:
@@ -4824,41 +5606,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl5_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl5_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl5_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl5_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x2
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl5_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl6
     description: ""
     fields:
@@ -4867,41 +5657,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl6_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl6_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl6_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl6_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x3
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl6_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl7
     description: ""
     fields:
@@ -4910,41 +5708,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl7_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl7_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl7_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl7_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x4
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl7_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl8
     description: ""
     fields:
@@ -4953,41 +5759,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl8_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl8_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl8_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl8_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x5
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl8_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl9
     description: ""
     fields:
@@ -4996,41 +5810,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl9_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl9_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl9_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl9_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x3
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl9_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x2
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl10
     description: ""
     fields:
@@ -5039,41 +5861,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl10_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl10_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl10_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl10_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x4
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl10_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x2
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl11
     description: ""
     fields:
@@ -5082,41 +5912,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl11_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl11_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl11_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl11_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x5
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl11_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x2
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl12
     description: ""
     fields:
@@ -5125,41 +5963,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl12_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl12_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl12_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl12_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x6
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl12_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x2
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl13
     description: ""
     fields:
@@ -5168,41 +6014,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl13_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl13_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl13_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl13_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x4
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl13_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x3
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl14
     description: ""
     fields:
@@ -5211,41 +6065,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl14_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl14_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl14_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl14_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x5
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl14_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x3
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: rbb_gain_ctrl15
     description: ""
     fields:
@@ -5254,41 +6116,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl15_rosdac_i_bw0
         description: ""
         bit_size: 6
         bit_offset: 6
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl15_rosdac_q_bw1
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl15_rosdac_i_bw1
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x20
+        permissions: r/w
       - name: gain_ctrl15_g_rbb2
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x6
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: gain_ctrl15_g_rbb1
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x3
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: acal_config
     description: ""
     fields:
@@ -5297,41 +6167,49 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x20
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: vco_idac_lh
         description: ""
         bit_size: 6
         bit_offset: 8
         default_value: 0x20
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: vco_idac_hl
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x20
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: vco_idac_hh
         description: ""
         bit_size: 6
         bit_offset: 24
         default_value: 0x20
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2402
     description: ""
     fields:
@@ -5340,21 +6218,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2402
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2404
     description: ""
     fields:
@@ -5363,21 +6245,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2404
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2406
     description: ""
     fields:
@@ -5386,21 +6272,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2406
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2408
     description: ""
     fields:
@@ -5409,21 +6299,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2408
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2410
     description: ""
     fields:
@@ -5432,21 +6326,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2410
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2412
     description: ""
     fields:
@@ -5455,21 +6353,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2412
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2414
     description: ""
     fields:
@@ -5478,21 +6380,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2414
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2416
     description: ""
     fields:
@@ -5501,21 +6407,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2416
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2418
     description: ""
     fields:
@@ -5524,21 +6434,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2418
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2420
     description: ""
     fields:
@@ -5547,21 +6461,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2420
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2422
     description: ""
     fields:
@@ -5570,21 +6488,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2422
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2424
     description: ""
     fields:
@@ -5593,21 +6515,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2424
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2426
     description: ""
     fields:
@@ -5616,21 +6542,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2426
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2428
     description: ""
     fields:
@@ -5639,21 +6569,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2428
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2430
     description: ""
     fields:
@@ -5662,21 +6596,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2430
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2432
     description: ""
     fields:
@@ -5685,21 +6623,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2432
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2434
     description: ""
     fields:
@@ -5708,21 +6650,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2434
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2436
     description: ""
     fields:
@@ -5731,21 +6677,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2436
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2438
     description: ""
     fields:
@@ -5754,21 +6704,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2438
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2440
     description: ""
     fields:
@@ -5777,21 +6731,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2440
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2442
     description: ""
     fields:
@@ -5800,21 +6758,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2442
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2444
     description: ""
     fields:
@@ -5823,21 +6785,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2444
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2446
     description: ""
     fields:
@@ -5846,21 +6812,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2446
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2448
     description: ""
     fields:
@@ -5869,21 +6839,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2448
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2450
     description: ""
     fields:
@@ -5892,21 +6866,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2450
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2452
     description: ""
     fields:
@@ -5915,21 +6893,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2452
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2454
     description: ""
     fields:
@@ -5938,21 +6920,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2454
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2456
     description: ""
     fields:
@@ -5961,21 +6947,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2456
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2458
     description: ""
     fields:
@@ -5984,21 +6974,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2458
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2460
     description: ""
     fields:
@@ -6007,21 +7001,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2460
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2462
     description: ""
     fields:
@@ -6030,21 +7028,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2462
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2464
     description: ""
     fields:
@@ -6053,21 +7055,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2464
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2466
     description: ""
     fields:
@@ -6076,21 +7082,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2466
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2468
     description: ""
     fields:
@@ -6099,21 +7109,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2468
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2470
     description: ""
     fields:
@@ -6122,21 +7136,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2470
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2472
     description: ""
     fields:
@@ -6145,21 +7163,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2472
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2474
     description: ""
     fields:
@@ -6168,21 +7190,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2474
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2476
     description: ""
     fields:
@@ -6191,21 +7217,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2476
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2478
     description: ""
     fields:
@@ -6214,21 +7244,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2478
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2480
     description: ""
     fields:
@@ -6237,21 +7271,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2480
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2405
     description: ""
     fields:
@@ -6260,21 +7298,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2405
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2415
     description: ""
     fields:
@@ -6283,21 +7325,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2415
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2425
     description: ""
     fields:
@@ -6306,21 +7352,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2425
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2435
     description: ""
     fields:
@@ -6329,21 +7379,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2435
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2445
     description: ""
     fields:
@@ -6352,21 +7406,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2445
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2455
     description: ""
     fields:
@@ -6375,21 +7433,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2455
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2465
     description: ""
     fields:
@@ -6398,21 +7460,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2465
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: lo_config_2475
     description: ""
     fields:
@@ -6421,21 +7487,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x26c
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: adpll_sdm_dither_en_2475
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: dg_testbus_0
     description: ""
     fields:
@@ -6444,6 +7514,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xbf707
+        permissions: r
   - name: dg_testbus_1
     description: ""
     fields:
@@ -6452,11 +7523,13 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: dg_ppud_0
     description: ""
     fields:
@@ -6465,26 +7538,31 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: ppud_cnt2
         description: ""
         bit_size: 9
         bit_offset: 16
         default_value: 0x9a
+        permissions: r/w
       - name: ppud_cnt1
         description: ""
         bit_size: 5
         bit_offset: 25
         default_value: 0xf
+        permissions: r/w
       - name: ppud_manaual_en
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: rf_top
     description: ""
     fields:
@@ -6493,66 +7571,79 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: rfckg_afifo_rxadc_inv
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: rfckg_afifo_tx_inv
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3_15
         description: ""
         bit_size: 13
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: rf_mac_lo_time_offset
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x4
+        permissions: r/w
       - name: rf_rx_mode_hw
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: rf_rx_mode_4s
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: rf_rx_mode_4s_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: rf_rx_en_4s
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: rf_rx_en_src
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: rf_tx_en_4s
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: rf_tx_en_src
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: rf_fsm
     description: ""
     fields:
@@ -6561,61 +7652,73 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x640
+        permissions: r/w
       - name: rf_fsm_state
         description: ""
         bit_size: 3
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: rf_fsm_st_4s
         description: ""
         bit_size: 3
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: rf_fsm_st_4s_en
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: rf_fsm_en
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x1
+        permissions: r/w
       - name: rf_fsm_rx_afifo_4s
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: rf_fsm_rx_afifo_4s_en
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: rf_fsm_tx_afifo_4s
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: rf_fsm_tx_afifo_4s_en
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: rf_fsm_afifo_dly_time
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x17
+        permissions: r/w
   - name: rf_singen_0
     description: ""
     fields:
@@ -6624,36 +7727,43 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: singen_inc_step0
         description: ""
         bit_size: 10
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reserved_26_27
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
       - name: singen_unsign_en
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: singen_clkdiv_n
         description: ""
         bit_size: 2
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: singen_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: rf_singen_1
     description: ""
     fields:
@@ -6662,31 +7772,37 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: singen_mode_q
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: singen_clkdiv_i
         description: ""
         bit_size: 10
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reserved_26_27
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
       - name: singen_mode_i
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
   - name: rf_singen_2
     description: ""
     fields:
@@ -6695,21 +7811,25 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x3ff
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: singen_start_addr1_i
         description: ""
         bit_size: 10
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: singen_start_addr0_i
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
   - name: rf_singen_3
     description: ""
     fields:
@@ -6718,21 +7838,25 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x3ff
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: singen_start_addr1_q
         description: ""
         bit_size: 10
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: singen_start_addr0_q
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
   - name: rf_singen_4
     description: ""
     fields:
@@ -6741,31 +7865,37 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: singen_fix_en_q
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: singen_fix_i
         description: ""
         bit_size: 12
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: singen_fix_en_i
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: rf_sram_ctrl0
     description: ""
     fields:
@@ -6774,36 +7904,43 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: rf_sram_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: rf_sram_loop_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: rf_sram_sts_clr
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: rf_sram_mode
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_15
         description: ""
         bit_size: 10
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: rf_sram_done_cnt
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r
   - name: rf_sram_ctrl1
     description: ""
     fields:
@@ -6812,11 +7949,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
       - name: rf_sram_addr_start
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x6000
+        permissions: r/w
   - name: rf_sram_ctrl2
     description: ""
     fields:
@@ -6825,6 +7964,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: rf_test_mode
     description: ""
     fields:
@@ -6833,36 +7973,43 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: dacout_4s
         description: ""
         bit_size: 12
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: dacout_4s_en
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: dacout_4s_sram_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: rf_test_mode_en
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: rf_rx_pulse_filter
     description: ""
     fields:
@@ -6871,33 +8018,40 @@ fieldsets:
         bit_size: 9
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: reserved_9
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: pf_th1
         description: ""
         bit_size: 9
         bit_offset: 10
         default_value: 0x7f
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: pf_en_q
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: pf_en_i
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_31
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd

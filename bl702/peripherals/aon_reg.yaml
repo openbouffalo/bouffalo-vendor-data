@@ -151,41 +151,49 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_8_11
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
       - name: pu_aon_dc_tbuf
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_19
         description: ""
         bit_size: 7
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: ldo11_rt_pulldown
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: ldo11_rt_pulldown_sel
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: sw_pu_ldo11_rt
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x1
+        permissions: r/w
       - name: reserved_23_31
         description: ""
         bit_size: 9
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
   - name: aon_common
     description: ""
     fields:
@@ -194,91 +202,109 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: ten_aon
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: dten_xtal32k
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: ten_xtal32k
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ten_vddcore_aon
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: ten_ldo11soc_aon
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: ten_dcdc18_0_aon
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: ten_dcdc18_1_aon
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: ten_bg_sys_aon
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: ten_ldo15rf_aon
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: ten_xtal_aon
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: dten_xtal_aon
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: ten_mbg_aon
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: ten_cip_misc_aon
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_21_31
         description: ""
         bit_size: 11
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
   - name: aon_misc
     description: ""
     fields:
@@ -287,16 +313,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: sw_bz_en_aon
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: bg_sys_top
     description: ""
     fields:
@@ -305,26 +334,31 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: pu_bg_sys_aon
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: bg_sys_start_ctrl_aon
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: dcdc18_top_0
     description: ""
     fields:
@@ -333,71 +367,85 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: dcdc18_vout_sel_aon
         description: ""
         bit_size: 5
         bit_offset: 1
         default_value: 0x1b
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: dcdc18_vpfm_aon
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x7
+        permissions: r/w
       - name: dcdc18_osc_2m_mode_aon
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: dcdc18_osc_freq_trim_aon
         description: ""
         bit_size: 4
         bit_offset: 16
         default_value: 0x8
+        permissions: r/w
       - name: dcdc18_slope_curr_sel_aon
         description: ""
         bit_size: 5
         bit_offset: 20
         default_value: 0x5
+        permissions: r/w
       - name: dcdc18_stop_osc_aon
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: dcdc18_slow_osc_aon
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: dcdc18_osc_inhibit_t2_aon
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: dcdc18_sstart_time_aon
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
       - name: dcdc18_rdy_aon
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x1
+        permissions: r
   - name: dcdc18_top_1
     description: ""
     fields:
@@ -406,61 +454,73 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: dcdc18_cs_delay_aon
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x4
+        permissions: r/w
       - name: dcdc18_zvs_td_opt_aon
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x4
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: dcdc18_nonoverlap_td_aon
         description: ""
         bit_size: 5
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: dcdc18_rc_sel_aon
         description: ""
         bit_size: 4
         bit_offset: 16
         default_value: 0x8
+        permissions: r/w
       - name: dcdc18_chf_sel_aon
         description: ""
         bit_size: 4
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: dcdc18_cfb_sel_aon
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0x8
+        permissions: r/w
       - name: dcdc18_en_antiring_aon
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: dcdc18_pulldown_aon
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: ldo11soc_and_dctest
     description: ""
     fields:
@@ -469,76 +529,91 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: ldo11soc_sstart_sel_aon
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: ldo11soc_sstart_delay_aon
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: ldo11soc_pulldown_aon
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: ldo11soc_pulldown_sel_aon
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: ldo11soc_vth_sel_aon
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: reserved_14_23
         description: ""
         bit_size: 10
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: ldo11soc_cc_aon
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_26_27
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
       - name: ldo11soc_rdy_aon
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r
       - name: ldo11soc_power_good_aon
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r
       - name: pu_vddcore_misc_aon
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r/w
       - name: pmip_dc_tp_out_en_aon
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: psw_irrcv
     description: ""
     fields:
@@ -547,11 +622,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_31
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
   - name: rf_top_aon
     description: ""
     fields:
@@ -560,96 +637,115 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: pu_ldo15rf_aon
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: pu_sfreg_aon
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: pu_xtal_buf_aon
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: pu_xtal_aon
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: ldo15rf_sstart_sel_aon
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: ldo15rf_sstart_delay_aon
         description: ""
         bit_size: 2
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: ldo15rf_pulldown_aon
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: ldo15rf_pulldown_sel_aon
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: ldo15rf_vout_sel_aon
         description: ""
         bit_size: 3
         bit_offset: 16
         default_value: 0x2
+        permissions: r/w
       - name: reserved_19_23
         description: ""
         bit_size: 5
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: ldo15rf_cc_aon
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_26_27
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
       - name: ldo15rf_bypass_aon
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: xtal_cfg
     description: ""
     fields:
@@ -658,61 +754,73 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: xtal_capcode_extra_aon
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: xtal_ext_sel_aon
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: xtal_buf_en_aon
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0xf
+        permissions: r/w
       - name: xtal_buf_hp_aon
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: xtal_fast_startup_aon
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: xtal_sleep_aon
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: xtal_amp_ctrl_aon
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x3
+        permissions: r/w
       - name: xtal_capcode_out_aon
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x10
+        permissions: r/w
       - name: xtal_capcode_in_aon
         description: ""
         bit_size: 6
         bit_offset: 22
         default_value: 0x10
+        permissions: r/w
       - name: xtal_gm_boost_aon
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x3
+        permissions: r/w
       - name: xtal_rdy_sel_aon
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x2
+        permissions: r/w
   - name: tsen
     description: ""
     fields:
@@ -721,31 +829,37 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x8ff
+        permissions: r/w
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: tsen_refcode_rfcal
         description: ""
         bit_size: 12
         bit_offset: 16
         default_value: 0x8ff
+        permissions: r/w
       - name: xtal_rdy
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r
       - name: xtal_inn_cfg_en_aon
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
       - name: xtal_rdy_int_sel_aon
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x1
+        permissions: r/w
   - name: acomp0_ctrl
     description: ""
     fields:
@@ -754,51 +868,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: acomp0_hyst_seln
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: acomp0_hyst_selp
         description: ""
         bit_size: 3
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: acomp0_bias_prog
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: acomp0_level_sel
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: acomp0_neg_sel
         description: ""
         bit_size: 4
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: acomp0_pos_sel
         description: ""
         bit_size: 4
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: acomp0_muxen
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: reserved_27_31
         description: ""
         bit_size: 5
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
   - name: acomp1_ctrl
     description: ""
     fields:
@@ -807,51 +931,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: acomp1_hyst_seln
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: acomp1_hyst_selp
         description: ""
         bit_size: 3
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: acomp1_bias_prog
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: acomp1_level_sel
         description: ""
         bit_size: 6
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: acomp1_neg_sel
         description: ""
         bit_size: 4
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: acomp1_pos_sel
         description: ""
         bit_size: 4
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: acomp1_muxen
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: reserved_27_31
         description: ""
         bit_size: 5
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
   - name: acomp_ctrl
     description: ""
     fields:
@@ -860,66 +994,79 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: acomp0_rstn_ana
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: acomp1_test_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: acomp0_test_en
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: acomp1_test_sel
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: acomp0_test_sel
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_14_16
         description: ""
         bit_size: 3
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: acomp1_out_raw
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: reserved_18
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: acomp0_out_raw
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_23
         description: ""
         bit_size: 4
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: acomp_reserved
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
   - name: gpadc_reg_cmd
     description: ""
     fields:
@@ -928,101 +1075,121 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_conv_start
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_soft_rst
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_neg_sel
         description: ""
         bit_size: 5
         bit_offset: 3
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_pos_sel
         description: ""
         bit_size: 5
         bit_offset: 8
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_neg_gnd
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_micbias_en
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_micpga_en
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_byp_micboost
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_dwa_en
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_mic2_diff
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_mic1_diff
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_mic_pga2_gain
         description: ""
         bit_size: 2
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_micboost_32db_en
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: reserved_24_26
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_chip_sen_pu
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_sen_sel
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_sen_test_en
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_config1
     description: ""
     fields:
@@ -1031,81 +1198,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_cont_conv_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: gpadc_res_sel
         description: ""
         bit_size: 3
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_vcm_sel_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_vcm_hyst_sel
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_lowv_det_en
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: reserved_11_16
         description: ""
         bit_size: 6
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_clk_ana_inv
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_clk_div_ratio
         description: ""
         bit_size: 3
         bit_offset: 18
         default_value: 0x3
+        permissions: r/w
       - name: gpadc_scan_length
         description: ""
         bit_size: 4
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_scan_en
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_dither_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_v11_sel
         description: ""
         bit_size: 2
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_v18_sel
         description: ""
         bit_size: 2
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_config2
     description: ""
     fields:
@@ -1114,91 +1297,109 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_diff_mode
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_vref_sel
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_vbat_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_tsext_sel
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_ts_en
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_pga_vcm
         description: ""
         bit_size: 2
         bit_offset: 7
         default_value: 0x2
+        permissions: r/w
       - name: gpadc_pga_os_cal
         description: ""
         bit_size: 4
         bit_offset: 9
         default_value: 0x8
+        permissions: r/w
       - name: gpadc_pga_en
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_pga_vcmi_en
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_chop_mode
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x3
+        permissions: r/w
       - name: gpadc_bias_sel
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_test_en
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_test_sel
         description: ""
         bit_size: 3
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_pga2_gain
         description: ""
         bit_size: 3
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_pga1_gain
         description: ""
         bit_size: 3
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_dly_sel
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_tsvbe_low
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: gpadc_reg_scn_pos1
     description: ""
     fields:
@@ -1207,36 +1408,43 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_1
         description: ""
         bit_size: 5
         bit_offset: 5
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_2
         description: ""
         bit_size: 5
         bit_offset: 10
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_3
         description: ""
         bit_size: 5
         bit_offset: 15
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_4
         description: ""
         bit_size: 5
         bit_offset: 20
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_5
         description: ""
         bit_size: 5
         bit_offset: 25
         default_value: 0xf
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_scn_pos2
     description: ""
     fields:
@@ -1245,36 +1453,43 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_7
         description: ""
         bit_size: 5
         bit_offset: 5
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_8
         description: ""
         bit_size: 5
         bit_offset: 10
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_9
         description: ""
         bit_size: 5
         bit_offset: 15
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_10
         description: ""
         bit_size: 5
         bit_offset: 20
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_pos_11
         description: ""
         bit_size: 5
         bit_offset: 25
         default_value: 0xf
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_scn_neg1
     description: ""
     fields:
@@ -1283,36 +1498,43 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_1
         description: ""
         bit_size: 5
         bit_offset: 5
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_2
         description: ""
         bit_size: 5
         bit_offset: 10
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_3
         description: ""
         bit_size: 5
         bit_offset: 15
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_4
         description: ""
         bit_size: 5
         bit_offset: 20
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_5
         description: ""
         bit_size: 5
         bit_offset: 25
         default_value: 0xf
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_scn_neg2
     description: ""
     fields:
@@ -1321,36 +1543,43 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_7
         description: ""
         bit_size: 5
         bit_offset: 5
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_8
         description: ""
         bit_size: 5
         bit_offset: 10
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_9
         description: ""
         bit_size: 5
         bit_offset: 15
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_10
         description: ""
         bit_size: 5
         bit_offset: 20
         default_value: 0xf
+        permissions: r/w
       - name: gpadc_scan_neg_11
         description: ""
         bit_size: 5
         bit_offset: 25
         default_value: 0xf
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_status
     description: ""
     fields:
@@ -1359,16 +1588,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_1_15
         description: ""
         bit_size: 15
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_reserved
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: gpadc_reg_isr
     description: ""
     fields:
@@ -1377,46 +1609,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: gpadc_pos_satur
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_neg_satur_clr
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_pos_satur_clr
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_neg_satur_mask
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_pos_satur_mask
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_31
         description: ""
         bit_size: 22
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_result
     description: ""
     fields:
@@ -1425,11 +1666,13 @@ fieldsets:
         bit_size: 26
         bit_offset: 0
         default_value: 0x1ef0000
+        permissions: r
       - name: reserved_26_31
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_raw_result
     description: ""
     fields:
@@ -1438,11 +1681,13 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_12_31
         description: ""
         bit_size: 20
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
   - name: gpadc_reg_define
     description: ""
     fields:
@@ -1451,11 +1696,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: hbncore_resv0
     description: ""
     fields:
@@ -1464,6 +1711,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: hbncore_resv1
     description: ""
     fields:
@@ -1472,3 +1720,4 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w

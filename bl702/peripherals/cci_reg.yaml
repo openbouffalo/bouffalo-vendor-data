@@ -36,51 +36,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: cci_slv_sel_cci2
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: cci_mas_sel_cci2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: cci_mas_hw_mode
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reg_m_cci_sclk_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_div_m_cci_sclk
         description: ""
         bit_size: 2
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: cfg_cci1_pre_read
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: reg_scci_clk_inv
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reg_mcci_clk_inv
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: reserved_10_31
         description: ""
         bit_size: 22
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
   - name: cci_addr
     description: ""
     fields:
@@ -89,6 +99,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: cci_wdata
     description: ""
     fields:
@@ -97,6 +108,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: cci_rdata
     description: ""
     fields:
@@ -105,6 +117,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: cci_ctl
     description: ""
     fields:
@@ -113,18 +126,22 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: cci_read_flag
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: ahb_state
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd

@@ -26,16 +26,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1c
       - name: cr_cks_byte_swap
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: data_in
     description: ""
     fields:
@@ -44,11 +47,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: cks_out
     description: ""
     fields:
@@ -57,8 +62,10 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd

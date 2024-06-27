@@ -471,56 +471,67 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_fclk_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_hclk_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reg_bclk_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: reg_pll_sel
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: hbn_root_clk_sel
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: reg_hclk_div
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reg_bclk_div
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: fclk_sw_state
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: chip_rdy
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: glb_id
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x7
+        permissions: r
   - name: clk_cfg1
     description: ""
     fields:
@@ -529,91 +540,109 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0x1f
+        permissions: r/w
       - name: reserved_5_6
         description: ""
         bit_size: 2
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: qdec_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: usb_clk_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: dll_48m_div_en
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: reg_i2s_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reg_i2s0_clk_en
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reg_i2s_0_ref_clk_oe
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: ble_clk_sel
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0x10
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: ble_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: m154_zbEn
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: reserved_26_27
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
       - name: reg_cam_ref_clk_en
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reg_cam_ref_clk_src_sel
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reg_cam_ref_clk_div
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
   - name: clk_cfg2
     description: ""
     fields:
@@ -622,66 +651,79 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x7
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: uart_clk_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_5_6
         description: ""
         bit_size: 2
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: hbn_uart_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: sf_clk_div
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x3
+        permissions: r/w
       - name: sf_clk_en
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: sf_clk_sel
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x2
+        permissions: r/w
       - name: sf_clk_sel2
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ir_clk_div
         description: ""
         bit_size: 6
         bit_offset: 16
         default_value: 0xf
+        permissions: r/w
       - name: reserved_22
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: ir_clk_en
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: dma_clk_en
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0xff
+        permissions: r/w
   - name: clk_cfg3
     description: ""
     fields:
@@ -690,66 +732,79 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0x3
+        permissions: r/w
       - name: cfg_sel_eth_ref_clk_o
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: cfg_inv_eth_ref_clk_o
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: cfg_inv_eth_tx_clk
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: spi_clk_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: cfg_inv_rf_test_clk_o
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: cfg_inv_eth_rx_clk
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: reserved_11_15
         description: ""
         bit_size: 5
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: i2c_clk_div
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0xff
+        permissions: r/w
       - name: i2c_clk_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: reserved_25_27
         description: ""
         bit_size: 3
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
       - name: chip_clk_out_0_sel
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: chip_clk_out_1_sel
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
   - name: swrst_cfg0
     description: ""
     fields:
@@ -758,36 +813,43 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s01
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: swrst_s20
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: swrst_s30
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_9_31
         description: ""
         bit_size: 23
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
   - name: swrst_cfg1
     description: ""
     fields:
@@ -796,161 +858,193 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s11
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s12
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s13
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s14
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s15
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s16
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s17
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s18
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s19
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1b
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1c
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1d
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1e
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1f
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a0
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a1
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a2
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a3
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a4
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a5
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a6
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a7
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a8
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1a9
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1aa
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1ab
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1ac
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1ad
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: swrst_s1ae
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: swrst_cfg2
     description: ""
     fields:
@@ -959,41 +1053,49 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_ctrl_cpu_reset
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reg_ctrl_sys_reset
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: reg_ctrl_reset_dummy
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_8_23
         description: ""
         bit_size: 16
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
       - name: pka_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: swrst_cfg3
     description: ""
     fields:
@@ -1002,6 +1104,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: cgen_cfg0
     description: ""
     fields:
@@ -1010,11 +1113,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0xff
+        permissions: r/w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: cgen_cfg1
     description: ""
     fields:
@@ -1023,11 +1128,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xcfff
+        permissions: r/w
       - name: cgen_s1a
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x9b23
+        permissions: r/w
   - name: cgen_cfg2
     description: ""
     fields:
@@ -1036,21 +1143,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: cgen_s3
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_31
         description: ""
         bit_size: 27
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
   - name: cgen_cfg3
     description: ""
     fields:
@@ -1059,6 +1170,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: MBIST_CTL
     description: ""
     fields:
@@ -1067,41 +1179,49 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: hsram_mem_mbist_mode
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: hsram_cache_mbist_mode
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: tag_mbist_mode
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: ocram_mbist_mode
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: em_ram_mbist_mode
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_30
         description: ""
         bit_size: 25
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_mbist_rst_n
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: MBIST_STAT
     description: ""
     fields:
@@ -1110,71 +1230,85 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: hsram_mem_mbist_done
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: hsram_cache_mbist_done
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: tag_mbist_done
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: ocram_mbist_done
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: em_ram_mbist_done
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: reserved_6_15
         description: ""
         bit_size: 10
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: irom_mbist_fail
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: hsram_mem_mbist_fail
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: hsram_cache_mbist_fail
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: tag_mbist_fail
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: ocram_mbist_fail
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: em_ram_mbist_fail
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r
       - name: reserved_22_31
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
   - name: bmx_cfg1
     description: ""
     fields:
@@ -1183,51 +1317,61 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: bmx_arb_mode
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: bmx_err_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: bmx_busy_option_dis
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: bmx_gating_dis
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: hsel_option
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: pds_apb_cfg
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: hbn_apb_cfg
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
   - name: bmx_cfg2
     description: ""
     fields:
@@ -1236,46 +1380,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: bmx_err_dec
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: bmx_err_tz
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_w_thre_bmx
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reg_w_thre_l1c
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_27
         description: ""
         bit_size: 16
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: bmx_dbg_sel
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
   - name: bmx_err_addr
     description: ""
     fields:
@@ -1284,6 +1437,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: bmx_dbg_out
     description: ""
     fields:
@@ -1292,6 +1446,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: rsv0
     description: ""
     fields:
@@ -1300,6 +1455,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: rsv1
     description: ""
     fields:
@@ -1308,6 +1464,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: rsv2
     description: ""
     fields:
@@ -1316,6 +1473,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: rsv3
     description: ""
     fields:
@@ -1324,6 +1482,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: rsvd
   - name: sram_ret
     description: ""
     fields:
@@ -1332,6 +1491,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sram_slp
     description: ""
     fields:
@@ -1340,6 +1500,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sram_parm
     description: ""
     fields:
@@ -1348,6 +1509,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x6a4c0c0c
+        permissions: r/w
   - name: seam_misc
     description: ""
     fields:
@@ -1356,11 +1518,13 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x3
+        permissions: r/w
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: glb_parm
     description: ""
     fields:
@@ -1369,101 +1533,121 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x4
+        permissions: r/w
       - name: cfg_sflash2_swap_io0_io3
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: cfg_sflash2_swap_cs_io2
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: cfg_flash_scenario
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: reg_spi_0_master_mode
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reg_spi_0_swap
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: reg_cci_use_jtag_pin
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: p1_adc_test_with_cci
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: p2_dac_test_with_cci
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: p3_cci_use_io_0_2_7
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: p4_adc_test_with_jtag
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: p5_dac_test_with_jtag
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: p6_jtag_use_io_0_2_7
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: uart_swap_set
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reserved_28
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
       - name: reg_kys_drv_val
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reg_ext_rst_smt
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: pin_sel_emac_cam
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: PDM_CLK_CTRL
     description: ""
     fields:
@@ -1472,21 +1656,25 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_6
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_pdm0_clk_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_USE_PSRAM__IO
     description: ""
     fields:
@@ -1495,11 +1683,13 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_31
         description: ""
         bit_size: 26
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
   - name: CPU_CLK_CFG
     description: ""
     fields:
@@ -1508,31 +1698,37 @@ fieldsets:
         bit_size: 17
         bit_offset: 0
         default_value: 0x10
+        permissions: r/w
       - name: reserved_17
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: cpu_rtc_en
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: cpu_rtc_sel
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x1
+        permissions: r/w
       - name: debug_ndreset_gate
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_21_31
         description: ""
         bit_size: 11
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
   - name: GPADC_32M_SRC_CTRL
     description: ""
     fields:
@@ -1541,26 +1737,31 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x2
+        permissions: r/w
       - name: reserved_6
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: gpadc_32m_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: gpadc_32m_div_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: reserved_9_31
         description: ""
         bit_size: 23
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
   - name: DIG32K_WAKEUP_CTRL
     description: ""
     fields:
@@ -1569,66 +1770,79 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x3e8
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: dig_32k_en
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dig_32k_comp
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: dig_512k_div
         description: ""
         bit_size: 7
         bit_offset: 16
         default_value: 0x3e
+        permissions: r/w
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: dig_512k_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: dig_512k_comp
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: reserved_26_27
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
       - name: dig_clk_src_sel
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
       - name: reg_en_platform_wakeup
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: WIFI_BT_COEX_CTRL
     description: ""
     fields:
@@ -1637,26 +1851,31 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: coex_bt_pti
         description: ""
         bit_size: 4
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: coex_bt_bw
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: en_gpio_bt_coex
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: BZ_COEX_CTRL
     description: ""
     fields:
@@ -1665,101 +1884,121 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: wlan_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ble_rx_ignore
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: m154_rx_ignore
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: bz_pri_thr
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: bz_pri_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: bz_pri_pol
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: bz_active_pol
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: bz_abort_pol
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: coex_pri
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: force_m154_win
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: force_ble_win
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: coex_option
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: coex_force_ch
         description: ""
         bit_size: 7
         bit_offset: 16
         default_value: 0x4
+        permissions: r/w
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: m154_rx_abort_dis
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: m154_tx_abort_dis
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: ble_rx_abort_dis
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: ble_tx_abort_dis
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: coex_arb
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x8
+        permissions: r
   - name: UART_SIG_SEL_0
     description: ""
     fields:
@@ -1768,41 +2007,49 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: uart_sig_1_sel
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: uart_sig_2_sel
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x2
+        permissions: r/w
       - name: uart_sig_3_sel
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x3
+        permissions: r/w
       - name: uart_sig_4_sel
         description: ""
         bit_size: 4
         bit_offset: 16
         default_value: 0x4
+        permissions: r/w
       - name: uart_sig_5_sel
         description: ""
         bit_size: 4
         bit_offset: 20
         default_value: 0x5
+        permissions: r/w
       - name: uart_sig_6_sel
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0x6
+        permissions: r/w
       - name: uart_sig_7_sel
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x7
+        permissions: r/w
   - name: DBG_SEL_LL
     description: ""
     fields:
@@ -1811,6 +2058,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DBG_SEL_LH
     description: ""
     fields:
@@ -1819,6 +2067,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DBG_SEL_HL
     description: ""
     fields:
@@ -1827,6 +2076,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DBG_SEL_HH
     description: ""
     fields:
@@ -1835,6 +2085,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: debug
     description: ""
     fields:
@@ -1843,11 +2094,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: debug_i
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: r
   - name: GPIO_CFGCTL0
     description: ""
     fields:
@@ -1856,81 +2109,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_0_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_0_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_0_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_0_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_0_func_sel
         description: "GPIO Function Select (Default : JTAG)"
         bit_size: 5
         bit_offset: 8
         default_value: 0xe
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_1_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_1_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_1_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_1_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_1_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_1_func_sel
         description: "GPIO Function Select (Default : JTAG)"
         bit_size: 5
         bit_offset: 24
         default_value: 0xe
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL1
     description: ""
     fields:
@@ -1939,81 +2208,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_2_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_2_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_2_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_2_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_2_func_sel
         description: "GPIO Function Select (Default : JTAG)"
         bit_size: 5
         bit_offset: 8
         default_value: 0xe
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_3_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_3_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_3_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_3_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_3_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_3_func_sel
         description: "GPIO Function Select (Default : SWGPIO)"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL2
     description: ""
     fields:
@@ -2022,81 +2307,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_4_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_4_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_4_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_4_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_4_func_sel
         description: "GPIO Function Select (Default : SWGPIO)"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_5_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_5_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_5_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_5_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_5_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_5_func_sel
         description: "GPIO Function Select (Default : SWGPIO)"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL3
     description: ""
     fields:
@@ -2105,81 +2406,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_6_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_6_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_6_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_6_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_6_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_7_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_7_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_7_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_7_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_7_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_7_func_sel
         description: "GPIO Function Select (Default : SWGPIO)"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL4
     description: ""
     fields:
@@ -2188,85 +2505,101 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_8_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_8_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_8_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_8_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_8_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_9_ie
         description: "GPIO Input Enable (Useless, IE depend on reg_aon_pad_ie_smt[0] :
           0x4000F014[8])"
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_9_smt
         description: "GPIO SMT Control(Useless, IE depend on reg_aon_pad_ie_smt[0] :
           0x4000F014[8])"
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_9_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_9_pu
         description: GPIO Pull Up Control (Use this bit if reg_en_hw_pu_pd := 0
           (0x4000F014[16])
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_9_pd
         description: GPIO Pull Down Control (Use this bit if reg_en_hw_pu_pd := 0
           (0x4000F014[16])
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_9_func_sel
         description: "GPIO Function Select (Default : JTAG )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xe
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL5
     description: ""
     fields:
@@ -2276,84 +2609,100 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_10_smt
         description: "GPIO SMT Control(Useless, IE depend on reg_aon_pad_ie_smt[1] :
           0x4000F014[9])"
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_10_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_10_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_10_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_10_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_11_ie
         description: "GPIO Input Enable (Useless, IE depend on reg_aon_pad_ie_smt[2] :
           0x4000F014[10])"
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_11_smt
         description: "GPIO SMT Control(Useless, IE depend on reg_aon_pad_ie_smt[2] :
           0x4000F014[10])"
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_11_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_11_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_11_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_11_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL6
     description: ""
     fields:
@@ -2363,84 +2712,100 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_12_smt
         description: "GPIO SMT Control(Useless, IE depend on reg_aon_pad_ie_smt[3] :
           0x4000F014[11])"
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_12_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_12_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_12_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_12_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_13_ie
         description: "GPIO Input Enable (Useless, IE depend on reg_aon_pad_ie_smt[4] :
           0x4000F014[12])"
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_13_smt
         description: "GPIO SMT Control(Useless, IE depend on reg_aon_pad_ie_smt[4] :
           0x4000F014[12])"
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_13_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_13_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_13_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_13_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL7
     description: ""
     fields:
@@ -2449,81 +2814,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_14_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_14_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_14_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_14_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_14_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_15_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_15_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_15_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_15_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_15_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_15_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL8
     description: ""
     fields:
@@ -2532,83 +2913,99 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_16_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_16_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_16_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_16_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_16_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_17_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_17_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_17_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_17_pu
         description: GPIO Pull Up Control (Use this bit if reg_en_hw_pu_pd := 0
           (0x4000F014[16])
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_17_pd
         description: GPIO Pull Down Control (Use this bit if reg_en_hw_pu_pd := 0
           (0x4000F014[16])
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_17_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL9
     description: ""
     fields:
@@ -2617,81 +3014,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_18_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_18_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_18_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_18_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_18_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_19_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_19_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_19_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_19_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_19_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_19_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL10
     description: ""
     fields:
@@ -2700,81 +3113,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_20_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_20_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_20_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_20_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_20_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_21_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_21_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_21_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_21_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_21_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_21_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL11
     description: ""
     fields:
@@ -2783,81 +3212,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_22_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_22_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_22_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_22_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_22_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_23_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_23_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_23_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_23_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_23_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_23_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL12
     description: ""
     fields:
@@ -2866,81 +3311,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_24_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_24_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_24_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_24_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_24_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_25_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_25_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_25_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_25_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_25_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_25_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL13
     description: ""
     fields:
@@ -2949,81 +3410,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_26_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_26_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_26_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_26_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_26_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_27_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_27_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_27_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_27_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_27_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_27_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL14
     description: ""
     fields:
@@ -3032,81 +3509,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_28_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_28_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_28_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_28_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_28_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_29_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_29_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_29_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_29_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_29_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_29_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL15
     description: ""
     fields:
@@ -3115,81 +3608,97 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_30_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_30_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_30_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_30_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_30_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 8
         default_value: 0xb
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_31_ie
         description: GPIO Input Enable
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_31_smt
         description: GPIO SMT Control
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_31_drv
         description: GPIO Driving Control
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_31_pu
         description: GPIO Pull Up Control
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_31_pd
         description: GPIO Pull Down Control
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_23
         description: ""
         bit_size: 2
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_31_func_sel
         description: "GPIO Function Select (Default : SWGPIO )"
         bit_size: 5
         bit_offset: 24
         default_value: 0xb
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL16
     description: ""
     fields:
@@ -3198,61 +3707,73 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_32_smt
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_32_drv
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_32_pu
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_32_pd
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_15
         description: ""
         bit_size: 10
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_33_ie
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_33_smt
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_33_drv
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_33_pu
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_33_pd
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_31
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL17
     description: ""
     fields:
@@ -3261,61 +3782,73 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_34_smt
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_34_drv
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_34_pu
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_34_pd
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_15
         description: ""
         bit_size: 10
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_35_ie
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_35_smt
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_35_drv
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_35_pu
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_35_pd
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_31
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL18
     description: ""
     fields:
@@ -3324,61 +3857,73 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_36_smt
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_36_drv
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_36_pu
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_36_pd
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_15
         description: ""
         bit_size: 10
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_gpio_37_ie
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_37_smt
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: reg_gpio_37_drv
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_37_pu
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_37_pd
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reserved_22_31
         description: ""
         bit_size: 10
         bit_offset: 22
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL30
     description: ""
     fields:
@@ -3387,161 +3932,193 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_1_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_2_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_3_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_4_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_5_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_6_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_7_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_8_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_9_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_10_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_11_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_12_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_13_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_14_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_15_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_16_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_17_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_18_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_19_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_20_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_21_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_22_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_23_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_24_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_25_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_26_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_27_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_28_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_29_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_30_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r
       - name: reg_gpio_31_i
         description: Register Controlled GPIO Input value
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: GPIO_CFGCTL31
     description: ""
     fields:
@@ -3550,6 +4127,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL32
     description: ""
     fields:
@@ -3558,161 +4136,193 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_1_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_2_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_3_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_4_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_5_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_6_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_7_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_8_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_9_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_10_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_11_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_12_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_13_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_14_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_15_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_16_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_17_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_18_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_19_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_20_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_21_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_22_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_23_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_24_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_25_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_26_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_27_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_28_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_29_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_30_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_31_o
         description: Register Controlled GPIO Output Value
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: GPIO_CFGCTL33
     description: ""
     fields:
@@ -3721,6 +4331,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_CFGCTL34
     description: ""
     fields:
@@ -3730,192 +4341,224 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_1_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_2_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_3_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_4_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_5_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_6_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_7_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_8_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_9_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_10_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_11_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_12_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_13_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_14_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_15_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_16_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_17_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_18_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_19_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_20_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_21_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_22_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_23_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_24_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_25_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_26_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_27_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_28_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_29_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_30_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: reg_gpio_31_oe
         description: Register Controlled GPIO Output Enable (Used when GPIO Function
           select to Register Control GPIO)
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: GPIO_CFGCTL35
     description: ""
     fields:
@@ -3924,6 +4567,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_INT_MASK1
     description: ""
     fields:
@@ -3932,6 +4576,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: GPIO_INT_STAT1
     description: ""
     fields:
@@ -3940,6 +4585,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: GPIO_INT_CLR1
     description: ""
     fields:
@@ -3948,6 +4594,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: GPIO_INT_MODE_SET1
     description: ""
     fields:
@@ -3957,11 +4604,13 @@ fieldsets:
         bit_size: 30
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_INT_MODE_SET2
     description: ""
     fields:
@@ -3971,11 +4620,13 @@ fieldsets:
         bit_size: 30
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_INT_MODE_SET3
     description: ""
     fields:
@@ -3985,11 +4636,13 @@ fieldsets:
         bit_size: 30
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_INT_MODE_SET4
     description: ""
     fields:
@@ -3998,11 +4651,13 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_31
         description: ""
         bit_size: 26
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_INT2_MASK1
     description: ""
     fields:
@@ -4011,6 +4666,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: GPIO_INT2_STAT1
     description: ""
     fields:
@@ -4019,6 +4675,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: GPIO_INT2_CLR1
     description: ""
     fields:
@@ -4027,6 +4684,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: GPIO_INT2_MODE_SET1
     description: ""
     fields:
@@ -4036,11 +4694,13 @@ fieldsets:
         bit_size: 30
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_INT2_MODE_SET2
     description: ""
     fields:
@@ -4050,11 +4710,13 @@ fieldsets:
         bit_size: 30
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_INT2_MODE_SET3
     description: ""
     fields:
@@ -4064,11 +4726,13 @@ fieldsets:
         bit_size: 30
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: GPIO_INT2_MODE_SET4
     description: ""
     fields:
@@ -4077,11 +4741,13 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_31
         description: ""
         bit_size: 26
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
   - name: dll
     description: ""
     fields:
@@ -4090,116 +4756,139 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: dtest_en_dll_outclk
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ten_dll
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: dll_clk_mmdiv_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: dll_clk_288M_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: dll_clk_144M_en
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: dll_clk_96M_en
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: dll_clk_57p6M_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: dll_vctrl_sel
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x4
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: dll_prechg_sel
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: dll_prechg_reg
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: dll_prechg_en
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: dll_vctrl_force_en
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: dll_post_div
         description: ""
         bit_size: 4
         bit_offset: 16
         default_value: 0x2
+        permissions: r/w
       - name: dll_delay_sel
         description: ""
         bit_size: 2
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: dll_cp_op_en
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x1
+        permissions: r/w
       - name: dll_cp_hiz
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: reserved_24_27
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
       - name: dll_refclk_sel
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: dll_reset
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
       - name: pu_dll
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: ppu_dll
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: led_driver
     description: ""
     fields:
@@ -4208,51 +4897,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: led_din_sel
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: led_din_polarity_sel
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: leddrv_ibias
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x8
+        permissions: r/w
       - name: ir_rx_gpio_sel
         description: ""
         bit_size: 4
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_27
         description: ""
         bit_size: 16
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: leddrv_out_en
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x3
+        permissions: r/w
       - name: reserved_30
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
       - name: pu_leddrv
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: usb_xcvr
     description: ""
     fields:
@@ -4261,106 +4960,127 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x3
+        permissions: r/w
       - name: pu_usb_ldo
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: usb_rout_nmos
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x3
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: usb_rout_pmos
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x3
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: usb_oeb_sel
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: rw
       - name: usb_oeb_reg
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: rw
       - name: usb_oeb
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: usb_data_convert
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: rw
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: usb_enum
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: usb_spd
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x1
+        permissions: r/w
       - name: usb_sus
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r/w
       - name: pu_usb
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: usb_bd
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: usb_vim
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r
       - name: usb_vip
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: usb_rcv
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: usb_xcvr_config
     description: ""
     fields:
@@ -4369,81 +5089,97 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: usb_v_hys_p
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: usb_bd_vth
         description: ""
         bit_size: 3
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reg_usb_use_xcvr
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: usb_str_drv
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reg_usb_use_ctrl
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: usb_res_pullup_tune
         description: ""
         bit_size: 3
         bit_offset: 12
         default_value: 0x2
+        permissions: r/w
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: usb_slewrate_m_fall
         description: ""
         bit_size: 3
         bit_offset: 16
         default_value: 0x3
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: usb_slewrate_m_rise
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x4
+        permissions: r/w
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: usb_slewrate_p_fall
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x3
+        permissions: r/w
       - name: reserved_27
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: usb_slewrate_p_rise
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x4
+        permissions: r/w
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: gpdac_ctrl
     description: ""
     fields:
@@ -4452,41 +5188,49 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: gpdacb_rstn_ana
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reserved_2_6
         description: ""
         bit_size: 5
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: gpdac_test_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: gpdac_ref_sel
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: gpdac_test_sel
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_23
         description: ""
         bit_size: 12
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: gpdac_reserved
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0xf
+        permissions: r/w
   - name: gpdac_actrl
     description: ""
     fields:
@@ -4495,31 +5239,37 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: gpdac_ioa_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_17
         description: ""
         bit_size: 16
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: gpdac_a_rng
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x3
+        permissions: r/w
       - name: gpdac_a_outmux
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_23_31
         description: ""
         bit_size: 9
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
   - name: gpdac_bctrl
     description: ""
     fields:
@@ -4528,31 +5278,37 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: gpdac_iob_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_17
         description: ""
         bit_size: 16
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: gpdac_b_rng
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x3
+        permissions: r/w
       - name: gpdac_b_outmux
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_23_31
         description: ""
         bit_size: 9
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
   - name: gpdac_data
     description: ""
     fields:
@@ -4561,21 +5317,25 @@ fieldsets:
         bit_size: 10
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: gpdac_a_data
         description: ""
         bit_size: 10
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_26_31
         description: ""
         bit_size: 6
         bit_offset: 26
         default_value: 0x0
+        permissions: rsvd
   - name: chip_revision
     description: ""
     fields:
@@ -4584,11 +5344,13 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: tzc_glb_ctrl_0
     description: ""
     fields:
@@ -4597,86 +5359,103 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s01_lock
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: tzc_glb_swrst_s30_lock
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: reserved_9_11
         description: ""
         bit_size: 3
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
       - name: tzc_glb_ctrl_pwron_rst_lock
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_ctrl_cpu_reset_lock
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_ctrl_sys_reset_lock
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_ctrl_ungated_ap_lock
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: reserved_16_24
         description: ""
         bit_size: 9
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
       - name: tzc_glb_misc_lock
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_sram_lock
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_l2c_lock
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_bmx_lock
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_dbg_lock
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_mbist_lock
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_clk_lock
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: tzc_glb_ctrl_1
     description: ""
     fields:
@@ -4685,161 +5464,193 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s21_lock
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s22_lock
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s23_lock
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s24_lock
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s25_lock
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s26_lock
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s27_lock
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s28_lock
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s29_lock
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s2a_lock
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s2b_lock
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s2c_lock
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s2d_lock
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s2e_lock
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s2f_lock
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s10_lock
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s11_lock
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s12_lock
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s13_lock
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s14_lock
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s15_lock
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s16_lock
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s17_lock
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s18_lock
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s19_lock
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s1a_lock
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s1b_lock
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s1c_lock
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s1d_lock
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s1e_lock
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_swrst_s1f_lock
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: tzc_glb_ctrl_2
     description: ""
     fields:
@@ -4848,161 +5659,193 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_1_lock
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_2_lock
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_3_lock
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_4_lock
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_5_lock
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_6_lock
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_7_lock
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_8_lock
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_9_lock
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_10_lock
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_11_lock
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_12_lock
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_13_lock
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_14_lock
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_15_lock
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_16_lock
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_17_lock
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_18_lock
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_19_lock
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_20_lock
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_21_lock
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_22_lock
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_23_lock
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_24_lock
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_25_lock
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_26_lock
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_27_lock
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_28_lock
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_29_lock
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_30_lock
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_31_lock
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: tzc_glb_ctrl_3
     description: ""
     fields:
@@ -5011,33 +5854,40 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_33_lock
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_34_lock
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_35_lock
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_36_lock
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: tzc_glb_gpio_37_lock
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: reserved_6_31
         description: ""
         bit_size: 26
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd

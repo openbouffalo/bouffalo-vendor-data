@@ -101,26 +101,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: led_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: led_pol
         description: led polarity
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: deg_en
         description: deglitch
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: deg_cnt
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: spl_period
         description: >-
           "SPL" sample period in [us/sample]. The SAMPLE register will be
@@ -154,6 +159,7 @@ fieldsets:
         bit_size: 4
         bit_offset: 8
         default_value: 0x2
+        permissions: r/w
       - name: rpt_period
         description: >-
           "RPT" report period in [samples/report]. Specifies the number of
@@ -164,11 +170,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 12
         default_value: 0xa
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: qdec0_ctrl1
     description: ""
     fields:
@@ -177,36 +185,43 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: spl_mode
         description: "spl option  0: Stop sample if rpt_rdy  1: Continue sample"
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: rpt_mode
         description: "rpt option  0: Count time only if sample change  1: Continue time"
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: input_swap
         description: input a/b swap
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_15
         description: ""
         bit_size: 12
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: led_period
         description: Period in us the LED is switched on prior to sampling
         bit_size: 9
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: qdec0_value
     description: ""
     fields:
@@ -215,16 +230,19 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: acc2_val
         description: Double error accumulation (0~15)
         bit_size: 4
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_20_27
         description: ""
         bit_size: 8
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: spl_val
         description: |-
           Sample value. Direction of last change
@@ -235,11 +253,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: qdec0_int_en
     description: ""
     fields:
@@ -248,26 +268,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: spl_rdy_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: dbl_rdy_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: overflow_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: qdec0_int_sts
     description: ""
     fields:
@@ -276,27 +301,32 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: spl_rdy_sts
         description: Event being generated for every new sample value written to the
           SAMPLE register
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: dbl_rdy_sts
         description: ACC2 double error
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: overflow_sts
         description: ACC1 or ACC2 overflow
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: qdec0_int_clr
     description: ""
     fields:
@@ -305,26 +335,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1c
       - name: spl_rdy_clr
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1c
       - name: dbl_rdy_clr
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: overflow_clr
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: qdec1_ctrl0
     description: ""
     fields:
@@ -333,26 +368,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: led_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: led_pol
         description: led polarity
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: deg_en
         description: deglitch
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: deg_cnt
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: spl_period
         description: >-
           "SPL" sample period in [us/sample]. The SAMPLE register will be
@@ -386,6 +426,7 @@ fieldsets:
         bit_size: 4
         bit_offset: 8
         default_value: 0x2
+        permissions: r/w
       - name: rpt_period
         description: >-
           "RPT" report period in [samples/report]. Specifies the number of
@@ -396,11 +437,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 12
         default_value: 0xa
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: qdec1_ctrl1
     description: ""
     fields:
@@ -409,36 +452,43 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: spl_mode
         description: "spl option  0: Stop sample if rpt_rdy  1: Continue sample"
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: rpt_mode
         description: "rpt option  0: Count time only if sample change  1: Continue time"
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: input_swap
         description: input a/b swap
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_15
         description: ""
         bit_size: 12
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: led_period
         description: Period in us the LED is switched on prior to sampling
         bit_size: 9
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: qdec1_value
     description: ""
     fields:
@@ -447,16 +497,19 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: acc2_val
         description: Double error accumulation (0~15)
         bit_size: 4
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_20_27
         description: ""
         bit_size: 8
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: spl_val
         description: |-
           Sample value. Direction of last change
@@ -467,11 +520,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: qdec1_int_en
     description: ""
     fields:
@@ -480,26 +535,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: spl_rdy_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: dbl_rdy_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: overflow_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: qdec1_int_sts
     description: ""
     fields:
@@ -508,27 +568,32 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: spl_rdy_sts
         description: Event being generated for every new sample value written to the
           SAMPLE register
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: dbl_rdy_sts
         description: ACC2 double error
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: overflow_sts
         description: ACC1 or ACC2 overflow
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: qdec1_int_clr
     description: ""
     fields:
@@ -537,26 +602,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1c
       - name: spl_rdy_clr
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1c
       - name: dbl_rdy_clr
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: overflow_clr
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: qdec2_ctrl0
     description: ""
     fields:
@@ -565,26 +635,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: led_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: led_pol
         description: led polarity
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: deg_en
         description: deglitch
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: deg_cnt
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: spl_period
         description: >-
           "SPL" sample period in [us/sample]. The SAMPLE register will be
@@ -618,6 +693,7 @@ fieldsets:
         bit_size: 4
         bit_offset: 8
         default_value: 0x2
+        permissions: r/w
       - name: rpt_period
         description: >-
           "RPT" report period in [samples/report]. Specifies the number of
@@ -628,11 +704,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 12
         default_value: 0xa
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: qdec2_ctrl1
     description: ""
     fields:
@@ -641,36 +719,43 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: spl_mode
         description: "spl option  0: Stop sample if rpt_rdy  1: Continue sample"
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: rpt_mode
         description: "rpt option  0: Count time only if sample change  1: Continue time"
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: input_swap
         description: input a/b swap
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_15
         description: ""
         bit_size: 12
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: led_period
         description: Period in us the LED is switched on prior to sampling
         bit_size: 9
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: qdec2_value
     description: ""
     fields:
@@ -679,16 +764,19 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: acc2_val
         description: Double error accumulation (0~15)
         bit_size: 4
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_20_27
         description: ""
         bit_size: 8
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: spl_val
         description: |-
           Sample value. Direction of last change
@@ -699,11 +787,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: qdec2_int_en
     description: ""
     fields:
@@ -712,26 +802,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: spl_rdy_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: dbl_rdy_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: overflow_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: qdec2_int_sts
     description: ""
     fields:
@@ -740,27 +835,32 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: spl_rdy_sts
         description: Event being generated for every new sample value written to the
           SAMPLE register
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: dbl_rdy_sts
         description: ACC2 double error
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: overflow_sts
         description: ACC1 or ACC2 overflow
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: qdec2_int_clr
     description: ""
     fields:
@@ -769,23 +869,28 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1c
       - name: spl_rdy_clr
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1c
       - name: dbl_rdy_clr
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: overflow_clr
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd

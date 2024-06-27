@@ -366,91 +366,109 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_mjpeg_bit_order
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_order_u_even
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reg_wr_over_stop
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reg_last_hf_wblk_dmy
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reg_last_hf_hblk_dmy
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reg_reflect_dmy
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: reg_h_bust
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x3
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: reg_yuv_mode
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_14_15
         description: ""
         bit_size: 2
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: reg_q_mode
         description: ""
         bit_size: 7
         bit_offset: 16
         default_value: 0x32
+        permissions: r/w
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: reg_y0_order
         description: ""
         bit_size: 2
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: reg_u0_order
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: reg_y1_order
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x2
+        permissions: r/w
       - name: reg_v0_order
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x3
+        permissions: r/w
   - name: mjpeg_control_2
     description: ""
     fields:
@@ -459,51 +477,61 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: reg_mjpeg_sw_mode
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reg_mjpeg_sw_run
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_11
         description: ""
         bit_size: 2
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: reg_yy_dvp2ahb_lsel
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reg_yy_dvp2ahb_fsel
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reg_uv_dvp2ahb_lsel
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: reg_uv_dvp2ahb_fsel
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: reg_mjpeg_wait_cycle
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x400
+        permissions: r/w
   - name: mjpeg_yy_frame_addr
     description: ""
     fields:
@@ -512,6 +540,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x80000000
+        permissions: r/w
   - name: mjpeg_uv_frame_addr
     description: ""
     fields:
@@ -520,6 +549,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x80000000
+        permissions: r/w
   - name: mjpeg_yuv_mem
     description: ""
     fields:
@@ -528,21 +558,25 @@ fieldsets:
         bit_size: 13
         bit_offset: 0
         default_value: 0x2
+        permissions: r/w
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: reg_uv_mem_hblk
         description: ""
         bit_size: 13
         bit_offset: 16
         default_value: 0x2
+        permissions: r/w
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: jpeg_frame_addr
     description: ""
     fields:
@@ -551,6 +585,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x80400000
+        permissions: r/w
   - name: jpeg_store_memory
     description: ""
     fields:
@@ -559,6 +594,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x4000
+        permissions: r/w
   - name: mjpeg_control_3
     description: ""
     fields:
@@ -567,121 +603,145 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_int_cam_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reg_int_mem_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_int_frame_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: sts_normal_int
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: sts_cam_int
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: sts_mem_int
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: sts_frame_int
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: mjpeg_idle
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r
       - name: mjpeg_func
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: mjpeg_wait
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: mjpeg_flsh
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: mjpeg_mans
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: mjpeg_manf
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: ahb_idle
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: reg_frame_cnt_trgr_int
         description: ""
         bit_size: 5
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reg_int_idle_en
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: sts_idle_int
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: frame_valid_cnt
         description: ""
         bit_size: 5
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: reg_int_swap_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: sts_swap_int
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_frame_fifo_pop
     description: ""
     fields:
@@ -690,51 +750,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1p
       - name: reg_w_swap_clr
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1p
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: reg_int_normal_clr
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_cam_clr
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_mem_clr
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_frame_clr
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_idle_clr
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_swap_clr
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: w1p
       - name: reserved_14_31
         description: ""
         bit_size: 18
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_frame_size
     description: ""
     fields:
@@ -743,21 +813,25 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0xf
+        permissions: r/w
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: reg_frame_hblk
         description: ""
         bit_size: 12
         bit_offset: 16
         default_value: 0x14
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_header_byte
     description: ""
     fields:
@@ -766,21 +840,25 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: reg_tail_exp
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_swap_mode
     description: ""
     fields:
@@ -789,41 +867,49 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_7
         description: ""
         bit_size: 7
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: sts_swap0_full
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: sts_swap1_full
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: sts_read_swap_idx
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: sts_swap_fstart
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: sts_swap_fend
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_swap_bit_cnt
     description: ""
     fields:
@@ -832,6 +918,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_paket_ctrl
     description: ""
     fields:
@@ -840,21 +927,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_jend_to_pend
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_15
         description: ""
         bit_size: 14
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: reg_pket_body_byte
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: mjpeg_paket_head_tail
     description: ""
     fields:
@@ -863,21 +954,25 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: reg_pket_tail_byte
         description: ""
         bit_size: 12
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_28_31
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_Y_frame_read_status_1
     description: ""
     fields:
@@ -886,21 +981,25 @@ fieldsets:
         bit_size: 13
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: yy_frm_hblk_r
         description: ""
         bit_size: 13
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_Y_frame_read_status_2
     description: ""
     fields:
@@ -909,21 +1008,25 @@ fieldsets:
         bit_size: 13
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: yy_mem_rnd_r
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: yy_frm_cnt_r
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r
   - name: mjpeg_Y_frame_write_status
     description: ""
     fields:
@@ -932,21 +1035,25 @@ fieldsets:
         bit_size: 13
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: yy_mem_rnd_w
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: yy_frm_cnt_w
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r
   - name: mjpeg_UV_frame_read_status_1
     description: ""
     fields:
@@ -955,21 +1062,25 @@ fieldsets:
         bit_size: 13
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: uv_frm_hblk_r
         description: ""
         bit_size: 13
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_UV_frame_read_status_2
     description: ""
     fields:
@@ -978,21 +1089,25 @@ fieldsets:
         bit_size: 13
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: uv_mem_rnd_r
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: uv_frm_cnt_r
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r
   - name: mjpeg_UV_frame_write_status
     description: ""
     fields:
@@ -1001,21 +1116,25 @@ fieldsets:
         bit_size: 13
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_13_15
         description: ""
         bit_size: 3
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: uv_mem_rnd_w
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: uv_frm_cnt_w
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr0
     description: ""
     fields:
@@ -1024,6 +1143,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt0
     description: ""
     fields:
@@ -1032,6 +1152,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr1
     description: ""
     fields:
@@ -1040,6 +1161,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt1
     description: ""
     fields:
@@ -1048,6 +1170,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr2
     description: ""
     fields:
@@ -1056,6 +1179,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt2
     description: ""
     fields:
@@ -1064,6 +1188,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr3
     description: ""
     fields:
@@ -1072,6 +1197,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt3
     description: ""
     fields:
@@ -1080,6 +1206,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr4
     description: ""
     fields:
@@ -1088,6 +1215,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt4
     description: ""
     fields:
@@ -1096,6 +1224,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr5
     description: ""
     fields:
@@ -1104,6 +1233,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt5
     description: ""
     fields:
@@ -1112,6 +1242,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr6
     description: ""
     fields:
@@ -1120,6 +1251,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt6
     description: ""
     fields:
@@ -1128,6 +1260,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr7
     description: ""
     fields:
@@ -1136,6 +1269,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt7
     description: ""
     fields:
@@ -1144,6 +1278,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr_8
     description: ""
     fields:
@@ -1152,6 +1287,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt_8
     description: ""
     fields:
@@ -1160,6 +1296,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr_9
     description: ""
     fields:
@@ -1168,6 +1305,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt_9
     description: ""
     fields:
@@ -1176,6 +1314,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr_a
     description: ""
     fields:
@@ -1184,6 +1323,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt_a
     description: ""
     fields:
@@ -1192,6 +1332,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr_b
     description: ""
     fields:
@@ -1200,6 +1341,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt_b
     description: ""
     fields:
@@ -1208,6 +1350,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr_c
     description: ""
     fields:
@@ -1216,6 +1359,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt_c
     description: ""
     fields:
@@ -1224,6 +1368,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr_d
     description: ""
     fields:
@@ -1232,6 +1377,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt_d
     description: ""
     fields:
@@ -1240,6 +1386,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr_e
     description: ""
     fields:
@@ -1248,6 +1395,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt_e
     description: ""
     fields:
@@ -1256,6 +1404,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_start_addr_f
     description: ""
     fields:
@@ -1264,6 +1413,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_bit_cnt_f
     description: ""
     fields:
@@ -1272,6 +1422,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: mjpeg_q_mode0
     description: ""
     fields:
@@ -1280,11 +1431,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode1
     description: ""
     fields:
@@ -1293,11 +1446,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode2
     description: ""
     fields:
@@ -1306,11 +1461,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode3
     description: ""
     fields:
@@ -1319,11 +1476,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode4
     description: ""
     fields:
@@ -1332,11 +1491,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode5
     description: ""
     fields:
@@ -1345,11 +1506,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode6
     description: ""
     fields:
@@ -1358,11 +1521,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode7
     description: ""
     fields:
@@ -1371,11 +1536,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode_8
     description: ""
     fields:
@@ -1384,11 +1551,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode_9
     description: ""
     fields:
@@ -1397,11 +1566,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode_a
     description: ""
     fields:
@@ -1410,11 +1581,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode_b
     description: ""
     fields:
@@ -1423,11 +1596,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode_c
     description: ""
     fields:
@@ -1436,11 +1611,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode_d
     description: ""
     fields:
@@ -1449,11 +1626,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode_e
     description: ""
     fields:
@@ -1462,11 +1641,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_q_mode_f
     description: ""
     fields:
@@ -1475,11 +1656,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_debug
     description: ""
     fields:
@@ -1488,21 +1671,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: reg_mjpeg_dbg_sel
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: mjpeg_dummy_reg
     description: ""
     fields:
@@ -1511,3 +1698,4 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w

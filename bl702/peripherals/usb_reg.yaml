@@ -276,11 +276,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_3
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: cr_usb_rom_dct_en
         description: >-
           Enable signal of ROM-based descriptors (don't care if ep0_sw_ctrl is
@@ -292,11 +294,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: cr_usb_ep0_sw_ctrl
         description: |-
           EP0 software control enable
@@ -305,16 +309,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: cr_usb_ep0_sw_addr
         description: EP0 address (SW control mode)
         bit_size: 7
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: cr_usb_ep0_sw_size
         description: EP0 transfer size (SW control mode)
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_usb_ep0_sw_stall
         description: >-
           EP0 stall response (SW control mode)
@@ -324,6 +331,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: w1c
       - name: cr_usb_ep0_sw_nack_in
         description: >-
           EP0 IN transaction nack response (SW control mode)
@@ -333,6 +341,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: cr_usb_ep0_sw_nack_out
         description: >-
           EP0 OUT/SETUP transaction nack response (SW control mode)
@@ -342,23 +351,27 @@ fieldsets:
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: cr_usb_ep0_sw_rdy
         description: EP0 transaction ready. When NACK is enabled, asserting this bit
           will allow one packet to be transferred even if NACK is asserted
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: w1c
       - name: sts_usb_ep0_sw_rdy
         description: EP0 transaction ready status bit. Asserted with sw_rdy, and
           de-asserted when ACK is sent/received.
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: reserved_29_31
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x0
+        permissions: rsvd
   - name: usb_lpm_config
     description: ""
     fields:
@@ -367,6 +380,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1c
       - name: cr_lpm_resp_upd
         description: |-
           Response update signal (for async concern)
@@ -374,6 +388,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1c
       - name: cr_lpm_resp
         description: |-
           Response when LPM packet is received
@@ -384,21 +399,25 @@ fieldsets:
         bit_size: 2
         bit_offset: 2
         default_value: 0x2
+        permissions: r/w
       - name: reserved_4_19
         description: ""
         bit_size: 16
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: sts_lpm_attr
         description: LPM attributes received in LPM packet
         bit_size: 11
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: sts_lpm
         description: LPM status bit
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: usb_resume_config
     description: ""
     fields:
@@ -407,26 +426,31 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x1a
+        permissions: r/w
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: cr_res_trig
         description: Resume K-state trigger
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: w1c
       - name: reserved_13_30
         description: ""
         bit_size: 18
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
       - name: cr_res_force
         description: Force to output K-state
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: usb_setup_data_0
     description: ""
     fields:
@@ -435,21 +459,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: sts_setup_data_b1
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: sts_setup_data_b2
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: sts_setup_data_b3
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r
   - name: usb_setup_data_1
     description: ""
     fields:
@@ -458,21 +486,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: sts_setup_data_b5
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: sts_setup_data_b6
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: sts_setup_data_b7
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r
   - name: usb_frame_no
     description: ""
     fields:
@@ -481,26 +513,31 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: sts_pid
         description: PID value of the current transaction
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: sts_ep_no
         description: Endpoint number of the current transaction
         bit_size: 4
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: usb_error
     description: ""
     fields:
@@ -509,41 +546,49 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: xfer_to_err
         description: Transfer time-out error occurs, cleared by cr_usb_err_clr
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: ivld_ep_err
         description: Invalid endpoint error occurs, cleared by cr_usb_err_clr
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: pid_seq_err
         description: PID sequence error occurs, cleared by cr_usb_err_clr
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: pid_cks_err
         description: PID check sum error occurs, cleared by cr_usb_err_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: crc5_err
         description: Token CRC error occurs, cleared by cr_usb_err_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: crc16_err
         description: Data CRC error occurs, cleared by cr_usb_err_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: usb_int_en
     description: ""
     fields:
@@ -552,151 +597,181 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: cr_usb_reset_en
         description: Interrupt enable of usb_reset_int
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: cr_vbus_tgl_en
         description: Interrupt enable of vbus_tgl_int
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: cr_get_dct_cmd_en
         description: Interrupt enable of get_dct_cmd_int
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_setup_cmd_en
         description: Interrupt enable of ep0_setup_cmd_int
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_setup_done_en
         description: Interrupt enable of ep0_setup_done_int
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_in_cmd_en
         description: Interrupt enable of ep0_in_cmd_int
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_in_done_en
         description: Interrupt enable of ep0_in_done_int
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_out_cmd_en
         description: Interrupt enable of ep0_out_cmd_int
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_out_done_en
         description: Interrupt enable of ep0_out_done_int
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep1_cmd_en
         description: Interrupt enable of ep1_cmd_int
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep1_done_en
         description: Interrupt enable of ep1_done_int
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep2_cmd_en
         description: Interrupt enable of ep2_cmd_int
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep2_done_en
         description: Interrupt enable of ep2_done_int
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep3_cmd_en
         description: Interrupt enable of ep3_cmd_int
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep3_done_en
         description: Interrupt enable of ep3_done_int
         bit_size: 1
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep4_cmd_en
         description: Interrupt enable of ep4_cmd_int
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep4_done_en
         description: Interrupt enable of ep4_done_int
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep5_cmd_en
         description: Interrupt enable of ep5_cmd_int
         bit_size: 1
         bit_offset: 18
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep5_done_en
         description: Interrupt enable of ep5_done_int
         bit_size: 1
         bit_offset: 19
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep6_cmd_en
         description: Interrupt enable of ep6_cmd_int
         bit_size: 1
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep6_done_en
         description: Interrupt enable of ep6_done_int
         bit_size: 1
         bit_offset: 21
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep7_cmd_en
         description: Interrupt enable of ep7_cmd_int
         bit_size: 1
         bit_offset: 22
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep7_done_en
         description: Interrupt enable of ep7_done_int
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: rsvd_26_24
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
       - name: cr_usb_rend_en
         description: Interrupt enable of usb_rend_int
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: cr_lpm_wkup_en
         description: Interrupt enable of lpm_wkup_int
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: cr_lpm_pkt_en
         description: Interrupt enable of lpm_pkt_int
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: cr_sof_3ms_en
         description: Interrupt enable of sof_3ms_int
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: cr_usb_err_en
         description: Interrupt enable of usb_err_int
         bit_size: 1
         bit_offset: 31
         default_value: 0x1
+        permissions: r/w
   - name: usb_int_sts
     description: ""
     fields:
@@ -705,151 +780,181 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: usb_reset_int
         description: USB reset is triggered
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: vbus_tgl_int
         description: VBUS detection is toggled, check 0x1FC[31] for vbus_detect status
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: get_dct_cmd_int
         description: GET_DESCRIPTOR command is received
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: ep0_setup_cmd_int
         description: EP0 SETUP command is received
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep0_setup_done_int
         description: EP0 SETUP command is finished
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep0_in_cmd_int
         description: EP0 IN command is received
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep0_in_done_int
         description: EP0 IN command is finished
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: ep0_out_cmd_int
         description: EP0 OUT command is received
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: ep0_out_done_int
         description: EP0 OUT command is finished
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: ep1_cmd_int
         description: EP1 IN or OUT command is received
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r
       - name: ep1_done_int
         description: EP1 IN or OUT command is finished
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: ep2_cmd_int
         description: EP2 IN or OUT command is received
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r
       - name: ep2_done_int
         description: EP2 IN or OUT command is finished
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r
       - name: ep3_cmd_int
         description: EP3 IN or OUT command is received
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r
       - name: ep3_done_int
         description: EP3 IN or OUT command is finished
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep4_cmd_int
         description: EP4 IN or OUT command is received
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: ep4_done_int
         description: EP4 IN or OUT command is finished
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: ep5_cmd_int
         description: EP5 IN or OUT command is received
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r
       - name: ep5_done_int
         description: EP5 IN or OUT command is finished
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: ep6_cmd_int
         description: EP6 IN or OUT command is received
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: ep6_done_int
         description: EP6 IN or OUT command is finished
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r
       - name: ep7_cmd_int
         description: EP7 IN or OUT command is received
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: r
       - name: ep7_done_int
         description: EP7 IN or OUT command is finished
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r
       - name: rsvd_26_24
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
       - name: usb_rend_int
         description: USB reset de-assert is triggered
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r
       - name: lpm_wkup_int
         description: LPM resume (wakeup) signal is received
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r
       - name: lpm_pkt_int
         description: LPM packet is received
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r
       - name: sof_3ms_int
         description: SOF is absent for 3 ms
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r
       - name: usb_err_int
         description: USB error occurs, check usb_error for detailed error type
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: usb_int_mask
     description: ""
     fields:
@@ -858,151 +963,181 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: cr_usb_reset_mask
         description: Interrupt mask of usb_reset_int
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: cr_vbus_tgl_mask
         description: Interrupt mask of vbus_tgl_int
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: cr_get_dct_cmd_mask
         description: Interrupt mask of get_dct_cmd_int
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_setup_cmd_mask
         description: Interrupt mask of ep0_setup_cmd_int
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_setup_done_mask
         description: Interrupt mask of ep0_setup_done_int
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_in_cmd_mask
         description: Interrupt mask of ep0_in_cmd_int
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_in_done_mask
         description: Interrupt mask of ep0_in_done_int
         bit_size: 1
         bit_offset: 7
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_out_cmd_mask
         description: Interrupt mask of ep0_out_cmd_int
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep0_out_done_mask
         description: Interrupt mask of ep0_out_done_int
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep1_cmd_mask
         description: Interrupt mask of ep1_cmd_int
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep1_done_mask
         description: Interrupt mask of ep1_done_int
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep2_cmd_mask
         description: Interrupt mask of ep2_cmd_int
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep2_done_mask
         description: Interrupt mask of ep2_done_int
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep3_cmd_mask
         description: Interrupt mask of ep3_cmd_int
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep3_done_mask
         description: Interrupt mask of ep3_done_int
         bit_size: 1
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep4_cmd_mask
         description: Interrupt mask of ep4_cmd_int
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep4_done_mask
         description: Interrupt mask of ep4_done_int
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep5_cmd_mask
         description: Interrupt mask of ep5_cmd_int
         bit_size: 1
         bit_offset: 18
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep5_done_mask
         description: Interrupt mask of ep5_done_int
         bit_size: 1
         bit_offset: 19
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep6_cmd_mask
         description: Interrupt mask of ep6_cmd_int
         bit_size: 1
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep6_done_mask
         description: Interrupt mask of ep6_done_int
         bit_size: 1
         bit_offset: 21
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep7_cmd_mask
         description: Interrupt mask of ep7_cmd_int
         bit_size: 1
         bit_offset: 22
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep7_done_mask
         description: Interrupt mask of ep7_done_int
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: rsvd_26_24
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
       - name: cr_usb_rend_mask
         description: Interrupt mask of usb_rend_int
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: cr_lpm_wkup_mask
         description: Interrupt mask of lpm_wkup_int
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: cr_lpm_pkt_mask
         description: Interrupt mask of lpm_pkt_int
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
       - name: cr_sof_3ms_mask
         description: Interrupt mask of sof_3ms_int
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r/w
       - name: cr_usb_err_mask
         description: Interrupt mask of usb_err_int
         bit_size: 1
         bit_offset: 31
         default_value: 0x1
+        permissions: r/w
   - name: usb_int_clear
     description: ""
     fields:
@@ -1011,151 +1146,181 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1c
       - name: cr_usb_reset_clr
         description: Interrupt clear of usb_reset_int
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1c
       - name: cr_vbus_tgl_clr
         description: Interrupt clear of vbus_tgl_int
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: cr_get_dct_cmd_clr
         description: Interrupt clear of get_dct_cmd_int
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep0_setup_cmd_clr
         description: Interrupt clear of ep0_setup_cmd_int
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep0_setup_done_clr
         description: Interrupt clear of ep0_setup_done_int
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep0_in_cmd_clr
         description: Interrupt clear of ep0_in_cmd_int
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep0_in_done_clr
         description: Interrupt clear of ep0_in_done_int
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep0_out_cmd_clr
         description: Interrupt clear of ep0_out_cmd_int
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep0_out_done_clr
         description: Interrupt clear of ep0_out_done_int
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep1_cmd_clr
         description: Interrupt clear of ep1_cmd_int
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep1_done_clr
         description: Interrupt clear of ep1_done_int
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep2_cmd_clr
         description: Interrupt clear of ep2_cmd_int
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep2_done_clr
         description: Interrupt clear of ep2_done_int
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep3_cmd_clr
         description: Interrupt clear of ep3_cmd_int
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep3_done_clr
         description: Interrupt clear of ep3_done_int
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep4_cmd_clr
         description: Interrupt clear of ep4_cmd_int
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep4_done_clr
         description: Interrupt clear of ep4_done_int
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep5_cmd_clr
         description: Interrupt clear of ep5_cmd_int
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep5_done_clr
         description: Interrupt clear of ep5_done_int
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep6_cmd_clr
         description: Interrupt clear of ep6_cmd_int
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep6_done_clr
         description: Interrupt clear of ep6_done_int
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep7_cmd_clr
         description: Interrupt clear of ep7_cmd_int
         bit_size: 1
         bit_offset: 22
         default_value: 0x0
+        permissions: w1c
       - name: cr_ep7_done_clr
         description: Interrupt clear of ep7_done_int
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: w1c
       - name: rsvd_26_24
         description: ""
         bit_size: 3
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
       - name: cr_usb_rend_clr
         description: Interrupt clear of usb_rend_int
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: w1c
       - name: cr_lpm_wkup_clr
         description: Interrupt clear of lpm_wkup_int
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: w1c
       - name: cr_lpm_pkt_clr
         description: Interrupt clear of lpm_pkt_int
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: w1c
       - name: cr_sof_3ms_clr
         description: Interrupt clear of sof_3ms_int
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: w1c
       - name: cr_usb_err_clr
         description: Interrupt clear of usb_err_int
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: w1c
   - name: ep1_config
     description: ""
     fields:
@@ -1164,6 +1329,7 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x40
+        permissions: r/w
       - name: cr_ep1_dir
         description: |-
           Endpoint direction
@@ -1174,6 +1340,7 @@ fieldsets:
         bit_size: 2
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep1_type
         description: |-
           Endpoint type
@@ -1185,35 +1352,41 @@ fieldsets:
         bit_size: 3
         bit_offset: 13
         default_value: 0x4
+        permissions: r/w
       - name: cr_ep1_stall
         description: Endpoint STALL response enable, should not be enabled with NACK at
           the same time
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_ep1_nack
         description: Endpoint NACK response enable, should not be enabled with STALL at
           the same time
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep1_rdy
         description: Endpoint ready. When Endpoint NACK is enabled, asserting this bit
           will allow one packet to be transferred
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1c
       - name: sts_ep1_rdy
         description: Endpoint ready status bit. Asserted with ep_rdy, and de-asserted
           when ACK is sent/received.
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: ep2_config
     description: ""
     fields:
@@ -1222,6 +1395,7 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x40
+        permissions: r/w
       - name: cr_ep2_dir
         description: |-
           Endpoint direction
@@ -1232,6 +1406,7 @@ fieldsets:
         bit_size: 2
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep2_type
         description: |-
           Endpoint type
@@ -1243,35 +1418,41 @@ fieldsets:
         bit_size: 3
         bit_offset: 13
         default_value: 0x4
+        permissions: r/w
       - name: cr_ep2_stall
         description: Endpoint STALL response enable, should not be enabled with NACK at
           the same time
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_ep2_nack
         description: Endpoint NACK response enable, should not be enabled with STALL at
           the same time
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep2_rdy
         description: Endpoint ready. When Endpoint NACK is enabled, asserting this bit
           will allow one packet to be transferred
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1c
       - name: sts_ep2_rdy
         description: Endpoint ready status bit. Asserted with ep_rdy, and de-asserted
           when ACK is sent/received.
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: ep3_config
     description: ""
     fields:
@@ -1280,6 +1461,7 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x40
+        permissions: r/w
       - name: cr_ep3_dir
         description: |-
           Endpoint direction
@@ -1290,6 +1472,7 @@ fieldsets:
         bit_size: 2
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep3_type
         description: |-
           Endpoint type
@@ -1301,35 +1484,41 @@ fieldsets:
         bit_size: 3
         bit_offset: 13
         default_value: 0x4
+        permissions: r/w
       - name: cr_ep3_stall
         description: Endpoint STALL response enable, should not be enabled with NACK at
           the same time
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_ep3_nack
         description: Endpoint NACK response enable, should not be enabled with STALL at
           the same time
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep3_rdy
         description: Endpoint ready. When Endpoint NACK is enabled, asserting this bit
           will allow one packet to be transferred
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1c
       - name: sts_ep3_rdy
         description: Endpoint ready status bit. Asserted with ep_rdy, and de-asserted
           when ACK is sent/received.
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: ep4_config
     description: ""
     fields:
@@ -1338,6 +1527,7 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x40
+        permissions: r/w
       - name: cr_ep4_dir
         description: |-
           Endpoint direction
@@ -1348,6 +1538,7 @@ fieldsets:
         bit_size: 2
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep4_type
         description: |-
           Endpoint type
@@ -1359,35 +1550,41 @@ fieldsets:
         bit_size: 3
         bit_offset: 13
         default_value: 0x4
+        permissions: r/w
       - name: cr_ep4_stall
         description: Endpoint STALL response enable, should not be enabled with NACK at
           the same time
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_ep4_nack
         description: Endpoint NACK response enable, should not be enabled with STALL at
           the same time
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep4_rdy
         description: Endpoint ready. When Endpoint NACK is enabled, asserting this bit
           will allow one packet to be transferred
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1c
       - name: sts_ep4_rdy
         description: Endpoint ready status bit. Asserted with ep_rdy, and de-asserted
           when ACK is sent/received.
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: ep5_config
     description: ""
     fields:
@@ -1396,6 +1593,7 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x40
+        permissions: r/w
       - name: cr_ep5_dir
         description: |-
           Endpoint direction
@@ -1406,6 +1604,7 @@ fieldsets:
         bit_size: 2
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep5_type
         description: |-
           Endpoint type
@@ -1417,35 +1616,41 @@ fieldsets:
         bit_size: 3
         bit_offset: 13
         default_value: 0x4
+        permissions: r/w
       - name: cr_ep5_stall
         description: Endpoint STALL response enable, should not be enabled with NACK at
           the same time
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_ep5_nack
         description: Endpoint NACK response enable, should not be enabled with STALL at
           the same time
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep5_rdy
         description: Endpoint ready. When Endpoint NACK is enabled, asserting this bit
           will allow one packet to be transferred
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1c
       - name: sts_ep5_rdy
         description: Endpoint ready status bit. Asserted with ep_rdy, and de-asserted
           when ACK is sent/received.
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: ep6_config
     description: ""
     fields:
@@ -1454,6 +1659,7 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x40
+        permissions: r/w
       - name: cr_ep6_dir
         description: |-
           Endpoint direction
@@ -1464,6 +1670,7 @@ fieldsets:
         bit_size: 2
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep6_type
         description: |-
           Endpoint type
@@ -1475,35 +1682,41 @@ fieldsets:
         bit_size: 3
         bit_offset: 13
         default_value: 0x4
+        permissions: r/w
       - name: cr_ep6_stall
         description: Endpoint STALL response enable, should not be enabled with NACK at
           the same time
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_ep6_nack
         description: Endpoint NACK response enable, should not be enabled with STALL at
           the same time
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep6_rdy
         description: Endpoint ready. When Endpoint NACK is enabled, asserting this bit
           will allow one packet to be transferred
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1c
       - name: sts_ep6_rdy
         description: Endpoint ready status bit. Asserted with ep_rdy, and de-asserted
           when ACK is sent/received.
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: ep7_config
     description: ""
     fields:
@@ -1512,6 +1725,7 @@ fieldsets:
         bit_size: 11
         bit_offset: 0
         default_value: 0x40
+        permissions: r/w
       - name: cr_ep7_dir
         description: |-
           Endpoint direction
@@ -1522,6 +1736,7 @@ fieldsets:
         bit_size: 2
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep7_type
         description: |-
           Endpoint type
@@ -1533,35 +1748,41 @@ fieldsets:
         bit_size: 3
         bit_offset: 13
         default_value: 0x4
+        permissions: r/w
       - name: cr_ep7_stall
         description: Endpoint STALL response enable, should not be enabled with NACK at
           the same time
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: cr_ep7_nack
         description: Endpoint NACK response enable, should not be enabled with STALL at
           the same time
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: cr_ep7_rdy
         description: Endpoint ready. When Endpoint NACK is enabled, asserting this bit
           will allow one packet to be transferred
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1c
       - name: sts_ep7_rdy
         description: Endpoint ready status bit. Asserted with ep_rdy, and de-asserted
           when ACK is sent/received.
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: ep0_fifo_config
     description: ""
     fields:
@@ -1570,46 +1791,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ep0_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ep0_tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: ep0_rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: ep0_tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep0_tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep0_rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep0_rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep0_fifo_status
     description: ""
     fields:
@@ -1618,41 +1848,49 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x40
+        permissions: r
       - name: reserved_7_13
         description: ""
         bit_size: 7
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ep0_tx_fifo_empty
         description: TX FIFO empty flag
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: ep0_tx_fifo_full
         description: TX FIFO full flag
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep0_rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23_29
         description: ""
         bit_size: 7
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ep0_rx_fifo_empty
         description: RX FIFO empty flag
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r
       - name: ep0_rx_fifo_full
         description: RX FIFO full flag
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: ep0_tx_fifo_wdata
     description: ""
     fields:
@@ -1661,11 +1899,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep0_rx_fifo_rdata
     description: ""
     fields:
@@ -1674,11 +1914,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep1_fifo_config
     description: ""
     fields:
@@ -1687,46 +1929,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ep1_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ep1_tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: ep1_rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: ep1_tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep1_tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep1_rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep1_rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep1_fifo_status
     description: ""
     fields:
@@ -1735,41 +1986,49 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x40
+        permissions: r
       - name: reserved_7_13
         description: ""
         bit_size: 7
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ep1_tx_fifo_empty
         description: TX FIFO empty flag
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: ep1_tx_fifo_full
         description: TX FIFO full flag
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep1_rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23_29
         description: ""
         bit_size: 7
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ep1_rx_fifo_empty
         description: RX FIFO empty flag
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r
       - name: ep1_rx_fifo_full
         description: RX FIFO full flag
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: ep1_tx_fifo_wdata
     description: ""
     fields:
@@ -1778,11 +2037,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep1_rx_fifo_rdata
     description: ""
     fields:
@@ -1791,11 +2052,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep2_fifo_config
     description: ""
     fields:
@@ -1804,46 +2067,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ep2_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ep2_tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: ep2_rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: ep2_tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep2_tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep2_rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep2_rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep2_fifo_status
     description: ""
     fields:
@@ -1852,41 +2124,49 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x40
+        permissions: r
       - name: reserved_7_13
         description: ""
         bit_size: 7
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ep2_tx_fifo_empty
         description: TX FIFO empty flag
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: ep2_tx_fifo_full
         description: TX FIFO full flag
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep2_rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23_29
         description: ""
         bit_size: 7
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ep2_rx_fifo_empty
         description: RX FIFO empty flag
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r
       - name: ep2_rx_fifo_full
         description: RX FIFO full flag
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: ep2_tx_fifo_wdata
     description: ""
     fields:
@@ -1895,11 +2175,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep2_rx_fifo_rdata
     description: ""
     fields:
@@ -1908,11 +2190,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep3_fifo_config
     description: ""
     fields:
@@ -1921,46 +2205,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ep3_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ep3_tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: ep3_rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: ep3_tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep3_tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep3_rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep3_rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep3_fifo_status
     description: ""
     fields:
@@ -1969,41 +2262,49 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x40
+        permissions: r
       - name: reserved_7_13
         description: ""
         bit_size: 7
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ep3_tx_fifo_empty
         description: TX FIFO empty flag
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: ep3_tx_fifo_full
         description: TX FIFO full flag
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep3_rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23_29
         description: ""
         bit_size: 7
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ep3_rx_fifo_empty
         description: RX FIFO empty flag
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r
       - name: ep3_rx_fifo_full
         description: RX FIFO full flag
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: ep3_tx_fifo_wdata
     description: ""
     fields:
@@ -2012,11 +2313,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep3_rx_fifo_rdata
     description: ""
     fields:
@@ -2025,11 +2328,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep4_fifo_config
     description: ""
     fields:
@@ -2038,46 +2343,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ep4_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ep4_tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: ep4_rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: ep4_tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep4_tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep4_rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep4_rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep4_fifo_status
     description: ""
     fields:
@@ -2086,41 +2400,49 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x40
+        permissions: r
       - name: reserved_7_13
         description: ""
         bit_size: 7
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ep4_tx_fifo_empty
         description: TX FIFO empty flag
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: ep4_tx_fifo_full
         description: TX FIFO full flag
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep4_rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23_29
         description: ""
         bit_size: 7
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ep4_rx_fifo_empty
         description: RX FIFO empty flag
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r
       - name: ep4_rx_fifo_full
         description: RX FIFO full flag
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: ep4_tx_fifo_wdata
     description: ""
     fields:
@@ -2129,11 +2451,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep4_rx_fifo_rdata
     description: ""
     fields:
@@ -2142,11 +2466,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep5_fifo_config
     description: ""
     fields:
@@ -2155,46 +2481,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ep5_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ep5_tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: ep5_rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: ep5_tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep5_tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep5_rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep5_rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep5_fifo_status
     description: ""
     fields:
@@ -2203,41 +2538,49 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x40
+        permissions: r
       - name: reserved_7_13
         description: ""
         bit_size: 7
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ep5_tx_fifo_empty
         description: TX FIFO empty flag
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: ep5_tx_fifo_full
         description: TX FIFO full flag
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep5_rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23_29
         description: ""
         bit_size: 7
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ep5_rx_fifo_empty
         description: RX FIFO empty flag
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r
       - name: ep5_rx_fifo_full
         description: RX FIFO full flag
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: ep5_tx_fifo_wdata
     description: ""
     fields:
@@ -2246,11 +2589,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep5_rx_fifo_rdata
     description: ""
     fields:
@@ -2259,11 +2604,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep6_fifo_config
     description: ""
     fields:
@@ -2272,46 +2619,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ep6_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ep6_tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: ep6_rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: ep6_tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep6_tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep6_rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep6_rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep6_fifo_status
     description: ""
     fields:
@@ -2320,41 +2676,49 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x40
+        permissions: r
       - name: reserved_7_13
         description: ""
         bit_size: 7
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ep6_tx_fifo_empty
         description: TX FIFO empty flag
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: ep6_tx_fifo_full
         description: TX FIFO full flag
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep6_rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23_29
         description: ""
         bit_size: 7
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ep6_rx_fifo_empty
         description: RX FIFO empty flag
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r
       - name: ep6_rx_fifo_full
         description: RX FIFO full flag
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: ep6_tx_fifo_wdata
     description: ""
     fields:
@@ -2363,11 +2727,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep6_rx_fifo_rdata
     description: ""
     fields:
@@ -2376,11 +2742,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep7_fifo_config
     description: ""
     fields:
@@ -2389,46 +2757,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: ep7_dma_rx_en
         description: Enable signal of dma_rx_req/ack interface
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: ep7_tx_fifo_clr
         description: Clear signal of TX FIFO
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: w1c
       - name: ep7_rx_fifo_clr
         description: Clear signal of RX FIFO
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1c
       - name: ep7_tx_fifo_overflow
         description: Overflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: ep7_tx_fifo_underflow
         description: Underflow flag of TX FIFO, can be cleared by tx_fifo_clr
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: ep7_rx_fifo_overflow
         description: Overflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: ep7_rx_fifo_underflow
         description: Underflow flag of RX FIFO, can be cleared by rx_fifo_clr
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep7_fifo_status
     description: ""
     fields:
@@ -2437,41 +2814,49 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x40
+        permissions: r
       - name: reserved_7_13
         description: ""
         bit_size: 7
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: ep7_tx_fifo_empty
         description: TX FIFO empty flag
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: ep7_tx_fifo_full
         description: TX FIFO full flag
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r
       - name: ep7_rx_fifo_cnt
         description: RX FIFO available count
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23_29
         description: ""
         bit_size: 7
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: ep7_rx_fifo_empty
         description: RX FIFO empty flag
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r
       - name: ep7_rx_fifo_full
         description: RX FIFO full flag
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: ep7_tx_fifo_wdata
     description: ""
     fields:
@@ -2480,11 +2865,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: ep7_rx_fifo_rdata
     description: ""
     fields:
@@ -2493,11 +2880,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: rsvd_0
     description: ""
     fields:
@@ -2506,6 +2895,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: rsvd_1
     description: ""
     fields:
@@ -2514,6 +2904,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: xcvr_if_config
     description: ""
     fields:
@@ -2525,21 +2916,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: cr_xcvr_force_tx_oe
         description: Transceiver TX signals force mode value
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: cr_xcvr_force_tx_dp
         description: Transceiver TX signals force mode value
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: cr_xcvr_force_tx_dn
         description: Transceiver TX signals force mode value
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: cr_xcvr_force_rx_en
         description: |-
           Enable signal of transceiver RX signals force mode
@@ -2548,21 +2943,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: cr_xcvr_force_rx_d
         description: Transceiver RX signals force mode value
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: cr_xcvr_force_rx_dp
         description: Transceiver RX signals force mode value
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: cr_xcvr_force_rx_dn
         description: Transceiver RX signals force mode value
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: cr_xcvr_om_rx_sel
         description: |-
           Select signal of transceiver RX signals in output mode (tx_oe# = 0)
@@ -2571,28 +2970,34 @@ fieldsets:
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: cr_xcvr_om_rx_d
         description: Transceiver RX signals output mode CR value
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r/w
       - name: cr_xcvr_om_rx_dp
         description: Transceiver RX signals output mode CR value
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r/w
       - name: cr_xcvr_om_rx_dn
         description: Transceiver RX signals output mode CR value
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_30
         description: ""
         bit_size: 19
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: sts_vbus_det
         description: Transceiver VBUS detection status
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r

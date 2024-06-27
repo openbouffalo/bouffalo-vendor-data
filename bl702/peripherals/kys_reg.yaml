@@ -36,56 +36,67 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
       - name: ghost_en
         description: ghost key event detection
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: deg_en
         description: deglitch
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: deg_cnt
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: rc_ext
         description: idle duration between column scans
         bit_size: 2
         bit_offset: 8
         default_value: 0x3
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: row_num
         description: row_num + 1
         bit_size: 3
         bit_offset: 16
         default_value: 0x7
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: col_num
         description: col_num + 1
         bit_size: 5
         bit_offset: 20
         default_value: 0x13
+        permissions: r/w
       - name: reserved_25_31
         description: ""
         bit_size: 7
         bit_offset: 25
         default_value: 0x0
+        permissions: rsvd
   - name: ks_int_en
     description: ""
     fields:
@@ -94,11 +105,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_1_31
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
   - name: ks_int_sts
     description: ""
     fields:
@@ -107,11 +120,13 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: keycode_clr
     description: ""
     fields:
@@ -120,11 +135,13 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x0
+        permissions: w1c
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: keycode_value
     description: ""
     fields:
@@ -135,18 +152,22 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0xff
+        permissions: r
       - name: keycode1
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0xff
+        permissions: r
       - name: keycode2
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0xff
+        permissions: r
       - name: keycode3
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0xff
+        permissions: r

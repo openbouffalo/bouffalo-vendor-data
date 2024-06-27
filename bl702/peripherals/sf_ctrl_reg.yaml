@@ -436,91 +436,109 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: sf_clk_sf_rx_inv_sel
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: sf_clk_out_gate_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: sf_clk_out_inv_sel
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: sf_clk_sahb_sram_sel
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_read_dly_n
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_read_dly_en
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_15
         description: ""
         bit_size: 4
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_int
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: sf_if_int_clr
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_int_set
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_dly_mode
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_dout_endian
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x1
+        permissions: r/w
       - name: sf_aes_ctr_plus_en
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_key_endian
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x1
+        permissions: r/w
       - name: sf_aes_iv_endian
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: sf_id
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x1a
+        permissions: r/w
   - name: sf_ctrl_1
     description: ""
     fields:
@@ -529,81 +547,97 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_sr_pat
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_sr_int
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: sf_if_sr_int_en
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_sr_int_set
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_0_ack_lat
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x6
+        permissions: r/w
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_reg_hold
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_reg_wp
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: sf_ahb2sif_stopped
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r
       - name: sf_ahb2sif_stop
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_fn_sel
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
       - name: sf_ahb2sif_en
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x1
+        permissions: r/w
       - name: sf_ahb2sram_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x1
+        permissions: r/w
   - name: sf_if_sahb_0
     description: ""
     fields:
@@ -612,66 +646,79 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: sf_if_0_trig
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_dat_byte
         description: ""
         bit_size: 10
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_dmy_byte
         description: ""
         bit_size: 5
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_adr_byte
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_cmd_byte
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_dat_rw
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_dat_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_dmy_en
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_adr_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_cmd_en
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_spi_mode
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_qpi_mode_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_sahb_1
     description: ""
     fields:
@@ -680,6 +727,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_sahb_2
     description: ""
     fields:
@@ -688,6 +736,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_iahb_0
     description: ""
     fields:
@@ -696,56 +745,67 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_1_dmy_byte
         description: ""
         bit_size: 5
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_1_adr_byte
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x2
+        permissions: r/w
       - name: sf_if_1_cmd_byte
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_1_dat_rw
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_1_dat_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_1_dmy_en
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_1_adr_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_1_cmd_en
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_1_spi_mode
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_1_qpi_mode_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_iahb_1
     description: ""
     fields:
@@ -754,6 +814,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x3000000
+        permissions: r/w
   - name: sf_if_iahb_2
     description: ""
     fields:
@@ -762,6 +823,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_status_0
     description: ""
     fields:
@@ -770,6 +832,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: sf_if_status_1
     description: ""
     fields:
@@ -778,6 +841,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x20000000
+        permissions: r
   - name: sf_aes
     description: ""
     fields:
@@ -786,26 +850,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_mode
         description: ""
         bit_size: 2
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_pref_trig
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_pref_busy
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: sf_aes_status
         description: ""
         bit_size: 27
         bit_offset: 5
         default_value: 0x2
+        permissions: r
   - name: sf_ahb2sif_status
     description: ""
     fields:
@@ -814,6 +883,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x10000003
+        permissions: r
   - name: sf_if_io_dly_0
     description: ""
     fields:
@@ -822,41 +892,49 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: sf_cs2_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_7
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: sf_clk_out_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_25
         description: ""
         bit_size: 16
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf_dqs_oe_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: sf_dqs_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf_dqs_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_io_dly_1
     description: ""
     fields:
@@ -865,31 +943,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf_io_0_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf_io_0_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf_if_io_dly_2
     description: ""
     fields:
@@ -898,31 +982,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf_io_1_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf_io_1_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf_if_io_dly_3
     description: ""
     fields:
@@ -931,31 +1021,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf_io_2_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf_io_2_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf_if_io_dly_4
     description: ""
     fields:
@@ -964,31 +1060,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf_io_3_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf_io_3_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf_reserved
     description: ""
     fields:
@@ -997,6 +1099,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
   - name: sf2_if_io_dly_0
     description: ""
     fields:
@@ -1005,41 +1108,49 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: sf2_cs2_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_7
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_clk_out_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_25
         description: ""
         bit_size: 16
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_dqs_oe_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: sf2_dqs_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf2_dqs_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
   - name: sf2_if_io_dly_1
     description: ""
     fields:
@@ -1048,31 +1159,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_io_0_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_io_0_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf2_if_io_dly_2
     description: ""
     fields:
@@ -1081,31 +1198,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_io_1_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_io_1_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf2_if_io_dly_3
     description: ""
     fields:
@@ -1114,31 +1237,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_io_2_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_io_2_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf2_if_io_dly_4
     description: ""
     fields:
@@ -1147,31 +1276,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_io_3_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_io_3_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf3_if_io_dly_0
     description: ""
     fields:
@@ -1180,41 +1315,49 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: sf3_cs2_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_7
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_clk_out_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_25
         description: ""
         bit_size: 16
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_dqs_oe_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: sf3_dqs_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf3_dqs_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
   - name: sf3_if_io_dly_1
     description: ""
     fields:
@@ -1223,31 +1366,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_io_0_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_io_0_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf3_if_io_dly_2
     description: ""
     fields:
@@ -1256,31 +1405,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_io_1_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_io_1_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf3_if_io_dly_3
     description: ""
     fields:
@@ -1289,31 +1444,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_io_2_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_io_2_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf3_if_io_dly_4
     description: ""
     fields:
@@ -1322,31 +1483,37 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_7
         description: ""
         bit_size: 6
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_io_3_di_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: sf3_io_3_do_dly_sel
         description: ""
         bit_size: 2
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_18_31
         description: ""
         bit_size: 14
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
   - name: sf_ctrl_2
     description: ""
     fields:
@@ -1355,51 +1522,61 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_pad_sel_lock
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_dtr_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_dqs_en
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reserved_6_27
         description: ""
         bit_size: 22
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_bk_swap
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_bk2_mode
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_bk2_en
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_0_bk_sel
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: sf_ctrl_3
     description: ""
     fields:
@@ -1408,46 +1585,55 @@ fieldsets:
         bit_size: 4
         bit_offset: 0
         default_value: 0x6
+        permissions: r/w
       - name: sf_cmds_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: sf_cmds_bt_dly
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x2
+        permissions: r/w
       - name: sf_cmds_bt_en
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: sf_cmds_wrap_q_ini
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r/w
       - name: sf_cmds_wrap_mode
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: sf_cmds_wrap_q
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r
       - name: reserved_12_28
         description: ""
         bit_size: 17
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_1_ack_lat
         description: ""
         bit_size: 3
         bit_offset: 29
         default_value: 0x1
+        permissions: r/w
   - name: sf_if_iahb_3
     description: ""
     fields:
@@ -1456,56 +1642,67 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_2_dmy_byte
         description: ""
         bit_size: 5
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_2_adr_byte
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x2
+        permissions: r/w
       - name: sf_if_2_cmd_byte
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_2_dat_rw
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_2_dat_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_2_dmy_en
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_2_adr_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_2_cmd_en
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_2_spi_mode
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_2_qpi_mode_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x1
+        permissions: r/w
   - name: sf_if_iahb_4
     description: ""
     fields:
@@ -1514,6 +1711,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x38000000
+        permissions: r/w
   - name: sf_if_iahb_5
     description: ""
     fields:
@@ -1522,6 +1720,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_iahb_6
     description: ""
     fields:
@@ -1530,41 +1729,49 @@ fieldsets:
         bit_size: 17
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_3_adr_byte
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_3_cmd_byte
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_23_25
         description: ""
         bit_size: 3
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_3_adr_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_3_cmd_en
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_3_spi_mode
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_3_qpi_mode_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x1
+        permissions: r/w
   - name: sf_if_iahb_7
     description: ""
     fields:
@@ -1573,6 +1780,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xc0000000
+        permissions: r/w
   - name: sf_if_iahb_8
     description: ""
     fields:
@@ -1581,6 +1789,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_iahb_9
     description: ""
     fields:
@@ -1589,56 +1798,67 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_4_dmy_byte
         description: ""
         bit_size: 5
         bit_offset: 12
         default_value: 0x2
+        permissions: r/w
       - name: sf_if_4_adr_byte
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x2
+        permissions: r/w
       - name: sf_if_4_cmd_byte
         description: ""
         bit_size: 3
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_4_dat_rw
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_4_dat_en
         description: ""
         bit_size: 1
         bit_offset: 24
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_4_dmy_en
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_4_adr_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_4_cmd_en
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: sf_if_4_spi_mode
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: sf_if_4_qpi_mode_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x1
+        permissions: r/w
   - name: sf_if_iahb_10
     description: ""
     fields:
@@ -1647,6 +1867,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xeb000000
+        permissions: r/w
   - name: sf_if_iahb_11
     description: ""
     fields:
@@ -1655,6 +1876,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_if_iahb_12
     description: ""
     fields:
@@ -1663,51 +1885,61 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_clk_sf_rx_inv_sel
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: sf2_clk_sf_rx_inv_src
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: sf2_clk_out_inv_sel
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: sf3_clk_out_inv_sel
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: sf2_if_read_dly_n
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: sf2_if_read_dly_en
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: sf2_if_read_dly_src
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: sf_ctrl_prot_en_rd
     description: ""
     fields:
@@ -1716,31 +1948,37 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r
       - name: sf_ctrl_id0_en_rd
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r
       - name: sf_ctrl_id1_en_rd
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r
       - name: reserved_3_29
         description: ""
         bit_size: 27
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: sf_if_0_trig_wr_lock
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r
       - name: sf_dbg_dis
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: sf_ctrl_prot_en
     description: ""
     fields:
@@ -1749,21 +1987,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: sf_ctrl_id0_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: sf_ctrl_id1_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: sf_aes_key_r0_0
     description: ""
     fields:
@@ -1772,6 +2014,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r0_1
     description: ""
     fields:
@@ -1780,6 +2023,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r0_2
     description: ""
     fields:
@@ -1788,6 +2032,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r0_3
     description: ""
     fields:
@@ -1796,6 +2041,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r0_4
     description: ""
     fields:
@@ -1804,6 +2050,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r0_5
     description: ""
     fields:
@@ -1812,6 +2059,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r0_6
     description: ""
     fields:
@@ -1820,6 +2068,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r0_7
     description: ""
     fields:
@@ -1828,6 +2077,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r0_w0
     description: ""
     fields:
@@ -1836,6 +2086,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r0_w1
     description: ""
     fields:
@@ -1844,6 +2095,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r0_w2
     description: ""
     fields:
@@ -1852,6 +2104,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r0_w3
     description: ""
     fields:
@@ -1860,6 +2113,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_cfg_r0
     description: ""
     fields:
@@ -1868,31 +2122,37 @@ fieldsets:
         bit_size: 14
         bit_offset: 0
         default_value: 0x3fff
+        permissions: r/w
       - name: sf_aes_region_r0_start
         description: ""
         bit_size: 14
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: reserved_28
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
       - name: sf_aes_region_r0_hw_key_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_region_r0_en
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_region_r0_lock
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r1_0
     description: ""
     fields:
@@ -1901,6 +2161,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r1_1
     description: ""
     fields:
@@ -1909,6 +2170,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r1_2
     description: ""
     fields:
@@ -1917,6 +2179,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r1_3
     description: ""
     fields:
@@ -1925,6 +2188,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r1_4
     description: ""
     fields:
@@ -1933,6 +2197,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r1_5
     description: ""
     fields:
@@ -1941,6 +2206,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r1_6
     description: ""
     fields:
@@ -1949,6 +2215,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r1_7
     description: ""
     fields:
@@ -1957,6 +2224,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r1_w0
     description: ""
     fields:
@@ -1965,6 +2233,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r1_w1
     description: ""
     fields:
@@ -1973,6 +2242,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r1_w2
     description: ""
     fields:
@@ -1981,6 +2251,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r1_w3
     description: ""
     fields:
@@ -1989,6 +2260,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_r1
     description: ""
     fields:
@@ -1997,31 +2269,37 @@ fieldsets:
         bit_size: 14
         bit_offset: 0
         default_value: 0x3fff
+        permissions: r/w
       - name: sf_aes_r1_start
         description: ""
         bit_size: 14
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: reserved_28
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
       - name: sf_aes_r1_hw_key_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_r1_en
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_r1_lock
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r2_0
     description: ""
     fields:
@@ -2030,6 +2308,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r2_1
     description: ""
     fields:
@@ -2038,6 +2317,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r2_2
     description: ""
     fields:
@@ -2046,6 +2326,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r2_3
     description: ""
     fields:
@@ -2054,6 +2335,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r2_4
     description: ""
     fields:
@@ -2062,6 +2344,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r2_5
     description: ""
     fields:
@@ -2070,6 +2353,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r2_6
     description: ""
     fields:
@@ -2078,6 +2362,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_key_r2_7
     description: ""
     fields:
@@ -2086,6 +2371,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r2_w0
     description: ""
     fields:
@@ -2094,6 +2380,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r2_w1
     description: ""
     fields:
@@ -2102,6 +2389,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r2_w2
     description: ""
     fields:
@@ -2110,6 +2398,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_iv_r2_w3
     description: ""
     fields:
@@ -2118,6 +2407,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sf_aes_r2
     description: ""
     fields:
@@ -2126,31 +2416,37 @@ fieldsets:
         bit_size: 14
         bit_offset: 0
         default_value: 0x3fff
+        permissions: r/w
       - name: sf_aes_r2_start
         description: ""
         bit_size: 14
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: reserved_28
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x0
+        permissions: rsvd
       - name: sf_aes_r2_hw_key_en
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_r2_en
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
       - name: sf_aes_r2_lock
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: sf_id0_offset
     description: ""
     fields:
@@ -2159,11 +2455,13 @@ fieldsets:
         bit_size: 24
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_24_31
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
   - name: sf_id1_offset
     description: ""
     fields:
@@ -2172,11 +2470,13 @@ fieldsets:
         bit_size: 24
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_24_31
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
   - name: sf_bk2_id0_offset
     description: ""
     fields:
@@ -2185,11 +2485,13 @@ fieldsets:
         bit_size: 24
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_24_31
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
   - name: sf_bk2_id1_offset
     description: ""
     fields:
@@ -2198,8 +2500,10 @@ fieldsets:
         bit_size: 24
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_24_31
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd

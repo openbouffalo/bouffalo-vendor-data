@@ -51,6 +51,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: sd_chip_id_high
     description: ""
     fields:
@@ -59,6 +60,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: sd_wifi_mac_low
     description: ""
     fields:
@@ -67,6 +69,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: sd_wifi_mac_high
     description: ""
     fields:
@@ -75,6 +78,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: sd_dbg_pwd_low
     description: ""
     fields:
@@ -83,6 +87,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sd_dbg_pwd_high
     description: ""
     fields:
@@ -91,6 +96,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: sd_status
     description: ""
     fields:
@@ -99,36 +105,43 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: sd_dbg_pwd_trig
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: sd_dbg_cci_read_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: sd_dbg_cci_clk_sel
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: sd_dbg_pwd_cnt
         description: ""
         bit_size: 20
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: sd_dbg_mode
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: sd_dbg_ena
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r
   - name: sd_dbg_reserved
     description: ""
     fields:
@@ -137,3 +150,4 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w

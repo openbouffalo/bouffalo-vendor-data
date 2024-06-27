@@ -281,11 +281,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_IntTCStatus
     description: ""
     fields:
@@ -294,11 +296,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_IntTCClear
     description: ""
     fields:
@@ -307,11 +311,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_IntErrorStatus
     description: ""
     fields:
@@ -320,11 +326,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_IntErrClr
     description: ""
     fields:
@@ -333,11 +341,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: w
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_RawIntTCStatus
     description: ""
     fields:
@@ -346,11 +356,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_RawIntErrorStatus
     description: ""
     fields:
@@ -359,11 +371,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_EnbldChns
     description: ""
     fields:
@@ -372,11 +386,13 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_8_31
         description: ""
         bit_size: 24
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_SoftBReq
     description: ""
     fields:
@@ -385,6 +401,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_SoftSReq
     description: ""
     fields:
@@ -393,6 +410,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_SoftLBReq
     description: ""
     fields:
@@ -401,6 +419,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_SoftLSReq
     description: ""
     fields:
@@ -409,6 +428,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_Top_Config
     description: ""
     fields:
@@ -417,17 +437,20 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: M
         description: "AHB Master endianness configuration: 0 = little-endian, 1 =
           big-endian"
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_Sync
     description: ""
     fields:
@@ -437,6 +460,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C0SrcAddr
     description: ""
     fields:
@@ -445,6 +469,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C0DstAddr
     description: ""
     fields:
@@ -453,6 +478,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C0LLI
     description: ""
     fields:
@@ -461,6 +487,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C0Control
     description: ""
     fields:
@@ -470,42 +497,50 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SBSize
         description: "Source burst size: 1/4/8/16. Note CH FIFO Size is 16Bytes and
           SBSize*Swidth should <= 16B"
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dst_min_mode
         description: "Minus mode : Not issue all destination traffic"
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: DBSize
         description: "Destination burst size: 1/4/8/16"
         bit_size: 2
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: dst_add_mode
         description: "Add mode : issue remain destination traffic"
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: SWidth
         description: "Source transfer width: 8/16/32"
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: reserved_20
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: DWidth
         description: "Destination transfer width: 8/16/32"
         bit_size: 2
         bit_offset: 21
         default_value: 0x2
+        permissions: r/w
       - name: fix_cnt
         description: >-
           Only effect when dst_min_mode = 1
@@ -515,35 +550,41 @@ fieldsets:
         bit_size: 2
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: SLargerD
         description: In Memory-to-memory mode, Set this bit high when Src data size is
           larger than Dst.
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: SI
         description: Source increment. When set, the source address is incremented after
           each transfer.
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: DI
         description: Destination increment. When set, the Destination address is
           incremented after each transfer.
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: Prot
         description: Protection.
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: I
         description: Terminal count interrupt enable bit. It controls whether the
           current LLI is expected to trigger the terminal count interrupt.
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C0Config
     description: ""
     fields:
@@ -552,11 +593,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SrcPeripheral
         description: Source peripheral.
         bit_size: 5
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: DstPeripheral
         description: |-
           Destination peripheral.
@@ -569,6 +612,7 @@ fieldsets:
         bit_size: 5
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: FlowCntrl
         description: >-
           000: Memory-to-memory (DMA)
@@ -590,48 +634,57 @@ fieldsets:
         bit_size: 3
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: IE
         description: Interrupt error mask.
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ITC
         description: Terminal count interrupt mask.
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: L
         description: Lock.
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: A
         description: "Active: 0 = no data in FIFO of the channel, 1 = FIFO of the
           channel has data."
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: H
         description: "Halt: 0 = enable DMA requests, 1 = ignore subsequent source DMA
           requests."
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: LLICounter
         description: LLI counter. Increased 1 each LLI run. Cleared 0 when config Control.
         bit_size: 10
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: reserved_30_31
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_C1SrcAddr
     description: ""
     fields:
@@ -640,6 +693,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C1DstAddr
     description: ""
     fields:
@@ -648,6 +702,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C1LLI
     description: ""
     fields:
@@ -656,11 +711,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: LLI
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C1Control
     description: ""
     fields:
@@ -669,71 +726,85 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SBSize
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dst_min_mode
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: DBSize
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: dst_add_mode
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: SWidth
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: reserved_20
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: DWidth
         description: ""
         bit_size: 2
         bit_offset: 21
         default_value: 0x2
+        permissions: r/w
       - name: fix_cnt
         description: ""
         bit_size: 2
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: SLargerD
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: SI
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: DI
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: Prot
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: I
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C1Config
     description: ""
     fields:
@@ -742,51 +813,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SrcPeripheral
         description: ""
         bit_size: 5
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: DstPeripheral
         description: ""
         bit_size: 5
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: FlowCntrl
         description: ""
         bit_size: 3
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: IE
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ITC
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: L
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: A
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: H
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19_31
         description: ""
         bit_size: 13
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_C2SrcAddr
     description: ""
     fields:
@@ -795,6 +876,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C2DstAddr
     description: ""
     fields:
@@ -803,6 +885,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C2LLI
     description: ""
     fields:
@@ -811,11 +894,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: LLI
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C2Control
     description: ""
     fields:
@@ -824,71 +909,85 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SBSize
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dst_min_mode
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: DBSize
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: dst_add_mode
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: SWidth
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: reserved_20
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: DWidth
         description: ""
         bit_size: 2
         bit_offset: 21
         default_value: 0x2
+        permissions: r/w
       - name: fix_cnt
         description: ""
         bit_size: 2
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: SLargerD
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: SI
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: DI
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: Prot
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: I
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C2Config
     description: ""
     fields:
@@ -897,51 +996,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SrcPeripheral
         description: ""
         bit_size: 5
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: DstPeripheral
         description: ""
         bit_size: 5
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: FlowCntrl
         description: ""
         bit_size: 3
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: IE
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ITC
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: L
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: A
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: H
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19_31
         description: ""
         bit_size: 13
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_C3SrcAddr
     description: ""
     fields:
@@ -950,6 +1059,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C3DstAddr
     description: ""
     fields:
@@ -958,6 +1068,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C3LLI
     description: ""
     fields:
@@ -966,11 +1077,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: LLI
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C3Control
     description: ""
     fields:
@@ -979,71 +1092,85 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SBSize
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dst_min_mode
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: DBSize
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: dst_add_mode
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: SWidth
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: reserved_20
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: DWidth
         description: ""
         bit_size: 2
         bit_offset: 21
         default_value: 0x2
+        permissions: r/w
       - name: fix_cnt
         description: ""
         bit_size: 2
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: SLargerD
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: SI
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: DI
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: Prot
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: I
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C3Config
     description: ""
     fields:
@@ -1052,51 +1179,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SrcPeripheral
         description: ""
         bit_size: 5
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: DstPeripheral
         description: ""
         bit_size: 5
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: FlowCntrl
         description: ""
         bit_size: 3
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: IE
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ITC
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: L
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: A
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: H
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19_31
         description: ""
         bit_size: 13
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_C4SrcAddr
     description: ""
     fields:
@@ -1105,6 +1242,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C4DstAddr
     description: ""
     fields:
@@ -1113,6 +1251,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C4LLI
     description: ""
     fields:
@@ -1121,11 +1260,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: LLI
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C4Control
     description: ""
     fields:
@@ -1134,71 +1275,85 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SBSize
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dst_min_mode
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: DBSize
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: dst_add_mode
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: SWidth
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: reserved_20
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: DWidth
         description: ""
         bit_size: 2
         bit_offset: 21
         default_value: 0x2
+        permissions: r/w
       - name: fix_cnt
         description: ""
         bit_size: 2
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: SLargerD
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: SI
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: DI
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: Prot
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: I
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C4Config
     description: ""
     fields:
@@ -1207,51 +1362,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SrcPeripheral
         description: ""
         bit_size: 5
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: DstPeripheral
         description: ""
         bit_size: 5
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: FlowCntrl
         description: ""
         bit_size: 3
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: IE
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ITC
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: L
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: A
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: H
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19_31
         description: ""
         bit_size: 13
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_C5SrcAddr
     description: ""
     fields:
@@ -1260,6 +1425,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C5DstAddr
     description: ""
     fields:
@@ -1268,6 +1434,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C5LLI
     description: ""
     fields:
@@ -1276,11 +1443,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: LLI
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C5Control
     description: ""
     fields:
@@ -1289,71 +1458,85 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SBSize
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dst_min_mode
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: DBSize
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: dst_add_mode
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: SWidth
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: reserved_20
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: DWidth
         description: ""
         bit_size: 2
         bit_offset: 21
         default_value: 0x2
+        permissions: r/w
       - name: fix_cnt
         description: ""
         bit_size: 2
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: SLargerD
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: SI
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: DI
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: Prot
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: I
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C5Config
     description: ""
     fields:
@@ -1362,51 +1545,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SrcPeripheral
         description: ""
         bit_size: 5
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: DstPeripheral
         description: ""
         bit_size: 5
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: FlowCntrl
         description: ""
         bit_size: 3
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: IE
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ITC
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: L
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: A
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: H
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19_31
         description: ""
         bit_size: 13
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_C6SrcAddr
     description: ""
     fields:
@@ -1415,6 +1608,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C6DstAddr
     description: ""
     fields:
@@ -1423,6 +1617,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C6LLI
     description: ""
     fields:
@@ -1431,11 +1626,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: LLI
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C6Control
     description: ""
     fields:
@@ -1444,71 +1641,85 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SBSize
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dst_min_mode
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: DBSize
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: dst_add_mode
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: SWidth
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: reserved_20
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: DWidth
         description: ""
         bit_size: 2
         bit_offset: 21
         default_value: 0x2
+        permissions: r/w
       - name: fix_cnt
         description: ""
         bit_size: 2
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: SLargerD
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: SI
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: DI
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: Prot
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: I
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C6Config
     description: ""
     fields:
@@ -1517,51 +1728,61 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SrcPeripheral
         description: ""
         bit_size: 5
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: DstPeripheral
         description: ""
         bit_size: 5
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: FlowCntrl
         description: ""
         bit_size: 3
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: IE
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ITC
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: L
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: A
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: H
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19_31
         description: ""
         bit_size: 13
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
   - name: DMA_C7SrcAddr
     description: ""
     fields:
@@ -1570,6 +1791,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C7DstAddr
     description: ""
     fields:
@@ -1578,6 +1800,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C7LLI
     description: ""
     fields:
@@ -1586,11 +1809,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
       - name: LLI
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C7Control
     description: ""
     fields:
@@ -1599,71 +1824,85 @@ fieldsets:
         bit_size: 12
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SBSize
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: dst_min_mode
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: DBSize
         description: ""
         bit_size: 2
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: dst_add_mode
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: SWidth
         description: ""
         bit_size: 2
         bit_offset: 18
         default_value: 0x2
+        permissions: r/w
       - name: reserved_20
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
       - name: DWidth
         description: ""
         bit_size: 2
         bit_offset: 21
         default_value: 0x2
+        permissions: r/w
       - name: fix_cnt
         description: ""
         bit_size: 2
         bit_offset: 23
         default_value: 0x0
+        permissions: r/w
       - name: SLargerD
         description: ""
         bit_size: 1
         bit_offset: 25
         default_value: 0x0
+        permissions: r/w
       - name: SI
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x1
+        permissions: r/w
       - name: DI
         description: ""
         bit_size: 1
         bit_offset: 27
         default_value: 0x1
+        permissions: r/w
       - name: Prot
         description: ""
         bit_size: 3
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
       - name: I
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: DMA_C7Config
     description: ""
     fields:
@@ -1672,48 +1911,58 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: SrcPeripheral
         description: ""
         bit_size: 5
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: DstPeripheral
         description: ""
         bit_size: 5
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: FlowCntrl
         description: ""
         bit_size: 3
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: IE
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: ITC
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: L
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: A
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r
       - name: H
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: r/w
       - name: reserved_19_31
         description: ""
         bit_size: 13
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd

@@ -251,86 +251,103 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_sw_mode
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reg_fram_vld_pol
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reg_line_vld_pol
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: reg_hburst
         description: ""
         bit_size: 2
         bit_offset: 4
         default_value: 0x3
+        permissions: r/w
       - name: reserved_6_7
         description: ""
         bit_size: 2
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: reg_dvp_mode
         description: ""
         bit_size: 3
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reg_hw_mode_fwrap
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x1
+        permissions: r/w
       - name: reg_drop_en
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: reg_drop_even
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reg_subsample_en
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: reg_subsample_even
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: reg_interlv_mode
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_19
         description: ""
         bit_size: 3
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd
       - name: reg_dvp_pix_clk_cg
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x0
+        permissions: r/w
       - name: reserved_21_23
         description: ""
         bit_size: 3
         bit_offset: 21
         default_value: 0x0
+        permissions: rsvd
       - name: reg_dvp_wait_cycle
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x40
+        permissions: r/w
   - name: dvp2ahb_addr_start_0
     description: ""
     fields:
@@ -339,6 +356,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x80000000
+        permissions: r/w
   - name: dvp2ahb_mem_bcnt_0
     description: ""
     fields:
@@ -347,6 +365,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xc000
+        permissions: r/w
   - name: dvp2ahb_frame_bcnt_0
     description: ""
     fields:
@@ -355,6 +374,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xc000
+        permissions: r/w
   - name: dvp2ahb_addr_start_1
     description: ""
     fields:
@@ -363,6 +383,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x80000000
+        permissions: r/w
   - name: dvp2ahb_mem_bcnt_1
     description: ""
     fields:
@@ -371,6 +392,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xc000
+        permissions: r/w
   - name: dvp2ahb_frame_bcnt_1
     description: ""
     fields:
@@ -379,6 +401,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xc000
+        permissions: r/w
   - name: dvp_status_and_error
     description: ""
     fields:
@@ -387,106 +410,127 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: sts_normal_int_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: sts_mem_int_0
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: sts_mem_int_1
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r
       - name: sts_frame_int_0
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: sts_frame_int_1
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r
       - name: sts_fifo_int_0
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r
       - name: sts_fifo_int_1
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r
       - name: sts_hcnt_int
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: sts_vcnt_int
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: r
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: ahb_idle_0
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r
       - name: ahb_idle_1
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r
       - name: reserved_18
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: st_dvp_idle
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x1
+        permissions: r
       - name: frame_valid_cnt_0
         description: ""
         bit_size: 4
         bit_offset: 20
         default_value: 0x0
+        permissions: r
       - name: frame_valid_cnt_1
         description: ""
         bit_size: 4
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: st_bus_idle
         description: ""
         bit_size: 1
         bit_offset: 28
         default_value: 0x1
+        permissions: r
       - name: st_bus_func
         description: ""
         bit_size: 1
         bit_offset: 29
         default_value: 0x0
+        permissions: r
       - name: st_bus_wait
         description: ""
         bit_size: 1
         bit_offset: 30
         default_value: 0x0
+        permissions: r
       - name: st_bus_flsh
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: dvp_frame_fifo_pop
     description: ""
     fields:
@@ -495,76 +539,91 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: w1p
       - name: rfifo_pop_1
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1p
       - name: reserved_2_3
         description: ""
         bit_size: 2
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
       - name: reg_int_normal_clr_0
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_mem_clr_0
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_frame_clr_0
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_fifo_clr_0
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_hcnt_clr_0
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_vcnt_clr_0
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: w1p
       - name: reserved_10_15
         description: ""
         bit_size: 6
         bit_offset: 10
         default_value: 0x0
+        permissions: rsvd
       - name: reg_int_normal_clr_1
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_mem_clr_1
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_frame_clr_1
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x0
+        permissions: w1p
       - name: reg_int_fifo_clr_1
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: w1p
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: snsr_control
     description: ""
     fields:
@@ -573,16 +632,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reg_cam_pwdn
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: int_control
     description: ""
     fields:
@@ -591,46 +653,55 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_int_normal_1_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reg_int_mem_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reg_int_frame_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reg_int_fifo_en
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: reg_int_hcnt_en
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: reg_int_vcnt_en
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7_27
         description: ""
         bit_size: 21
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: reg_frame_cnt_trgr_int
         description: ""
         bit_size: 4
         bit_offset: 28
         default_value: 0x0
+        permissions: r/w
   - name: hsync_control
     description: ""
     fields:
@@ -639,11 +710,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
       - name: reg_hsync_act_start
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: vsync_control
     description: ""
     fields:
@@ -652,11 +725,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
       - name: reg_vsync_act_start
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: frame_size_control
     description: ""
     fields:
@@ -665,11 +740,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_total_vcnt
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: frame_start_addr0_0
     description: ""
     fields:
@@ -678,6 +755,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt0_0
     description: ""
     fields:
@@ -686,6 +764,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr0_1
     description: ""
     fields:
@@ -694,6 +773,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt0_1
     description: ""
     fields:
@@ -702,6 +782,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr0_2
     description: ""
     fields:
@@ -710,6 +791,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt0_2
     description: ""
     fields:
@@ -718,6 +800,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr0_3
     description: ""
     fields:
@@ -726,6 +809,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt0_3
     description: ""
     fields:
@@ -734,6 +818,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr0_4
     description: ""
     fields:
@@ -742,6 +827,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt0_4
     description: ""
     fields:
@@ -750,6 +836,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr0_5
     description: ""
     fields:
@@ -758,6 +845,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt0_5
     description: ""
     fields:
@@ -766,6 +854,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr0_6
     description: ""
     fields:
@@ -774,6 +863,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt0_6
     description: ""
     fields:
@@ -782,6 +872,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr0_7
     description: ""
     fields:
@@ -790,6 +881,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt0_7
     description: ""
     fields:
@@ -798,6 +890,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr1_0
     description: ""
     fields:
@@ -806,6 +899,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt1_0
     description: ""
     fields:
@@ -814,6 +908,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr1_1
     description: ""
     fields:
@@ -822,6 +917,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt1_1
     description: ""
     fields:
@@ -830,6 +926,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr1_2
     description: ""
     fields:
@@ -838,6 +935,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt1_2
     description: ""
     fields:
@@ -846,6 +944,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr1_3
     description: ""
     fields:
@@ -854,6 +953,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt1_3
     description: ""
     fields:
@@ -862,6 +962,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr1_4
     description: ""
     fields:
@@ -870,6 +971,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt1_4
     description: ""
     fields:
@@ -878,6 +980,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr1_5
     description: ""
     fields:
@@ -886,6 +989,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt1_5
     description: ""
     fields:
@@ -894,6 +998,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr1_6
     description: ""
     fields:
@@ -902,6 +1007,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt1_6
     description: ""
     fields:
@@ -910,6 +1016,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_start_addr1_7
     description: ""
     fields:
@@ -918,6 +1025,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: frame_byte_cnt1_7
     description: ""
     fields:
@@ -926,6 +1034,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: dvp_debug
     description: ""
     fields:
@@ -934,16 +1043,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reg_dvp_dbg_sel
         description: ""
         bit_size: 3
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: dvp_dummy_reg
     description: ""
     fields:
@@ -952,3 +1064,4 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xf0f0f0f0
+        permissions: rsvd

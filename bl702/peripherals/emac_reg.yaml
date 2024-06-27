@@ -109,6 +109,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: TXEN
         description: >-
           Transmit enable
@@ -122,6 +123,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: NOPRE
         description: |-
           No preamble mode
@@ -130,6 +132,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: BRO
         description: >-
           Broadcast address enable
@@ -141,11 +144,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: rsvd_4
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: PRO
         description: |-
           Promiscuous mode enable
@@ -154,6 +159,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: IFG
         description: |-
           Inter frame gap check
@@ -162,11 +168,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: rsvd_9_7
         description: ""
         bit_size: 3
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: FULLD
         description: |-
           Full duplex
@@ -175,11 +183,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: rsvd_12_11
         description: ""
         bit_size: 2
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: CRCEN
         description: |-
           CRC Enable
@@ -188,6 +198,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: HUGEN
         description: >-
           Huge frames enable
@@ -199,6 +210,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: PAD
         description: |-
           Padding enable
@@ -207,6 +219,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 15
         default_value: 0x1
+        permissions: r/w
       - name: RECSMALL
         description: |-
           Receive small frame enable
@@ -215,6 +228,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: RMII_EN
         description: |-
           RMII mode enable
@@ -223,16 +237,19 @@ fieldsets:
         bit_size: 1
         bit_offset: 17
         default_value: 0x0
+        permissions: r/w
       - name: rsvd_23_18
         description: ""
         bit_size: 6
         bit_offset: 18
         default_value: 0x0
+        permissions: rsvd
       - name: reserved_24_31
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
   - name: INT_SOURCE
     description: ""
     fields:
@@ -248,6 +265,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: TXE
         description: >-
           Transmit error
@@ -263,6 +281,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: RXB
         description: >-
           Receive frame
@@ -275,6 +294,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: RXE
         description: >-
           Receive error
@@ -290,6 +310,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: BUSY
         description: >-
           Busy
@@ -302,6 +323,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: TXC
         description: >-
           Transmit control frame
@@ -314,6 +336,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: RXC
         description: >-
           Receive control frame
@@ -326,11 +349,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: INT_MASK
     description: ""
     fields:
@@ -342,6 +367,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: TXE_M
         description: |-
           Transmit error mask ENABLE
@@ -350,6 +376,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: RXB_M
         description: |-
           Receive frame mask ENABLE
@@ -358,6 +385,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: RXE_M
         description: |-
           Receive error mask ENABLE
@@ -366,6 +394,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: BUSY_M
         description: |-
           Busy mask ENABLE
@@ -374,6 +403,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r/w
       - name: TXC_M
         description: |-
           Transmit control frame mask ENABLE
@@ -382,6 +412,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r/w
       - name: RXC_M
         description: |-
           Receive control frame mask ENABLE
@@ -390,11 +421,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r/w
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: IPGT
     description: ""
     fields:
@@ -406,11 +439,13 @@ fieldsets:
         bit_size: 7
         bit_offset: 0
         default_value: 0x18
+        permissions: r/w
       - name: reserved_7_31
         description: ""
         bit_size: 25
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
   - name: PACKETLEN
     description: ""
     fields:
@@ -429,6 +464,7 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x600
+        permissions: r/w
       - name: MINFL
         description: >-
           Minimum frame length
@@ -443,6 +479,7 @@ fieldsets:
         bit_size: 16
         bit_offset: 16
         default_value: 0x40
+        permissions: r/w
   - name: COLLCONFIG
     description: ""
     fields:
@@ -458,11 +495,13 @@ fieldsets:
         bit_size: 6
         bit_offset: 0
         default_value: 0x3f
+        permissions: r/w
       - name: reserved_6_15
         description: ""
         bit_size: 10
         bit_offset: 6
         default_value: 0x0
+        permissions: rsvd
       - name: MAXRET
         description: >-
           Maximum retry
@@ -478,11 +517,13 @@ fieldsets:
         bit_size: 4
         bit_offset: 16
         default_value: 0xf
+        permissions: r/w
       - name: reserved_20_31
         description: ""
         bit_size: 12
         bit_offset: 20
         default_value: 0x0
+        permissions: rsvd
   - name: TX_BD_NUM
     description: ""
     fields:
@@ -498,33 +539,39 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x40
+        permissions: r/w
       - name: reserved_8_15
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: rsvd
       - name: TXBDPTR
         description: TX buffer descriptors (BD) pointer, pointing at the TXBD currently
           being used
         bit_size: 7
         bit_offset: 16
         default_value: 0x0
+        permissions: r
       - name: reserved_23
         description: ""
         bit_size: 1
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: RXBDPTR
         description: RX buffer descriptors (BD) pointer, pointing at the RXBD currently
           being used
         bit_size: 7
         bit_offset: 24
         default_value: 0x0
+        permissions: r
       - name: reserved_31
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: rsvd
   - name: MIIMODE
     description: ""
     fields:
@@ -535,6 +582,7 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x64
+        permissions: r/w
       - name: MIINOPRE
         description: |-
           No preamble for Management Data (MD)
@@ -543,11 +591,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_9_31
         description: ""
         bit_size: 23
         bit_offset: 9
         default_value: 0x0
+        permissions: rsvd
   - name: MIICOMMAND
     description: ""
     fields:
@@ -561,6 +611,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: RSTAT
         description: >-
           Read status, setting this bit to 1 will trigger the command (auto
@@ -571,6 +622,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: WCTRLDATA
         description: >-
           Write control data, setting this bit to 1 will trigger the command
@@ -581,11 +633,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: MIIADDRESS
     description: ""
     fields:
@@ -594,21 +648,25 @@ fieldsets:
         bit_size: 5
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: RGAD
         description: Register Address
         bit_size: 5
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_13_31
         description: ""
         bit_size: 19
         bit_offset: 13
         default_value: 0x0
+        permissions: rsvd
   - name: MIITX_DATA
     description: ""
     fields:
@@ -617,11 +675,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: MIIRX_DATA
     description: ""
     fields:
@@ -630,11 +690,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: MIISTATUS
     description: ""
     fields:
@@ -643,6 +705,7 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: MIIM_BUSY
         description: |-
           MIIM I/F busy signal
@@ -651,11 +714,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: MAC_ADDR0
     description: ""
     fields:
@@ -664,21 +729,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: MAC_B4
         description: Ethernet MAC address byte 4
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: MAC_B3
         description: Ethernet MAC address byte 3
         bit_size: 8
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: MAC_B2
         description: Ethernet MAC address byte 2
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: r/w
   - name: MAC_ADDR1
     description: ""
     fields:
@@ -687,16 +756,19 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: MAC_B0
         description: Ethernet MAC address byte 0
         bit_size: 8
         bit_offset: 8
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: HASH0_ADDR
     description: ""
     fields:
@@ -705,6 +777,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: HASH1_ADDR
     description: ""
     fields:
@@ -713,6 +786,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: TXCTRL
     description: ""
     fields:
@@ -723,6 +797,7 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: TXPAUSERQ
         description: >-
           TX Pause Request
@@ -732,8 +807,10 @@ fieldsets:
         bit_size: 1
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
       - name: reserved_17_31
         description: ""
         bit_size: 15
         bit_offset: 17
         default_value: 0x0
+        permissions: rsvd

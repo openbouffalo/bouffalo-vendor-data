@@ -411,66 +411,79 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: se_sha_0_trig_1t
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1p
       - name: se_sha_0_mode
         description: ""
         bit_size: 3
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: se_sha_0_en
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: se_sha_0_hash_sel
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: se_sha_0_int
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: se_sha_0_int_clr_1t
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: w1p
       - name: se_sha_0_int_set_1t
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: w1p
       - name: se_sha_0_int_mask
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_14
         description: ""
         bit_size: 3
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: se_sha_0_link_mode
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: se_sha_0_msg_len
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: se_sha_0_msa
     description: ""
     fields:
@@ -479,6 +492,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_sha_0_status
     description: ""
     fields:
@@ -487,6 +501,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x41
+        permissions: r
   - name: se_sha_0_endian
     description: ""
     fields:
@@ -495,11 +510,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: reserved_1_31
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
   - name: se_sha_0_hash_l_0
     description: ""
     fields:
@@ -508,6 +525,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_l_1
     description: ""
     fields:
@@ -516,6 +534,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_l_2
     description: ""
     fields:
@@ -524,6 +543,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_l_3
     description: ""
     fields:
@@ -532,6 +552,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_l_4
     description: ""
     fields:
@@ -540,6 +561,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_l_5
     description: ""
     fields:
@@ -548,6 +570,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_l_6
     description: ""
     fields:
@@ -556,6 +579,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_l_7
     description: ""
     fields:
@@ -564,6 +588,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_h_0
     description: ""
     fields:
@@ -572,6 +597,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_h_1
     description: ""
     fields:
@@ -580,6 +606,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_h_2
     description: ""
     fields:
@@ -588,6 +615,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_h_3
     description: ""
     fields:
@@ -596,6 +624,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_h_4
     description: ""
     fields:
@@ -604,6 +633,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_h_5
     description: ""
     fields:
@@ -612,6 +642,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_h_6
     description: ""
     fields:
@@ -620,6 +651,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_hash_h_7
     description: ""
     fields:
@@ -628,6 +660,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_sha_0_link
     description: ""
     fields:
@@ -636,6 +669,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_sha_0_ctrl_prot
     description: ""
     fields:
@@ -644,21 +678,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: se_sha_id0_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: se_sha_id1_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: se_aes_0_ctrl
     description: ""
     fields:
@@ -667,76 +705,91 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: se_aes_0_trig_1t
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1p
       - name: se_aes_0_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_mode
         description: ""
         bit_size: 2
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_dec_en
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_dec_key_sel
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_hw_key_en
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_int
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: se_aes_0_int_clr_1t
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: w1p
       - name: se_aes_0_int_set_1t
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: w1p
       - name: se_aes_0_int_mask
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_block_mode
         description: ""
         bit_size: 2
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_iv_sel
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_link_mode
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: se_aes_0_msg_len
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_msa
     description: ""
     fields:
@@ -745,6 +798,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_mda
     description: ""
     fields:
@@ -753,6 +807,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_status
     description: ""
     fields:
@@ -761,6 +816,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x100
+        permissions: r
   - name: se_aes_0_iv_0
     description: ""
     fields:
@@ -769,6 +825,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_iv_1
     description: ""
     fields:
@@ -777,6 +834,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_iv_2
     description: ""
     fields:
@@ -785,6 +843,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_iv_3
     description: ""
     fields:
@@ -793,6 +852,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_0
     description: ""
     fields:
@@ -801,6 +861,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_1
     description: ""
     fields:
@@ -809,6 +870,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_2
     description: ""
     fields:
@@ -817,6 +879,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_3
     description: ""
     fields:
@@ -825,6 +888,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_4
     description: ""
     fields:
@@ -833,6 +897,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_5
     description: ""
     fields:
@@ -841,6 +906,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_6
     description: ""
     fields:
@@ -849,6 +915,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_7
     description: ""
     fields:
@@ -857,6 +924,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_key_sel_0
     description: ""
     fields:
@@ -865,11 +933,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: se_aes_0_key_sel_1
     description: ""
     fields:
@@ -878,11 +948,13 @@ fieldsets:
         bit_size: 2
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_2_31
         description: ""
         bit_size: 30
         bit_offset: 2
         default_value: 0x0
+        permissions: rsvd
   - name: se_aes_0_endian
     description: ""
     fields:
@@ -891,31 +963,37 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: se_aes_0_din_endian
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: se_aes_0_key_endian
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: se_aes_0_iv_endian
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x1
+        permissions: r/w
       - name: reserved_4_29
         description: ""
         bit_size: 26
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
       - name: se_aes_0_ctr_len
         description: ""
         bit_size: 2
         bit_offset: 30
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_sboot
     description: ""
     fields:
@@ -924,11 +1002,13 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: reserved_1_31
         description: ""
         bit_size: 31
         bit_offset: 1
         default_value: 0x0
+        permissions: rsvd
   - name: se_aes_0_link
     description: ""
     fields:
@@ -937,6 +1017,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_aes_0_ctrl_prot
     description: ""
     fields:
@@ -945,21 +1026,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: se_aes_id0_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: se_aes_id1_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: se_trng_0_ctrl_0
     description: ""
     fields:
@@ -968,76 +1053,91 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: se_trng_0_trig_1t
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1p
       - name: se_trng_0_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: se_trng_0_dout_clr_1t
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: w1p
       - name: se_trng_0_ht_error
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x0
+        permissions: r
       - name: reserved_5_7
         description: ""
         bit_size: 3
         bit_offset: 5
         default_value: 0x0
+        permissions: rsvd
       - name: se_trng_0_int
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: se_trng_0_int_clr_1t
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: w1p
       - name: se_trng_0_int_set_1t
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: w1p
       - name: se_trng_0_int_mask
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
       - name: se_trng_0_manual_fun_sel
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: se_trng_0_manual_reseed
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: r/w
       - name: se_trng_0_manual_en
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: se_trng_0_status
     description: ""
     fields:
@@ -1046,6 +1146,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x100020
+        permissions: r
   - name: se_trng_0_dout_0
     description: ""
     fields:
@@ -1054,6 +1155,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_dout_1
     description: ""
     fields:
@@ -1062,6 +1164,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_dout_2
     description: ""
     fields:
@@ -1070,6 +1173,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_dout_3
     description: ""
     fields:
@@ -1078,6 +1182,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_dout_4
     description: ""
     fields:
@@ -1086,6 +1191,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_dout_5
     description: ""
     fields:
@@ -1094,6 +1200,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_dout_6
     description: ""
     fields:
@@ -1102,6 +1209,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_dout_7
     description: ""
     fields:
@@ -1110,6 +1218,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_test
     description: ""
     fields:
@@ -1118,31 +1227,37 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: se_trng_0_cp_test_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r/w
       - name: se_trng_0_cp_bypass
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: se_trng_0_ht_dis
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: se_trng_0_ht_alarm_n
         description: ""
         bit_size: 8
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: reserved_12_31
         description: ""
         bit_size: 20
         bit_offset: 12
         default_value: 0x0
+        permissions: rsvd
   - name: se_trng_0_ctrl_1
     description: ""
     fields:
@@ -1151,6 +1266,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffff
+        permissions: r/w
   - name: se_trng_0_ctrl_2
     description: ""
     fields:
@@ -1159,11 +1275,13 @@ fieldsets:
         bit_size: 16
         bit_offset: 0
         default_value: 0xff
+        permissions: r/w
       - name: reserved_16_31
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: rsvd
   - name: se_trng_0_ctrl_3
     description: ""
     fields:
@@ -1172,31 +1290,37 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x3
+        permissions: r/w
       - name: se_trng_0_ht_rct_c
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x42
+        permissions: r/w
       - name: se_trng_0_ht_apt_c
         description: ""
         bit_size: 10
         bit_offset: 16
         default_value: 0x37a
+        permissions: r/w
       - name: se_trng_0_ht_od_en
         description: ""
         bit_size: 1
         bit_offset: 26
         default_value: 0x0
+        permissions: r/w
       - name: reserved_27_30
         description: ""
         bit_size: 4
         bit_offset: 27
         default_value: 0x0
+        permissions: rsvd
       - name: se_trng_0_rosc_en
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r/w
   - name: se_trng_0_test_out_0
     description: ""
     fields:
@@ -1205,6 +1329,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_test_out_1
     description: ""
     fields:
@@ -1213,6 +1338,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_test_out_2
     description: ""
     fields:
@@ -1221,6 +1347,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_test_out_3
     description: ""
     fields:
@@ -1229,6 +1356,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
   - name: se_trng_0_ctrl_prot
     description: ""
     fields:
@@ -1237,21 +1365,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: se_trng_id0_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: se_trng_id1_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: se_pka_0_ctrl_0
     description: ""
     fields:
@@ -1260,71 +1392,85 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: se_pka_0_done_clr_1t
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1p
       - name: se_pka_0_busy
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r
       - name: se_pka_0_en
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: se_pka_0_prot_md
         description: ""
         bit_size: 4
         bit_offset: 4
         default_value: 0x0
+        permissions: r/w
       - name: se_pka_0_int
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: se_pka_0_int_clr_1t
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: w1p
       - name: se_pka_0_int_set
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: r/w
       - name: se_pka_0_int_mask
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: se_pka_0_endian
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x0
+        permissions: r/w
       - name: se_pka_0_ram_clr_md
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x0
+        permissions: r/w
       - name: reserved_14
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x0
+        permissions: rsvd
       - name: se_pka_0_status_clr_1t
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: w1p
       - name: se_pka_0_status
         description: ""
         bit_size: 16
         bit_offset: 16
         default_value: 0x0
+        permissions: r
   - name: se_pka_0_seed
     description: ""
     fields:
@@ -1333,6 +1479,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_pka_0_ctrl_1
     description: ""
     fields:
@@ -1341,16 +1488,19 @@ fieldsets:
         bit_size: 3
         bit_offset: 0
         default_value: 0x5
+        permissions: r/w
       - name: se_pka_0_hbypass
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: r/w
       - name: reserved_4_31
         description: ""
         bit_size: 28
         bit_offset: 4
         default_value: 0x0
+        permissions: rsvd
   - name: se_pka_0_rw
     description: ""
     fields:
@@ -1359,6 +1509,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: se_pka_0_rw_burst
     description: ""
     fields:
@@ -1367,6 +1518,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: rsvd
   - name: se_pka_0_ctrl_prot
     description: ""
     fields:
@@ -1375,21 +1527,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: se_pka_id0_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: se_pka_id1_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: se_cdet_0_ctrl_0
     description: ""
     fields:
@@ -1398,26 +1554,31 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
       - name: se_cdet_0_error
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: r
       - name: se_cdet_0_status
         description: ""
         bit_size: 14
         bit_offset: 2
         default_value: 0x1
+        permissions: r
       - name: se_cdet_0_g_loop_max
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0x64
+        permissions: r/w
       - name: se_cdet_0_g_loop_min
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x21
+        permissions: r/w
   - name: se_cdet_0_ctrl_1
     description: ""
     fields:
@@ -1426,21 +1587,25 @@ fieldsets:
         bit_size: 8
         bit_offset: 0
         default_value: 0x32
+        permissions: r/w
       - name: se_cdet_0_t_dly_n
         description: ""
         bit_size: 8
         bit_offset: 8
         default_value: 0x3
+        permissions: r/w
       - name: se_cdet_0_g_slp_n
         description: ""
         bit_size: 8
         bit_offset: 16
         default_value: 0xff
+        permissions: r/w
       - name: reserved_24_31
         description: ""
         bit_size: 8
         bit_offset: 24
         default_value: 0x0
+        permissions: rsvd
   - name: se_cdet_0_ctrl_prot
     description: ""
     fields:
@@ -1449,21 +1614,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: se_cdet_id0_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: se_cdet_id1_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: se_gmac_0_ctrl_0
     description: ""
     fields:
@@ -1472,61 +1641,73 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x0
+        permissions: r
       - name: se_gmac_0_trig_1t
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x0
+        permissions: w1p
       - name: se_gmac_0_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x0
+        permissions: r/w
       - name: reserved_3_7
         description: ""
         bit_size: 5
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: se_gmac_0_int
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x0
+        permissions: r
       - name: se_gmac_0_int_clr_1t
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x0
+        permissions: w1p
       - name: se_gmac_0_int_set_1t
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x0
+        permissions: w1p
       - name: se_gmac_0_int_mask
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: r/w
       - name: se_gmac_0_t_endian
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r/w
       - name: se_gmac_0_h_endian
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r/w
       - name: se_gmac_0_x_endian
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r/w
       - name: reserved_15_31
         description: ""
         bit_size: 17
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
   - name: se_gmac_0_lca
     description: ""
     fields:
@@ -1535,6 +1716,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_gmac_0_status
     description: ""
     fields:
@@ -1543,6 +1725,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xf1000000
+        permissions: r
   - name: se_gmac_0_ctrl_prot
     description: ""
     fields:
@@ -1551,21 +1734,25 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r/w
       - name: se_gmac_id0_en
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r/w
       - name: se_gmac_id1_en
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r/w
       - name: reserved_3_31
         description: ""
         bit_size: 29
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
   - name: se_ctrl_prot_rd
     description: ""
     fields:
@@ -1574,126 +1761,151 @@ fieldsets:
         bit_size: 1
         bit_offset: 0
         default_value: 0x1
+        permissions: r
       - name: se_sha_id0_en_rd
         description: ""
         bit_size: 1
         bit_offset: 1
         default_value: 0x1
+        permissions: r
       - name: se_sha_id1_en_rd
         description: ""
         bit_size: 1
         bit_offset: 2
         default_value: 0x1
+        permissions: r
       - name: reserved_3
         description: ""
         bit_size: 1
         bit_offset: 3
         default_value: 0x0
+        permissions: rsvd
       - name: se_aes_prot_en_rd
         description: ""
         bit_size: 1
         bit_offset: 4
         default_value: 0x1
+        permissions: r
       - name: se_aes_id0_en_rd
         description: ""
         bit_size: 1
         bit_offset: 5
         default_value: 0x1
+        permissions: r
       - name: se_aes_id1_en_rd
         description: ""
         bit_size: 1
         bit_offset: 6
         default_value: 0x1
+        permissions: r
       - name: reserved_7
         description: ""
         bit_size: 1
         bit_offset: 7
         default_value: 0x0
+        permissions: rsvd
       - name: se_trng_prot_en_rd
         description: ""
         bit_size: 1
         bit_offset: 8
         default_value: 0x1
+        permissions: r
       - name: se_trng_id0_en_rd
         description: ""
         bit_size: 1
         bit_offset: 9
         default_value: 0x1
+        permissions: r
       - name: se_trng_id1_en_rd
         description: ""
         bit_size: 1
         bit_offset: 10
         default_value: 0x1
+        permissions: r
       - name: reserved_11
         description: ""
         bit_size: 1
         bit_offset: 11
         default_value: 0x0
+        permissions: rsvd
       - name: se_pka_prot_en_rd
         description: ""
         bit_size: 1
         bit_offset: 12
         default_value: 0x1
+        permissions: r
       - name: se_pka_id0_en_rd
         description: ""
         bit_size: 1
         bit_offset: 13
         default_value: 0x1
+        permissions: r
       - name: se_pka_id1_en_rd
         description: ""
         bit_size: 1
         bit_offset: 14
         default_value: 0x1
+        permissions: r
       - name: reserved_15
         description: ""
         bit_size: 1
         bit_offset: 15
         default_value: 0x0
+        permissions: rsvd
       - name: se_cdet_prot_en_rd
         description: ""
         bit_size: 1
         bit_offset: 16
         default_value: 0x1
+        permissions: r
       - name: se_cdet_id0_en_rd
         description: ""
         bit_size: 1
         bit_offset: 17
         default_value: 0x1
+        permissions: r
       - name: se_cdet_id1_en_rd
         description: ""
         bit_size: 1
         bit_offset: 18
         default_value: 0x1
+        permissions: r
       - name: reserved_19
         description: ""
         bit_size: 1
         bit_offset: 19
         default_value: 0x0
+        permissions: rsvd
       - name: se_gmac_prot_en_rd
         description: ""
         bit_size: 1
         bit_offset: 20
         default_value: 0x1
+        permissions: r
       - name: se_gmac_id0_en_rd
         description: ""
         bit_size: 1
         bit_offset: 21
         default_value: 0x1
+        permissions: r
       - name: se_gmac_id1_en_rd
         description: ""
         bit_size: 1
         bit_offset: 22
         default_value: 0x1
+        permissions: r
       - name: reserved_23_30
         description: ""
         bit_size: 8
         bit_offset: 23
         default_value: 0x0
+        permissions: rsvd
       - name: se_dbg_dis
         description: ""
         bit_size: 1
         bit_offset: 31
         default_value: 0x0
+        permissions: r
   - name: se_ctrl_reserved_0
     description: ""
     fields:
@@ -1702,6 +1914,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r/w
   - name: se_ctrl_reserved_1
     description: ""
     fields:
@@ -1710,6 +1923,7 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0xffffffff
+        permissions: r/w
   - name: se_ctrl_reserved_2
     description: ""
     fields:
@@ -1718,3 +1932,4 @@ fieldsets:
         bit_size: 32
         bit_offset: 0
         default_value: 0x0
+        permissions: r
