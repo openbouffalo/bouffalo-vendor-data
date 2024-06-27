@@ -98,7 +98,7 @@ peripherals:
     address: 0x40006000
     size: 0x1000
     description: Trustzone control none-security
-  - name: ef_data # TODO: ef_data_0 and ef_data_1
+  - name: ef_data
     peripheral: ef_data
     address: 0x40007000
     size: 0x1000
