@@ -1,0 +1,72 @@
+Inconsistencies provided by bouffalo-data-parser:
+
+
+Inconsistencies between source code and the documentation:
+TODO: Name of reg is different DMA_Config - DMA_Top_Config
+TODO: Check failed dma_reg - DMA_C1Control, SWidth | SWidth, err: bit_size-mismatch2
+TODO: Check failed dma_reg - DMA_C1Control, DWidth | DWidth, err: bit_size-mismatch2
+TODO: Not found: dma_reg - DMA_C1Control, RSVD
+TODO: Check failed dma_reg - DMA_C2Control, SWidth | SWidth, err: bit_size-mismatch2
+TODO: Check failed dma_reg - DMA_C2Control, DWidth | DWidth, err: bit_size-mismatch2
+TODO: Not found: dma_reg - DMA_C2Control, RSVD
+TODO: Check failed dma_reg - DMA_C3Control, SWidth | SWidth, err: bit_size-mismatch2
+TODO: Check failed dma_reg - DMA_C3Control, DWidth | DWidth, err: bit_size-mismatch2
+TODO: Not found: dma_reg - DMA_C3Control, RSVD
+TODO: Check failed dma_reg - DMA_C4Control, SWidth | SWidth, err: bit_size-mismatch2
+TODO: Check failed dma_reg - DMA_C4Control, DWidth | DWidth, err: bit_size-mismatch2
+TODO: Not found: dma_reg - DMA_C4Control, RSVD
+TODO: Check failed dma_reg - DMA_C5Control, SWidth | SWidth, err: bit_size-mismatch2
+TODO: Check failed dma_reg - DMA_C5Control, DWidth | DWidth, err: bit_size-mismatch2
+TODO: Not found: dma_reg - DMA_C5Control, RSVD
+TODO: Check failed dma_reg - DMA_C6Control, SWidth | SWidth, err: bit_size-mismatch2
+TODO: Check failed dma_reg - DMA_C6Control, DWidth | DWidth, err: bit_size-mismatch2
+TODO: Not found: dma_reg - DMA_C6Control, RSVD
+TODO: Check failed dma_reg - DMA_C7Control, SWidth | SWidth, err: bit_size-mismatch2
+TODO: Check failed dma_reg - DMA_C7Control, DWidth | DWidth, err: bit_size-mismatch2
+TODO: Not found: dma_reg - DMA_C7Control, RSVD
+TODO: Check failed emac_reg - MODE, RSVD | rsvd_23_18, err: bit_size-mismatch2
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_36_ie | reg_gpio_30_ie, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_36_smt | reg_gpio_30_smt, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_36_drv | reg_gpio_30_drv, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_36_pu | reg_gpio_30_pu, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_36_pd | reg_gpio_30_pd, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, RSVD | reserved_6_7, err: bit_size-mismatch2
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_37_ie | reg_gpio_31_ie, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_37_smt | reg_gpio_31_smt, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_37_drv | reg_gpio_31_drv, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_37_pu | reg_gpio_31_pu, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_37_pd | reg_gpio_31_pd, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, RSVD | reserved_22_23, err: bit_size-mismatch2
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_34_ie | reg_gpio_30_ie, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_34_smt | reg_gpio_30_smt, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_34_drv | reg_gpio_30_drv, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_34_pu | reg_gpio_30_pu, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_34_pd | reg_gpio_30_pd, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, RSVD | reserved_6_7, err: bit_size-mismatch2
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_35_ie | reg_gpio_31_ie, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_35_smt | reg_gpio_31_smt, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_35_drv | reg_gpio_31_drv, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_35_pu | reg_gpio_31_pu, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_35_pd | reg_gpio_31_pd, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, RSVD | reserved_22_23, err: bit_size-mismatch2
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_32_ie | reg_gpio_30_ie, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_32_smt | reg_gpio_30_smt, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_32_drv | reg_gpio_30_drv, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_32_pu | reg_gpio_30_pu, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_32_pd | reg_gpio_30_pd, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, RSVD | reserved_6_7, err: bit_size-mismatch2
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_33_ie | reg_gpio_31_ie, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_33_smt | reg_gpio_31_smt, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_33_drv | reg_gpio_31_drv, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_33_pu | reg_gpio_31_pu, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, reg_gpio_33_pd | reg_gpio_31_pd, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_CFGCTL15, RSVD | reserved_22_23, err: bit_size-mismatch2
+TODO: Check failed glb_reg - GPIO_CFGCTL35, reg_gpio_int_mask1 | reserved_0_31, err: name-mismatch
+TODO: Check failed glb_reg - GPIO_INT2_MODE_SET4, RSVD | reg_gpio_int2_mode_set4, err: bit_size-mismatch2
+TODO: Not found: glb_reg - GPIO_INT2_MODE_SET4, reg_usb_use_ctrl
+TODO: Not found: glb_reg - GPIO_INT2_MODE_SET4, RSVD
+TODO: Check failed l1c_reg - l1c_config, RSVD | l1c_invalid_en, err: bit_size-mismatch2
+TODO: Check failed spi_reg - spi_int_sts, RSVD | rsvd_17, err: bit_size-mismatch2
+TODO: Check failed spi_reg - spi_int_sts, RSVD | rsvd_21, err: bit_size-mismatch2
+TODO: Check failed uart_reg - uart_int_clear, RSVD | rsvd_2, err: bit_size-mismatch2
+TODO: Check failed uart_reg - uart_int_clear, RSVD | rsvd_6, err: bit_size-mismatch2
