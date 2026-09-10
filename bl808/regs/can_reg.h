@@ -320,11 +320,91 @@ reset mode:rw  ->  acceptance_code1 */
 #define CAN_TXRX_ID2_OR_ACCEPTANCE_CODE2_MSK    (((1U << CAN_TXRX_ID2_OR_ACCEPTANCE_CODE2_LEN) - 1) << CAN_TXRX_ID2_OR_ACCEPTANCE_CODE2_POS)
 #define CAN_TXRX_ID2_OR_ACCEPTANCE_CODE2_UMSK   (~(((1U << CAN_TXRX_ID2_OR_ACCEPTANCE_CODE2_LEN) - 1) << CAN_TXRX_ID2_OR_ACCEPTANCE_CODE2_POS))
 
+/* 0x4c : op mode:w  ->  tx_data1_s or tx_id3
+            r   ->  rx_data1_s or rx_id3
+ reset mode:rw  ->  acceptance_code3 */
+#define CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_OFFSET (0x4c)
+#define CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3        CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3
+#define CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_POS    (0U)
+#define CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_LEN    (8U)
+#define CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_MSK    (((1U << CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_LEN) - 1) << CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_POS)
+#define CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_UMSK   (~(((1U << CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_LEN) - 1) << CAN_TXRX_ID1_OR_ACCEPTANCE_CODE3_POS))
+
+#define CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_OFFSET (0x4c)
+#define CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3        CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3
+#define CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_POS    (0U)
+#define CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_LEN    (8U)
+#define CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_MSK    (((1U << CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_LEN) - 1) << CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_POS)
+#define CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_UMSK   (~(((1U << CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_LEN) - 1) << CAN_TXRX_DATA1_S_OR_TXRX_ID3_E_OR_ACCEPTANCE_CODE3_POS))
+
+#define CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_OFFSET (0x50)
+#define CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0        CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0
+#define CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_POS    (0U)
+#define CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_LEN    (8U)
+#define CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_MSK    (((1U << CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_LEN) - 1) << CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_POS)
+#define CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_UMSK   (~(((1U << CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_LEN) - 1) << CAN_TXRX_DATA2_S_OR_TXRX_ID4_E_OR_ACCEPTANCE_MASK0_POS))
+
+#define CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_OFFSET (0x54)
+#define CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1        CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1
+#define CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_POS    (0U)
+#define CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_LEN    (8U)
+#define CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_MSK    (((1U << CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_LEN) - 1) << CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_POS)
+#define CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_UMSK   (~(((1U << CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_LEN) - 1) << CAN_TXRX_DATA3_S_OR_TXRX_DATA1_E_OR_ACCEPTANCE_MASK1_POS))
+
+#define CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_OFFSET (0x58)
+#define CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2        CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2
+#define CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_POS    (0U)
+#define CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_LEN    (8U)
+#define CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_MSK    (((1U << CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_LEN) - 1) << CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_POS)
+#define CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_UMSK   (~(((1U << CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_LEN) - 1) << CAN_TXRX_DATA4_S_OR_TXRX_DATA2_E_OR_ACCEPTANCE_MASK2_POS))
+
+#define CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_OFFSET (0x5c)
+#define CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3        CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3
+#define CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_POS    (0U)
+#define CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_LEN    (8U)
+#define CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_MSK    (((1U << CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_LEN) - 1) << CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_POS)
+#define CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_UMSK   (~(((1U << CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_LEN) - 1) << CAN_TXRX_DATA5_S_OR_TXRX_DATA3_E_OR_ACCEPTANCE_MASK3_POS))
+
+#define CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_OFFSET (0x60)
+#define CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E        CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E
+#define CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_POS    (0U)
+#define CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_LEN    (8U)
+#define CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_MSK    (((1U << CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_LEN) - 1) << CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_POS)
+#define CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_UMSK   (~(((1U << CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_LEN) - 1) << CAN_TXRX_DATA6_S_OR_TXRX_DATA4_E_POS))
+
+#define CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_OFFSET (0x64)
+#define CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E        CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E
+#define CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_POS    (0U)
+#define CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_LEN    (8U)
+#define CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_MSK    (((1U << CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_LEN) - 1) << CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_POS)
+#define CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_UMSK   (~(((1U << CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_LEN) - 1) << CAN_TXRX_DATA7_S_OR_TXRX_DATA5_E_POS))
+
+#define CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_OFFSET (0x68)
+#define CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E        CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E
+#define CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_POS    (0U)
+#define CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_LEN    (8U)
+#define CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_MSK    (((1U << CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_LEN) - 1) << CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_POS)
+#define CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_UMSK   (~(((1U << CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_LEN) - 1) << CAN_TXRX_DATA8_S_OR_TXRX_DATA6_E_POS))
+
+#define CAN_TXRX_DATA7_E_OFFSET (0x6c)
+#define CAN_TXRX_DATA7_E        CAN_TXRX_DATA7_E
+#define CAN_TXRX_DATA7_E_POS    (0U)
+#define CAN_TXRX_DATA7_E_LEN    (8U)
+#define CAN_TXRX_DATA7_E_MSK    (((1U << CAN_TXRX_DATA7_E_LEN) - 1) << CAN_TXRX_DATA7_E_POS)
+#define CAN_TXRX_DATA7_E_UMSK   (~(((1U << CAN_TXRX_DATA7_E_LEN) - 1) << CAN_TXRX_DATA7_E_POS))
+
+#define CAN_TXRX_DATA8_E_OFFSET (0x70)
+#define CAN_TXRX_DATA8_E        CAN_TXRX_DATA8_E
+#define CAN_TXRX_DATA8_E_POS    (0U)
+#define CAN_TXRX_DATA8_E_LEN    (8U)
+#define CAN_TXRX_DATA8_E_MSK    (((1U << CAN_TXRX_DATA8_E_LEN) - 1) << CAN_TXRX_DATA8_E_POS)
+#define CAN_TXRX_DATA8_E_UMSK   (~(((1U << CAN_TXRX_DATA8_E_LEN) - 1) << CAN_TXRX_DATA8_E_POS))
+
 /* 0x74 : op mode:r    reset mode:r */
 #define CAN_RX_MESSAGE_COUNT_OFFSET (0x74)
 #define CAN_RX_MESSAGE_CNT          CAN_RX_MESSAGE_CNT
 #define CAN_RX_MESSAGE_CNT_POS      (0U)
-#define CAN_RX_MESSAGE_CNT_LEN      (5U)
+#define CAN_RX_MESSAGE_CNT_LEN      (8U)
 #define CAN_RX_MESSAGE_CNT_MSK      (((1U << CAN_RX_MESSAGE_CNT_LEN) - 1) << CAN_RX_MESSAGE_CNT_POS)
 #define CAN_RX_MESSAGE_CNT_UMSK     (~(((1U << CAN_RX_MESSAGE_CNT_LEN) - 1) << CAN_RX_MESSAGE_CNT_POS))
 
@@ -552,14 +632,8 @@ reset mode:w    r   -> 8'h00 */
     /* 0x18 : op mode:r   reset mode:rw */
     union {
         struct {
-            uint32_t baud_rate_prescaler_0 : 1;  /* [    0],        r/w,        0x0 */
-            uint32_t baud_rate_prescaler_1 : 1;  /* [    1],        r/w,        0x0 */
-            uint32_t baud_rate_prescaler_2 : 1;  /* [    2],        r/w,        0x0 */
-            uint32_t baud_rate_prescaler_3 : 1;  /* [    3],        r/w,        0x0 */
-            uint32_t baud_rate_prescaler_4 : 1;  /* [    4],        r/w,        0x0 */
-            uint32_t baud_rate_prescaler_5 : 1;  /* [    5],        r/w,        0x0 */
-            uint32_t sync_jump_width_0     : 1;  /* [    6],        r/w,        0x0 */
-            uint32_t sync_jump_width_1     : 1;  /* [    7],        r/w,        0x0 */
+            uint32_t baud_rate_prescaler   : 6;  /* [ 5: 0],        r/w,        0x0 */
+            uint32_t sync_jump_width       : 2;  /* [ 7: 6],        r/w,        0x0 */
             uint32_t reserved_8_31         : 24; /* [31: 8],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
@@ -568,13 +642,8 @@ reset mode:w    r   -> 8'h00 */
     /* 0x1c : op mode:r  reset mode:rw */
     union {
         struct {
-            uint32_t time_segment_1_0 : 1;  /* [    0],        r/w,        0x0 */
-            uint32_t time_segment_1_1 : 1;  /* [    1],        r/w,        0x0 */
-            uint32_t time_segment_1_2 : 1;  /* [    2],        r/w,        0x0 */
-            uint32_t time_segment_1_3 : 1;  /* [    3],        r/w,        0x0 */
-            uint32_t time_segment_2_0 : 1;  /* [    4],        r/w,        0x0 */
-            uint32_t time_segment_2_1 : 1;  /* [    5],        r/w,        0x0 */
-            uint32_t time_segment_2_2 : 1;  /* [    6],        r/w,        0x0 */
+            uint32_t time_segment_1 : 4;  /* [ 3: 0],        r/w,        0x0 */
+            uint32_t time_segment_2 : 3;  /* [ 6: 4],        r/w,        0x0 */
             uint32_t sampling         : 1;  /* [    7],        r/w,        0x0 */
             uint32_t reserved_8_31    : 24; /* [31: 8],       rsvd,        0x0 */
         } BF;
