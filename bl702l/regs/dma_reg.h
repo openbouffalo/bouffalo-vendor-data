@@ -155,7 +155,6 @@
 #define DMA_SYNC_MSK    (((1U << DMA_SYNC_LEN) - 1) << DMA_SYNC_POS)
 #define DMA_SYNC_UMSK   (~(((1U << DMA_SYNC_LEN) - 1) << DMA_SYNC_POS))
 
-#if 0
 /* 0x100 : DMA_C0SrcAddr */
 #define DMA_C0SRCADDR_OFFSET   (0x100)
 #define DMA_SRCADDR            DMA_SRCADDR
@@ -1191,7 +1190,6 @@ struct  dma_reg {
     } DMA_C3RSVD;
 
 };
-#endif
 
 typedef volatile struct dma_reg dma_reg_t;
 
