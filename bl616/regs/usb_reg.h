@@ -3925,18 +3925,18 @@ struct usb_reg {
     union {
         struct
         {
-            uint32_t B_SRP_DN       : 1;  /* [    0],       None,        0x0 */
-            uint32_t reserved_1_3   : 3;  /* [ 3: 1],       rsvd,        0x0 */
-            uint32_t A_SRP_DET      : 1;  /* [    4],       None,        0x0 */
-            uint32_t A_VBUS_ERR_HOV : 1;  /* [    5],       None,        0x0 */
-            uint32_t B_SESS_END_POV : 1;  /* [    6],       None,        0x0 */
-            uint32_t reserved_7     : 1;  /* [    7],       rsvd,        0x0 */
-            uint32_t RLCHG          : 1;  /* [    8],       None,        0x0 */
-            uint32_t IDCHG          : 1;  /* [    9],       None,        0x0 */
-            uint32_t OVC_HOV        : 1;  /* [   10],       None,        0x0 */
-            uint32_t A_WAIT_CON_HOV : 1;  /* [   11],       None,        0x0 */
-            uint32_t APLGRMV        : 1;  /* [   12],       None,        0x0 */
-            uint32_t reserved_13_31 : 19; /* [31:13],       rsvd,        0x0 */
+            uint32_t B_SRP_DN             : 1;  /* [    0],       None,        0x0 */
+            uint32_t reserved_1_3         : 3;  /* [ 3: 1],       rsvd,        0x0 */
+            uint32_t A_SRP_DET            : 1;  /* [    4],       None,        0x0 */
+            uint32_t A_VBUS_ERR_HOV       : 1;  /* [    5],       None,        0x0 */
+            uint32_t B_SESS_END_INT_POV   : 1;  /* [    6],       None,        0x0 */
+            uint32_t reserved_7           : 1;  /* [    7],       rsvd,        0x0 */
+            uint32_t RLCHG                : 1;  /* [    8],       None,        0x0 */
+            uint32_t IDCHG                : 1;  /* [    9],       None,        0x0 */
+            uint32_t OVC_HOV              : 1;  /* [   10],       None,        0x0 */
+            uint32_t A_WAIT_CON_HOV       : 1;  /* [   11],       None,        0x0 */
+            uint32_t APLGRMV              : 1;  /* [   12],       None,        0x0 */
+            uint32_t reserved_13_31       : 19; /* [31:13],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } OTG_ISR;
@@ -3947,7 +3947,7 @@ struct usb_reg {
         {
             uint32_t B_SRP_DN_EN       : 1;  /* [    0],       None,        0x0 */
             uint32_t reserved_1_3      : 3;  /* [ 3: 1],       rsvd,        0x0 */
-            uint32_t A_SRP_DET_EN      : 1;  /* [    4],       None,        0x0 */
+            uint32_t A_SRP_DET_INT_EN  : 1;  /* [    4],       None,        0x0 */
             uint32_t A_VBUS_ERR_EN_HOV : 1;  /* [    5],       None,        0x0 */
             uint32_t B_SESS_END_EN_POV : 1;  /* [    6],       None,        0x0 */
             uint32_t reserved_7        : 1;  /* [    7],       rsvd,        0x0 */
@@ -4665,7 +4665,7 @@ struct usb_reg {
         uint32_t WORD;
     } DEV_OUTMPS8;
 
-    /* 0x1A0 : DEV_EPMAP08 */
+    /* 0x1A0 : DEV_EPMAP0 */
     union {
         struct
         {
@@ -4679,7 +4679,7 @@ struct usb_reg {
             uint32_t FNO_OEP4 : 4; /* [31:28],       None,        0x0 */
         } BF;
         uint32_t WORD;
-    } DEV_EPMAP08;
+    } DEV_EPMAP0;
 
     /* 0x1A4 : DEV_EPMAP1 */
     union {
