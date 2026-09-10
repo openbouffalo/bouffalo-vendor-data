@@ -875,8 +875,7 @@ struct dma_reg {
     union {
         struct
         {
-            uint32_t reserved_0_1 : 2;  /* [ 1: 0],       rsvd,        0x0 */
-            uint32_t LLI          : 30; /* [31: 2],        r/w,        0x0 */
+            uint32_t LLI          : 32; /* [31: 0],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C1LLI;
