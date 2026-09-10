@@ -906,7 +906,7 @@ struct hbn_reg {
             uint32_t rc32k_allow_cal       : 1;  /* [   18],        r/w,        0x0 */
             uint32_t rc32k_ext_code_en     : 1;  /* [   19],        r/w,        0x1 */
             uint32_t rc32k_cal_en          : 1;  /* [   20],        r/w,        0x0 */
-            uint32_t pu_rc32k              : 1;  /* [   21],        r/w,        0x1 */
+            uint32_t cr_pu_rc32k           : 1;  /* [   21],        r/w,        0x1 */
             uint32_t rc32k_code_fr_ext     : 10; /* [31:22],        r/w,      0x12c */
         } BF;
         uint32_t WORD;
