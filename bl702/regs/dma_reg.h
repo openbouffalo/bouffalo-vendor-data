@@ -155,7 +155,6 @@
 #define DMA_SYNC_MSK    (((1U << DMA_SYNC_LEN) - 1) << DMA_SYNC_POS)
 #define DMA_SYNC_UMSK   (~(((1U << DMA_SYNC_LEN) - 1) << DMA_SYNC_POS))
 
-#if 0
 /* 0x100 : DMA_C0SrcAddr */
 #define DMA_C0SRCADDR_OFFSET   (0x100)
 #define DMA_SRCADDR            DMA_SRCADDR
@@ -354,12 +353,12 @@
 #define DMA_DST_ADD_MODE_UMSK  (~(((1U << DMA_DST_ADD_MODE_LEN) - 1) << DMA_DST_ADD_MODE_POS))
 #define DMA_SWIDTH             DMA_SWIDTH
 #define DMA_SWIDTH_POS         (18U)
-#define DMA_SWIDTH_LEN         (3U)
+#define DMA_SWIDTH_LEN         (2U)
 #define DMA_SWIDTH_MSK         (((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS)
 #define DMA_SWIDTH_UMSK        (~(((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS))
 #define DMA_DWIDTH             DMA_DWIDTH
 #define DMA_DWIDTH_POS         (21U)
-#define DMA_DWIDTH_LEN         (3U)
+#define DMA_DWIDTH_LEN         (2U)
 #define DMA_DWIDTH_MSK         (((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS)
 #define DMA_DWIDTH_UMSK        (~(((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS))
 #define DMA_FIX_CNT            DMA_FIX_CNT
@@ -435,6 +434,11 @@
 #define DMA_H_LEN              (1U)
 #define DMA_H_MSK              (((1U << DMA_H_LEN) - 1) << DMA_H_POS)
 #define DMA_H_UMSK             (~(((1U << DMA_H_LEN) - 1) << DMA_H_POS))
+#define DMA_LLICOUNTER         DMA_LLICOUNTER
+#define DMA_LLICOUNTER_POS     (20U)
+#define DMA_LLICOUNTER_LEN     (10U)
+#define DMA_LLICOUNTER_MSK     (((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS)
+#define DMA_LLICOUNTER_UMSK    (~(((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS))
 
 /* 0x300 : DMA_C2SrcAddr */
 #define DMA_C2SRCADDR_OFFSET   (0x300)
@@ -489,12 +493,12 @@
 #define DMA_DST_ADD_MODE_UMSK  (~(((1U << DMA_DST_ADD_MODE_LEN) - 1) << DMA_DST_ADD_MODE_POS))
 #define DMA_SWIDTH             DMA_SWIDTH
 #define DMA_SWIDTH_POS         (18U)
-#define DMA_SWIDTH_LEN         (3U)
+#define DMA_SWIDTH_LEN         (2U)
 #define DMA_SWIDTH_MSK         (((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS)
 #define DMA_SWIDTH_UMSK        (~(((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS))
 #define DMA_DWIDTH             DMA_DWIDTH
 #define DMA_DWIDTH_POS         (21U)
-#define DMA_DWIDTH_LEN         (3U)
+#define DMA_DWIDTH_LEN         (2U)
 #define DMA_DWIDTH_MSK         (((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS)
 #define DMA_DWIDTH_UMSK        (~(((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS))
 #define DMA_FIX_CNT            DMA_FIX_CNT
@@ -570,6 +574,11 @@
 #define DMA_H_LEN              (1U)
 #define DMA_H_MSK              (((1U << DMA_H_LEN) - 1) << DMA_H_POS)
 #define DMA_H_UMSK             (~(((1U << DMA_H_LEN) - 1) << DMA_H_POS))
+#define DMA_LLICOUNTER         DMA_LLICOUNTER
+#define DMA_LLICOUNTER_POS     (20U)
+#define DMA_LLICOUNTER_LEN     (10U)
+#define DMA_LLICOUNTER_MSK     (((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS)
+#define DMA_LLICOUNTER_UMSK    (~(((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS))
 
 /* 0x400 : DMA_C3SrcAddr */
 #define DMA_C3SRCADDR_OFFSET   (0x400)
@@ -623,12 +632,12 @@
 #define DMA_DST_ADD_MODE_UMSK  (~(((1U << DMA_DST_ADD_MODE_LEN) - 1) << DMA_DST_ADD_MODE_POS))
 #define DMA_SWIDTH             DMA_SWIDTH
 #define DMA_SWIDTH_POS         (18U)
-#define DMA_SWIDTH_LEN         (3U)
+#define DMA_SWIDTH_LEN         (2U)
 #define DMA_SWIDTH_MSK         (((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS)
 #define DMA_SWIDTH_UMSK        (~(((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS))
 #define DMA_DWIDTH             DMA_DWIDTH
 #define DMA_DWIDTH_POS         (21U)
-#define DMA_DWIDTH_LEN         (3U)
+#define DMA_DWIDTH_LEN         (2U)
 #define DMA_DWIDTH_MSK         (((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS)
 #define DMA_DWIDTH_UMSK        (~(((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS))
 #define DMA_FIX_CNT            DMA_FIX_CNT
@@ -704,6 +713,11 @@
 #define DMA_H_LEN              (1U)
 #define DMA_H_MSK              (((1U << DMA_H_LEN) - 1) << DMA_H_POS)
 #define DMA_H_UMSK             (~(((1U << DMA_H_LEN) - 1) << DMA_H_POS))
+#define DMA_LLICOUNTER         DMA_LLICOUNTER
+#define DMA_LLICOUNTER_POS     (20U)
+#define DMA_LLICOUNTER_LEN     (10U)
+#define DMA_LLICOUNTER_MSK     (((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS)
+#define DMA_LLICOUNTER_UMSK    (~(((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS))
 
 /* 0x500 : DMA_C4SrcAddr */
 #define DMA_C4SRCADDR_OFFSET   (0x500)
@@ -757,12 +771,12 @@
 #define DMA_DST_ADD_MODE_UMSK  (~(((1U << DMA_DST_ADD_MODE_LEN) - 1) << DMA_DST_ADD_MODE_POS))
 #define DMA_SWIDTH             DMA_SWIDTH
 #define DMA_SWIDTH_POS         (18U)
-#define DMA_SWIDTH_LEN         (3U)
+#define DMA_SWIDTH_LEN         (2U)
 #define DMA_SWIDTH_MSK         (((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS)
 #define DMA_SWIDTH_UMSK        (~(((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS))
 #define DMA_DWIDTH             DMA_DWIDTH
 #define DMA_DWIDTH_POS         (21U)
-#define DMA_DWIDTH_LEN         (3U)
+#define DMA_DWIDTH_LEN         (2U)
 #define DMA_DWIDTH_MSK         (((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS)
 #define DMA_DWIDTH_UMSK        (~(((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS))
 #define DMA_FIX_CNT            DMA_FIX_CNT
@@ -838,6 +852,11 @@
 #define DMA_H_LEN              (1U)
 #define DMA_H_MSK              (((1U << DMA_H_LEN) - 1) << DMA_H_POS)
 #define DMA_H_UMSK             (~(((1U << DMA_H_LEN) - 1) << DMA_H_POS))
+#define DMA_LLICOUNTER         DMA_LLICOUNTER
+#define DMA_LLICOUNTER_POS     (20U)
+#define DMA_LLICOUNTER_LEN     (10U)
+#define DMA_LLICOUNTER_MSK     (((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS)
+#define DMA_LLICOUNTER_UMSK    (~(((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS))
 
 /* 0x600 : DMA_C5SrcAddr */
 #define DMA_C5SRCADDR_OFFSET   (0x600)
@@ -891,12 +910,12 @@
 #define DMA_DST_ADD_MODE_UMSK  (~(((1U << DMA_DST_ADD_MODE_LEN) - 1) << DMA_DST_ADD_MODE_POS))
 #define DMA_SWIDTH             DMA_SWIDTH
 #define DMA_SWIDTH_POS         (18U)
-#define DMA_SWIDTH_LEN         (3U)
+#define DMA_SWIDTH_LEN         (2U)
 #define DMA_SWIDTH_MSK         (((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS)
 #define DMA_SWIDTH_UMSK        (~(((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS))
 #define DMA_DWIDTH             DMA_DWIDTH
 #define DMA_DWIDTH_POS         (21U)
-#define DMA_DWIDTH_LEN         (3U)
+#define DMA_DWIDTH_LEN         (2U)
 #define DMA_DWIDTH_MSK         (((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS)
 #define DMA_DWIDTH_UMSK        (~(((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS))
 #define DMA_FIX_CNT            DMA_FIX_CNT
@@ -972,6 +991,11 @@
 #define DMA_H_LEN              (1U)
 #define DMA_H_MSK              (((1U << DMA_H_LEN) - 1) << DMA_H_POS)
 #define DMA_H_UMSK             (~(((1U << DMA_H_LEN) - 1) << DMA_H_POS))
+#define DMA_LLICOUNTER         DMA_LLICOUNTER
+#define DMA_LLICOUNTER_POS     (20U)
+#define DMA_LLICOUNTER_LEN     (10U)
+#define DMA_LLICOUNTER_MSK     (((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS)
+#define DMA_LLICOUNTER_UMSK    (~(((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS))
 
 /* 0x700 : DMA_C6SrcAddr */
 #define DMA_C6SRCADDR_OFFSET   (0x700)
@@ -1025,12 +1049,12 @@
 #define DMA_DST_ADD_MODE_UMSK  (~(((1U << DMA_DST_ADD_MODE_LEN) - 1) << DMA_DST_ADD_MODE_POS))
 #define DMA_SWIDTH             DMA_SWIDTH
 #define DMA_SWIDTH_POS         (18U)
-#define DMA_SWIDTH_LEN         (3U)
+#define DMA_SWIDTH_LEN         (2U)
 #define DMA_SWIDTH_MSK         (((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS)
 #define DMA_SWIDTH_UMSK        (~(((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS))
 #define DMA_DWIDTH             DMA_DWIDTH
 #define DMA_DWIDTH_POS         (21U)
-#define DMA_DWIDTH_LEN         (3U)
+#define DMA_DWIDTH_LEN         (2U)
 #define DMA_DWIDTH_MSK         (((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS)
 #define DMA_DWIDTH_UMSK        (~(((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS))
 #define DMA_FIX_CNT            DMA_FIX_CNT
@@ -1106,6 +1130,11 @@
 #define DMA_H_LEN              (1U)
 #define DMA_H_MSK              (((1U << DMA_H_LEN) - 1) << DMA_H_POS)
 #define DMA_H_UMSK             (~(((1U << DMA_H_LEN) - 1) << DMA_H_POS))
+#define DMA_LLICOUNTER         DMA_LLICOUNTER
+#define DMA_LLICOUNTER_POS     (20U)
+#define DMA_LLICOUNTER_LEN     (10U)
+#define DMA_LLICOUNTER_MSK     (((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS)
+#define DMA_LLICOUNTER_UMSK    (~(((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS))
 
 /* 0x800 : DMA_C7SrcAddr */
 #define DMA_C7SRCADDR_OFFSET   (0x800)
@@ -1159,12 +1188,12 @@
 #define DMA_DST_ADD_MODE_UMSK  (~(((1U << DMA_DST_ADD_MODE_LEN) - 1) << DMA_DST_ADD_MODE_POS))
 #define DMA_SWIDTH             DMA_SWIDTH
 #define DMA_SWIDTH_POS         (18U)
-#define DMA_SWIDTH_LEN         (3U)
+#define DMA_SWIDTH_LEN         (2U)
 #define DMA_SWIDTH_MSK         (((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS)
 #define DMA_SWIDTH_UMSK        (~(((1U << DMA_SWIDTH_LEN) - 1) << DMA_SWIDTH_POS))
 #define DMA_DWIDTH             DMA_DWIDTH
 #define DMA_DWIDTH_POS         (21U)
-#define DMA_DWIDTH_LEN         (3U)
+#define DMA_DWIDTH_LEN         (2U)
 #define DMA_DWIDTH_MSK         (((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS)
 #define DMA_DWIDTH_UMSK        (~(((1U << DMA_DWIDTH_LEN) - 1) << DMA_DWIDTH_POS))
 #define DMA_FIX_CNT            DMA_FIX_CNT
@@ -1240,9 +1269,14 @@
 #define DMA_H_LEN              (1U)
 #define DMA_H_MSK              (((1U << DMA_H_LEN) - 1) << DMA_H_POS)
 #define DMA_H_UMSK             (~(((1U << DMA_H_LEN) - 1) << DMA_H_POS))
+#define DMA_LLICOUNTER         DMA_LLICOUNTER
+#define DMA_LLICOUNTER_POS     (20U)
+#define DMA_LLICOUNTER_LEN     (10U)
+#define DMA_LLICOUNTER_MSK     (((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS)
+#define DMA_LLICOUNTER_UMSK    (~(((1U << DMA_LLICOUNTER_LEN) - 1) << DMA_LLICOUNTER_POS))
 
 
-struct  dma_reg
+struct dma_reg
 {
     /* 0x0 : DMA_IntStatus */
     union
@@ -1499,8 +1533,7 @@ struct  dma_reg
     {
         struct
         {
-            uint32_t reserved_0_1                   :  2; /* [ 1: 0],       rsvd,        0x0 */
-            uint32_t LLI                            : 30; /* [31: 2],        r/w,        0x0 */
+            uint32_t LLI                            : 32; /* [31: 0],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C1LLI;
@@ -1542,7 +1575,9 @@ struct  dma_reg
             uint32_t L                              :  1; /* [   16],        r/w,        0x0 */
             uint32_t A                              :  1; /* [   17],          r,        0x0 */
             uint32_t H                              :  1; /* [   18],        r/w,        0x0 */
-            uint32_t reserved_19_31                 : 13; /* [31:19],       rsvd,        0x0 */
+            uint32_t reserved_19                    :  1; /* [   19],       rsvd,        0x0 */
+            uint32_t LLICounter                     : 10; /* [29:20],          r,        0x0 */
+            uint32_t reserved_30_31                 :  2; /* [31:30],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C1Config;
@@ -1575,8 +1610,7 @@ struct  dma_reg
     {
         struct
         {
-            uint32_t reserved_0_1                   :  2; /* [ 1: 0],       rsvd,        0x0 */
-            uint32_t LLI                            : 30; /* [31: 2],        r/w,        0x0 */
+            uint32_t LLI                            : 32; /* [31: 0],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C2LLI;
@@ -1618,7 +1652,9 @@ struct  dma_reg
             uint32_t L                              :  1; /* [   16],        r/w,        0x0 */
             uint32_t A                              :  1; /* [   17],          r,        0x0 */
             uint32_t H                              :  1; /* [   18],        r/w,        0x0 */
-            uint32_t reserved_19_31                 : 13; /* [31:19],       rsvd,        0x0 */
+            uint32_t reserved_19                    :  1; /* [   19],       rsvd,        0x0 */
+            uint32_t LLICounter                     : 10; /* [29:20],          r,        0x0 */
+            uint32_t reserved_30_31                 :  2; /* [31:30],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C2Config;
@@ -1651,8 +1687,7 @@ struct  dma_reg
     {
         struct
         {
-            uint32_t reserved_0_1                   :  2; /* [ 1: 0],       rsvd,        0x0 */
-            uint32_t LLI                            : 30; /* [31: 2],        r/w,        0x0 */
+            uint32_t LLI                            : 32; /* [31: 0],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C3LLI;
@@ -1694,7 +1729,9 @@ struct  dma_reg
             uint32_t L                              :  1; /* [   16],        r/w,        0x0 */
             uint32_t A                              :  1; /* [   17],          r,        0x0 */
             uint32_t H                              :  1; /* [   18],        r/w,        0x0 */
-            uint32_t reserved_19_31                 : 13; /* [31:19],       rsvd,        0x0 */
+            uint32_t reserved_19                    :  1; /* [   19],       rsvd,        0x0 */
+            uint32_t LLICounter                     : 10; /* [29:20],          r,        0x0 */
+            uint32_t reserved_30_31                 :  2; /* [31:30],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C3Config;
@@ -1727,8 +1764,7 @@ struct  dma_reg
     {
         struct
         {
-            uint32_t reserved_0_1                   :  2; /* [ 1: 0],       rsvd,        0x0 */
-            uint32_t LLI                            : 30; /* [31: 2],        r/w,        0x0 */
+            uint32_t LLI                            : 32; /* [31: 0],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C4LLI;
@@ -1770,7 +1806,9 @@ struct  dma_reg
             uint32_t L                              :  1; /* [   16],        r/w,        0x0 */
             uint32_t A                              :  1; /* [   17],          r,        0x0 */
             uint32_t H                              :  1; /* [   18],        r/w,        0x0 */
-            uint32_t reserved_19_31                 : 13; /* [31:19],       rsvd,        0x0 */
+            uint32_t reserved_19                    :  1; /* [   19],       rsvd,        0x0 */
+            uint32_t LLICounter                     : 10; /* [29:20],          r,        0x0 */
+            uint32_t reserved_30_31                 :  2; /* [31:30],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C4Config;
@@ -1803,8 +1841,7 @@ struct  dma_reg
     {
         struct
         {
-            uint32_t reserved_0_1                   :  2; /* [ 1: 0],       rsvd,        0x0 */
-            uint32_t LLI                            : 30; /* [31: 2],        r/w,        0x0 */
+            uint32_t LLI                            : 32; /* [31: 0],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C5LLI;
@@ -1846,7 +1883,9 @@ struct  dma_reg
             uint32_t L                              :  1; /* [   16],        r/w,        0x0 */
             uint32_t A                              :  1; /* [   17],          r,        0x0 */
             uint32_t H                              :  1; /* [   18],        r/w,        0x0 */
-            uint32_t reserved_19_31                 : 13; /* [31:19],       rsvd,        0x0 */
+            uint32_t reserved_19                    :  1; /* [   19],       rsvd,        0x0 */
+            uint32_t LLICounter                     : 10; /* [29:20],          r,        0x0 */
+            uint32_t reserved_30_31                 :  2; /* [31:30],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C5Config;
@@ -1879,8 +1918,7 @@ struct  dma_reg
     {
         struct
         {
-            uint32_t reserved_0_1                   :  2; /* [ 1: 0],       rsvd,        0x0 */
-            uint32_t LLI                            : 30; /* [31: 2],        r/w,        0x0 */
+            uint32_t LLI                            : 32; /* [31: 0],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C6LLI;
@@ -1922,7 +1960,9 @@ struct  dma_reg
             uint32_t L                              :  1; /* [   16],        r/w,        0x0 */
             uint32_t A                              :  1; /* [   17],          r,        0x0 */
             uint32_t H                              :  1; /* [   18],        r/w,        0x0 */
-            uint32_t reserved_19_31                 : 13; /* [31:19],       rsvd,        0x0 */
+            uint32_t reserved_19                    :  1; /* [   19],       rsvd,        0x0 */
+            uint32_t LLICounter                     : 10; /* [29:20],          r,        0x0 */
+            uint32_t reserved_30_31                 :  2; /* [31:30],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C6Config;
@@ -1955,8 +1995,7 @@ struct  dma_reg
     {
         struct
         {
-            uint32_t reserved_0_1                   :  2; /* [ 1: 0],       rsvd,        0x0 */
-            uint32_t LLI                            : 30; /* [31: 2],        r/w,        0x0 */
+            uint32_t LLI                            : 32; /* [31: 0],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C7LLI;
@@ -1998,13 +2037,14 @@ struct  dma_reg
             uint32_t L                              :  1; /* [   16],        r/w,        0x0 */
             uint32_t A                              :  1; /* [   17],          r,        0x0 */
             uint32_t H                              :  1; /* [   18],        r/w,        0x0 */
-            uint32_t reserved_19_31                 : 13; /* [31:19],       rsvd,        0x0 */
+            uint32_t reserved_19                    :  1; /* [   19],       rsvd,        0x0 */
+            uint32_t LLICounter                     : 10; /* [29:20],          r,        0x0 */
+            uint32_t reserved_30_31                 :  2; /* [31:30],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } DMA_C7Config;
 
 };
-#endif
 
 typedef volatile struct dma_reg dma_reg_t;
 
