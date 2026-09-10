@@ -702,67 +702,67 @@ struct pwm_reg {
     /* 0x4  reserved */
     uint8_t RESERVED0x4[60];
 
-    /* 0x40 : pwm0_clkdiv */
+    /* 0x40 : pwm0_sc0_clkdiv */
     union {
         struct {
             uint32_t pwm_clk_div    : 16; /* [15: 0],        r/w,        0x0 */
             uint32_t reserved_16_31 : 16; /* [31:16],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
-    } pwm0_clkdiv;
+    } pwm0_sc0_clkdiv;
 
-    /* 0x44 : pwm0_thre1 */
+    /* 0x44 : pwm0_sc0_thre1 */
     union {
         struct {
-            uint32_t pwm_thre1      : 16; /* [15: 0],        r/w,        0x0 */
+            uint32_t pwm_sc0_thre1  : 16; /* [15: 0],        r/w,        0x0 */
             uint32_t reserved_16_31 : 16; /* [31:16],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
-    } pwm0_thre1;
+    } pwm0_sc0_thre1;
 
     /* 0x48 : pwm0_thre2 */
     union {
         struct {
-            uint32_t pwm_thre2      : 16; /* [15: 0],        r/w,        0x0 */
+            uint32_t pwm_sc0_thre2  : 16; /* [15: 0],        r/w,        0x0 */
             uint32_t reserved_16_31 : 16; /* [31:16],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
-    } pwm0_thre2;
+    } pwm0_sc0_thre2;
 
-    /* 0x4C : pwm0_period */
+    /* 0x4C : pwm0_sc0_period */
     union {
         struct {
             uint32_t pwm_period     : 16; /* [15: 0],        r/w,        0x0 */
             uint32_t reserved_16_31 : 16; /* [31:16],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
-    } pwm0_period;
+    } pwm0_sc0_period;
 
     /* 0x50 : pwm0_config */
     union {
         struct {
-            uint32_t reg_clk_sel      : 2;  /* [ 1: 0],        r/w,        0x0 */
-            uint32_t pwm_out_inv      : 1;  /* [    2],        r/w,        0x0 */
-            uint32_t pwm_stop_mode    : 1;  /* [    3],        r/w,        0x1 */
-            uint32_t pwm_sw_force_val : 1;  /* [    4],        r/w,        0x0 */
-            uint32_t pwm_sw_mode      : 1;  /* [    5],        r/w,        0x0 */
-            uint32_t pwm_stop_en      : 1;  /* [    6],        r/w,        0x0 */
-            uint32_t pwm_sts_top      : 1;  /* [    7],          r,        0x0 */
-            uint32_t pwm_stop_on_int  : 1;  /* [    8],        r/w,        0x0 */
+            uint32_t sc0_reg_clk_sel  : 2;  /* [ 1: 0],        r/w,        0x0 */
+            uint32_t sc0_out_inv      : 1;  /* [    2],        r/w,        0x0 */
+            uint32_t sc0_stop_mode    : 1;  /* [    3],        r/w,        0x1 */
+            uint32_t sc0_sw_force_val : 1;  /* [    4],        r/w,        0x0 */
+            uint32_t sc0_sw_mode      : 1;  /* [    5],        r/w,        0x0 */
+            uint32_t sc0_stop_en      : 1;  /* [    6],        r/w,        0x0 */
+            uint32_t sc0_sts_top      : 1;  /* [    7],          r,        0x0 */
+            uint32_t sc0_stop_on_int  : 1;  /* [    8],        r/w,        0x0 */
             uint32_t reserved_9_31    : 23; /* [31: 9],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
-    } pwm0_config;
+    } pwm0_sc0_config;
 
-    /* 0x54 : pwm0_interrupt */
+    /* 0x54 : pwm0_sc0_interrupt */
     union {
         struct {
-            uint32_t pwm_int_period_cnt : 16; /* [15: 0],        r/w,        0x0 */
-            uint32_t pwm_int_enable     : 1;  /* [   16],        r/w,        0x0 */
+            uint32_t sc0_int_period_cnt : 16; /* [15: 0],        r/w,        0x0 */
+            uint32_t sc0_int_enable     : 1;  /* [   16],        r/w,        0x0 */
             uint32_t reserved_17_31     : 15; /* [31:17],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
-    } pwm0_interrupt;
+    } pwm0_sc0_interrupt;
 
     /* 0x58  reserved */
     uint8_t RESERVED0x58[40];
