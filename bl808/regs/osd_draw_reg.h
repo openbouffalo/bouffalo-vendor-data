@@ -835,7 +835,7 @@
 #define OSD_REG_DRAW_Y_MAX_0F_MSK         (((1U << OSD_REG_DRAW_Y_MAX_0F_LEN) - 1) << OSD_REG_DRAW_Y_MAX_0F_POS)
 #define OSD_REG_DRAW_Y_MAX_0F_UMSK        (~(((1U << OSD_REG_DRAW_Y_MAX_0F_LEN) - 1) << OSD_REG_DRAW_Y_MAX_0F_POS))
 
-/* 0xF8 : osd_int_sts */
+/* 0xF8 : osd_draw_int_sts */
 #define OSD_DRAW_INT_STS_OFFSET           (0xF8)
 #define OSD_DRAW_REG_SEOF_INT_CLR_W       OSD_DRAW_REG_SEOF_INT_CLR_W
 #define OSD_DRAW_REG_SEOF_INT_CLR_W_POS   (0U)
@@ -863,7 +863,7 @@
 #define OSD_DRAW_STS_SEOF_INT_R_MSK       (((1U << OSD_DRAW_STS_SEOF_INT_R_LEN) - 1) << OSD_DRAW_STS_SEOF_INT_R_POS)
 #define OSD_DRAW_STS_SEOF_INT_R_UMSK      (~(((1U << OSD_DRAW_STS_SEOF_INT_R_LEN) - 1) << OSD_DRAW_STS_SEOF_INT_R_POS))
 
-/* 0xFC : osd_misc */
+/* 0xFC : osd_draw_misc */
 #define OSD_DRAW_MISC_OFFSET              (0xFC)
 #define OSD_DRAW_REG_BUS_STRT_W           OSD_DRAW_REG_BUS_STRT_W
 #define OSD_DRAW_REG_BUS_STRT_W_POS       (0U)
@@ -1467,7 +1467,7 @@ struct osd_draw_reg {
     /* 0xc4  reserved */
     uint8_t RESERVED0xc4[52];
 
-    /* 0xF8 : osd_int_sts */
+    /* 0xF8 : osd_draw_int_sts */
     union {
         struct {
             uint32_t reg_seof_int_clr_w  : 1;  /* [    0],        w1p,        0x0 */
@@ -1479,9 +1479,9 @@ struct osd_draw_reg {
             uint32_t reserved_21_31      : 11; /* [31:21],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
-    } osd_int_sts;
+    } osd_draw_int_sts;
 
-    /* 0xFC : osd_misc */
+    /* 0xFC : osd_draw_misc */
     union {
         struct {
             uint32_t reg_bus_strt_w      : 1; /* [    0],        w1p,        0x0 */
@@ -1503,7 +1503,7 @@ struct osd_draw_reg {
             uint32_t reg_pclk_force_on_w : 8; /* [31:24],        r/w,        0x0 */
         } BF;
         uint32_t WORD;
-    } osd_misc;
+    } osd_draw_misc;
 };
 
 typedef volatile struct osd_draw_reg osd_draw_reg_t;
