@@ -498,7 +498,7 @@
 
 struct  auadc_reg {
     /* 0x0  reserved */
-    uint8_t RESERVED0x0[3072];
+    // uint8_t RESERVED0x0[3072];
 
     /* 0xC00 : audpdm_top */
     union {
