@@ -521,7 +521,7 @@
 #define SEC_ENG_SE_AES_0_CTR_LEN_MSK      (((1U << SEC_ENG_SE_AES_0_CTR_LEN_LEN) - 1) << SEC_ENG_SE_AES_0_CTR_LEN_POS)
 #define SEC_ENG_SE_AES_0_CTR_LEN_UMSK     (~(((1U << SEC_ENG_SE_AES_0_CTR_LEN_LEN) - 1) << SEC_ENG_SE_AES_0_CTR_LEN_POS))
 
-/* 0x14C : se_aes_sboot */
+/* 0x14C : se_aes_0_sboot */
 #define SEC_ENG_SE_AES_0_SBOOT_OFFSET       (0x14C)
 #define SEC_ENG_SE_AES_0_SBOOT_KEY_SEL      SEC_ENG_SE_AES_0_SBOOT_KEY_SEL
 #define SEC_ENG_SE_AES_0_SBOOT_KEY_SEL_POS  (0U)
@@ -1529,16 +1529,16 @@ struct sec_eng_reg {
         uint32_t WORD;
     } se_aes_0_endian;
 
-    /* 0x14C : se_aes_sboot */
+    /* 0x14C : se_aes_0_sboot */
     union {
         struct {
-            uint32_t se_aes_sboot_key_sel : 1;  /* [    0],        r/w,        0x0 */
+            uint32_t se_aes_0_sboot_key_sel : 1;  /* [    0],        r/w,        0x0 */
             uint32_t reserved_1_14        : 14; /* [14: 1],       rsvd,        0x0 */
             uint32_t se_aes_0_xts_mode    : 1;  /* [   15],        r/w,        0x0 */
             uint32_t se_aes_0_uni_len     : 16; /* [31:16],        r/w,        0x2 */
         } BF;
         uint32_t WORD;
-    } se_aes_sboot;
+    } se_aes_0_sboot;
 
     /* 0x150 : se_aes_0_link */
     union {
