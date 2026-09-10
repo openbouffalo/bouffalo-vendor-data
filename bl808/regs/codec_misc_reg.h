@@ -264,7 +264,7 @@ struct codec_misc_reg {
     } codec_bus_thre;
 
     /* 0xc  reserved */
-    uint8_t RESERVED0xc[20];
+    uint8_t RESERVED0xc[4];
 
     /* 0x10 : codec_bus_dec_err */
     union {
