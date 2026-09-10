@@ -504,8 +504,8 @@ struct ef_data_0_reg {
             uint32_t ef_cpu0_dis        : 1; /* [    3],        r/w,        0x0 */
             uint32_t ef_sboot_en        : 2; /* [ 5: 4],        r/w,        0x0 */
             uint32_t ef_uart_dis        : 4; /* [ 9: 6],        r/w,        0x0 */
-            uint32_t ef_ble2_dis        : 1; /* [   10],        r/w,        0x0 */
-            uint32_t ef_m1542_dis       : 1; /* [   11],        r/w,        0x0 */
+            uint32_t ef_no_xtal         : 1; /* [   10],        r/w,        0x0 */
+            uint32_t ef_force_no_trim   : 1; /* [   11],        r/w,        0x0 */
             uint32_t ef_sf_key_re_sel   : 2; /* [13:12],        r/w,        0x0 */
             uint32_t ef_sdu_dis         : 1; /* [   14],        r/w,        0x0 */
             uint32_t ef_btdm_dis        : 1; /* [   15],        r/w,        0x0 */
