@@ -223,7 +223,7 @@ struct kys_reg {
     union {
         struct {
             uint32_t reserved_0_6     : 7;  /* [ 6: 0],       rsvd,        0x0 */
-            uint32_t ks_done          : 1;  /* [    7],          r,        0x0 */
+            uint32_t keycode_done     : 1;  /* [    7],          r,        0x0 */
             uint32_t keyfifo_full     : 1;  /* [    8],          r,        0x0 */
             uint32_t keyfifo_half     : 1;  /* [    9],          r,        0x0 */
             uint32_t keyfifo_quarter  : 1;  /* [   10],          r,        0x0 */
@@ -237,12 +237,12 @@ struct kys_reg {
     /* 0x18 : keycode_clr */
     union {
         struct {
-            uint32_t reserved_0_6   : 7;  /* [ 6: 0],       rsvd,        0x0 */
-            uint32_t ks_done_clr    : 1;  /* [    7],        w1c,        0x0 */
-            uint32_t keyfifo_clr    : 1;  /* [    8],        w1c,        0x0 */
-            uint32_t reserved_9_11  : 3;  /* [11: 9],       rsvd,        0x0 */
-            uint32_t ghost_clr      : 1;  /* [   12],        w1c,        0x0 */
-            uint32_t reserved_13_31 : 19; /* [31:13],       rsvd,        0x0 */
+            uint32_t reserved_0_6      : 7;  /* [ 6: 0],       rsvd,        0x0 */
+            uint32_t ks_done_clr       : 1;  /* [    7],        w1c,        0x0 */
+            uint32_t keyfifo_full_clr : 1;  /* [    8],        w1c,        0x0 */
+            uint32_t reserved_9_11     : 3;  /* [11: 9],       rsvd,        0x0 */
+            uint32_t ghost_clr         : 1;  /* [   12],        w1c,        0x0 */
+            uint32_t reserved_13_31    : 19; /* [31:13],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } keycode_clr;
