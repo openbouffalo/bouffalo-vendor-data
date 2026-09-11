@@ -1,0 +1,3 @@
+- Register headers: [bouffalolab/bl_iot_sdk-components](https://github.com/bouffalolab/bl_iot_sdk-components/tree/8b30aa639de25d48684cd8eb5c7cf805a321838c/platform/soc/bl602/bl602_std/bl602_std/Device/Bouffalo/BL602/Peripherals)
+- SVD: [bouffalolab/bouffalo_sdk](https://github.com/bouffalolab/bouffalo_sdk/blob/bc120c8861741cf2ada6d6a46e19e9c865a7fff3/drivers/bl602_driver/regs/soc602_reg.svd)
+- `rf_reg.h`: [bouffalolab/bouffalo_sdk](https://github.com/bouffalolab/bouffalo_sdk/blob/bc120c8861741cf2ada6d6a46e19e9c865a7fff3/drivers/bl602_driver/regs/rf_reg.h)

@@ -1,0 +1,1 @@
+- Register headers: [bouffalolab/bl_iot_sdk-components](https://github.com/bouffalolab/bl_iot_sdk-components/tree/3810a439428aebcfd707e074507edd5ad6f78923/platform/soc/bl702l/bl702l_std/BSP_Driver/regs)
