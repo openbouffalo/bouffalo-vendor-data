@@ -1,0 +1,1 @@
+- Register headers: [bouffalolab/bl_iot_sdk-components](https://github.com/bouffalolab/bouffalo_sdk/tree/957ecf8be43a28dd9662f59333de8dfc9e6f6079/drivers/soc/bl618cl/std/include/hardware)
