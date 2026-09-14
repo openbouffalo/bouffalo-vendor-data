@@ -656,7 +656,7 @@
 #define GLB_SPI_SWAP_SET_MSK                                    (((1U<<GLB_SPI_SWAP_SET_LEN)-1)<<GLB_SPI_SWAP_SET_POS)
 #define GLB_SPI_SWAP_SET_UMSK                                   (~(((1U<<GLB_SPI_SWAP_SET_LEN)-1)<<GLB_SPI_SWAP_SET_POS))
 
-/* 0x1C0 : ppec_cfg0 */
+/* 0x1C0 : pec_cfg0 */
 #define GLB_PEC_CFG0_OFFSET                                     (0x1C0)
 #define GLB_PEC_CLK_DIV                                         GLB_PEC_CLK_DIV
 #define GLB_PEC_CLK_DIV_POS                                     (0U)
@@ -10239,17 +10239,17 @@ struct  glb_reg {
     /* 0x1b4  reserved */
     uint8_t RESERVED0x1b4[12];
 
-    /* 0x1C0 : pio_cfg0 */
+    /* 0x1C0 : pec_cfg0 */
     union {
         struct {
-            uint32_t pio_clk_div                    :  5; /* [ 4: 0],        r/w,        0x3 */
+            uint32_t pec_clk_div                    :  5; /* [ 4: 0],        r/w,        0x3 */
             uint32_t reserved_5_7                   :  3; /* [ 7: 5],       rsvd,        0x0 */
-            uint32_t pio_clk_en                     :  1; /* [    8],        r/w,        0x1 */
-            uint32_t pio_clk_sel                    :  1; /* [    9],        r/w,        0x0 */
+            uint32_t pec_clk_en                     :  1; /* [    8],        r/w,        0x1 */
+            uint32_t pec_clk_sel                    :  1; /* [    9],        r/w,        0x0 */
             uint32_t reserved_10_31                 : 22; /* [31:10],       rsvd,        0x0 */
         }BF;
         uint32_t WORD;
-    } pio_cfg0;
+    } pec_cfg0;
 
     /* 0x1c4  reserved */
     uint8_t RESERVED0x1c4[12];

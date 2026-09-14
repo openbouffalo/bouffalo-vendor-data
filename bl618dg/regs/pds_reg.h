@@ -1705,7 +1705,7 @@ struct pds_reg {
             uint32_t cr_pds_pad_od_en     : 1;  /* [    1],        r/w,        0x0 */
             uint32_t cr_wl_mcu_wfi_mask   : 1;  /* [    2],        r/w,        0x0 */
             uint32_t reserved_3           : 1;  /* [    3],       rsvd,        0x0 */
-            uint32_t cr_lpcpu_wfi_mask     : 1;  /* [    4],        r/w,        0x0 */
+            uint32_t cr_lpcpu_wfi_mask    : 1;  /* [    4],        r/w,        0x0 */
             uint32_t reserved_5_7         : 3;  /* [ 7: 5],       rsvd,        0x0 */
             uint32_t cr_pds_ctrl_usb33    : 1;  /* [    8],        r/w,        0x0 */
             uint32_t cr_pds_pd_ldo18io    : 1;  /* [    9],        r/w,        0x0 */
@@ -1720,9 +1720,10 @@ struct pds_reg {
     /* 0x28 : PDS_RAM2 */
     union {
         struct {
-            uint32_t cr_wram_slp    : 10; /* [ 9: 0],        r/w,        0x0 */
-            uint32_t cr_wram_ret    : 10; /* [19:10],        r/w,        0x0 */
-            uint32_t reserved_20_31 : 12; /* [31:20],       rsvd,        0x0 */
+            uint32_t cr_wram_slp    : 12; /* [11: 0],        r/w,        0x0 */
+            uint32_t reserved_12_15 : 4;  /* [15:12],       rsvd,        0x0 */
+            uint32_t cr_wram_ret    : 12; /* [27:16],        r/w,        0x0 */
+            uint32_t reserved_28_31 : 4;  /* [31:28],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } PDS_RAM2;
