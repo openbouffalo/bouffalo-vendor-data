@@ -1207,7 +1207,6 @@ struct hbn_reg {
     } HBN_IRQ_CLR;
 
     /* 0x20 : HBN_EXT_DCDC_CFG */
-    /* 0x20 : HBN_PIR_CFG */
     union {
         struct {
             uint32_t ext_dcdc1_aon_ctrl_hw_en : 1;  /* [    0],        r/w,        0x0 */
@@ -1222,23 +1221,28 @@ struct hbn_reg {
             uint32_t reserved_0_31 : 32; /* [31: 0],       rsvd,        0x0 */
         } BF_HBN_PIR_CFG;
         uint32_t WORD;
-    } HBN_EXT_DCDC_CFG_HBN_PIR_CFG;
+    } HBN_EXT_DCDC_CFG;
 
-    /* 0x24 : HBN_PIR_VTH */
+    /* 0x24 : HBN_IRQ_MODE2 */
     union {
         struct {
             uint32_t reserved_0_31 : 32; /* [31: 0],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
-    } HBN_PIR_VTH;
+    } HBN_IRQ_MODE2;
 
     /* 0x28 : HBN_PIR_INTERVAL */
+#if 0
     union {
         struct {
             uint32_t reserved_0_31 : 32; /* [31: 0],       rsvd,        0x0 */
         } BF;
         uint32_t WORD;
     } HBN_PIR_INTERVAL;
+#else
+    uint8_t RESERVED0x28[4];
+#endif
+
 
     /* 0x2C : HBN_BOR_CFG */
     union {
@@ -1256,18 +1260,18 @@ struct hbn_reg {
     /* 0x30 : HBN_GLB */
     union {
         struct {
-            uint32_t hbn_root_clk_sel       : 2; /* [ 1: 0],        r/w,        0x0 */
-            uint32_t hbn_uart_clk_sel       : 1; /* [    2],        r/w,        0x0 */
-            uint32_t hbn_f32k_sel           : 2; /* [ 4: 3],        r/w,        0x0 */
-            uint32_t hbn_pu_rc32k           : 1; /* [    5],        r/w,        0x1 */
-            uint32_t reserved_6             : 1; /* [    6],       rsvd,        0x0 */
-            uint32_t hbn_reset_event        : 6; /* [12: 7],          r,        0x0 */
-            uint32_t hbn_clr_reset_event    : 1; /* [   13],        r/w,        0x0 */
-            uint32_t gpio_int_det_clk_sel   : 1; /* [   14],        r/w,        0x1 */
-            uint32_t hbn_uart_clk_sel2      : 1; /* [   15],        r/w,        0x0 */
-            uint32_t reserved_16_23         : 8; /* [23:16],       rsvd,        0x0 */
-            uint32_t ldo08aon_vout_trim_aon : 4; /* [27:24],        r/w,        0x8 */
-            uint32_t ldo08aon_vout_sel_aon  : 4; /* [31:28],        r/w,        0x9 */
+            uint32_t hbn_root_clk_sel          : 2; /* [ 1: 0],        r/w,        0x0 */
+            uint32_t hbn_uart_clk_sel          : 1; /* [    2],        r/w,        0x0 */
+            uint32_t hbn_f32k_sel              : 2; /* [ 4: 3],        r/w,        0x0 */
+            uint32_t hbn_pu_rc32k              : 1; /* [    5],        r/w,        0x1 */
+            uint32_t reserved_6                : 1; /* [    6],       rsvd,        0x0 */
+            uint32_t hbn_reset_event           : 6; /* [12: 7],          r,        0x0 */
+            uint32_t hbn_clr_reset_event       : 1; /* [   13],        r/w,        0x0 */
+            uint32_t gpio_int_det_clk_sel      : 1; /* [   14],        r/w,        0x1 */
+            uint32_t hbn_uart_clk_sel2         : 1; /* [   15],        r/w,        0x0 */
+            uint32_t reserved_16_23            : 8; /* [23:16],       rsvd,        0x0 */
+            uint32_t sw_ldo08aon_vout_trim_aon : 4; /* [27:24],        r/w,        0x8 */
+            uint32_t sw_ldo08aon_vout_sel_aon  : 4; /* [31:28],        r/w,        0x9 */
         } BF;
         uint32_t WORD;
     } HBN_GLB;
