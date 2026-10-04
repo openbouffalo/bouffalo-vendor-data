@@ -440,7 +440,8 @@ struct ef_data_0_reg {
             uint32_t reserved_6         : 1; /* [    6],       rsvd,        0x0 */
             uint32_t ef_cpu0_enc_en     : 1; /* [    7],        r/w,        0x0 */
             uint32_t reserved_8_11      : 4; /* [11: 8],       rsvd,        0x0 */
-            uint32_t ef_sw_usage_1      : 2; /* [13:12],        r/w,        0x0 */
+            uint32_t ef_trim_en         : 1; /* [   12],        r/w,        0x0 */
+            uint32_t ef_no_hd_boot_en   : 1; /* [   13],        r/w,        0x0 */
             uint32_t rsvd0              : 1; /* [   14],        r/w,        0x0 */
             uint32_t rsvd1              : 1; /* [   15],        r/w,        0x0 */
             uint32_t rsvd2              : 1; /* [   16],        r/w,        0x0 */
